@@ -22,24 +22,24 @@
           <div class="offcanvas-body nav_links">
               <ul class="navbar-nav justify-content-center flex-grow-1 pe-3 ul_nav">
                 <li class="nav-item">
-                  <a class="nav-link lng-onas" aria-current="page" href="#info_block"></a>
+                  <a class="nav-link lng-onas" aria-current="page" href="#info_block">{{ t('onas') }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link lng-tourst" href="#tours"></a>
+                  <a class="nav-link lng-tourst" href="#tours">{{ t('tourst') }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link lng-hadj" href="#tours">></a>
+                  <a class="nav-link lng-hadj" href="#tours">{{ t('hadj') }}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link lng-umra" href="#tours"></a>
+                  <a class="nav-link lng-umra" href="#tours">{{ t('umra') }}</a>
                 </li>
               </ul>
-              <select v-model="currentLang" @change="changeLanguage">
-                <option value="kz">Каз</option>
-                <option value="ru">Рус</option>
+              <select class="change-lng" v-model="currentLang" @change="changeLanguage">
+                <option value=kz>Каз</option>
+                <option value=ru>Рус</option>
               </select>
                 <ul class="navbar-nav justify-content-end sviaz">
-                  <li><p class="lng-number_text phone_number_bai"></p></li>
+                  <li><p class="lng-number_text phone_number_bai">{{ t('number_text') }}</p></li>
                   <li><p><img src="./img/phone_icon.svg" alt="">+7 (707) 362-11-56</p></li>
                 </ul>
             </div>   
@@ -74,7 +74,7 @@
     <div class="info_block_comp">
       <img src="./img/single_logo2.png" alt="">
       <h1>BAKKA TRAVEL</h1>
-      <p class="lng-options"></p>
+      <p class="lng-options">{{t('options')  }}</p>
     </div>
     </div>
     </div>
@@ -98,44 +98,44 @@
     <!--info block 2 end-->
         <div class="second_part">
           <div class="container">
-            <h3 class="wow animate__animated animate__fadeInRightBig lng-our_advantages"></h3>
+            <h3 class="wow animate__animated animate__fadeInRightBig lng-our_advantages">{{ t('our_advantages') }}</h3>
             <div class="row">
               <div class="col1 col-3 wow animate__animated animate__zoomIn">
                 <img class="icon_info" src="./img/Icon1.svg" alt="">
-                <h6 class="lng-first_block_h6"></h6>
-                <p class="lng-first_block_p"></p>
+                <h6 class="lng-first_block_h6">{{ t('first_block_h6') }}</h6>
+                <p class="lng-first_block_p">{{ t('first_block_p') }}</p>
               </div>
               <div class="col1 col-3 wow animate__animated animate__zoomIn">
                 <img class="icon_info" src="./img/Icon2.svg" alt="">
-                <h6 class="lng-second_block_h6"></h6>
-                <p class="lng-second_block_p"></p>
+                <h6 class="lng-second_block_h6">{{ t('second_block_h6') }}</h6>
+                <p class="lng-second_block_p">{{ t('second_block_p') }}</p>
               </div>
               <div class="col1 col-3 wow animate__animated animate__zoomIn">
                 <img class="icon_info" src="./img/Icon3.svg" alt="">
-                <h6 class="lng-third_block_h6"></h6>
-                <p class="lng-third_block_p"></p></div>
+                <h6 class="lng-third_block_h6">{{ t('third_block_h6') }}</h6>
+                <p class="lng-third_block_p">{{ t('third_block_p') }}</p></div>
               <div class="col1 col-3 wow animate__animated animate__zoomIn">
                 <img class="icon_info" src="./img/Icon4.svg" alt="">
-                <h6 class="lng-fourth_block_h6"></h6>
-                <p class="lng-fourth_block_p"></p></div>
+                <h6 class="lng-fourth_block_h6">{{ t('fourth_block_h6') }}</h6>
+                <p class="lng-fourth_block_p">{{ t('fourth_block_p') }}</p></div>
             </div>
                 <div class="row">
               <div class="col1 col-3 wow animate__animated animate__zoomIn">
                 <img class="icon_info" src="./img/Icon5.svg" alt="">
-                <h6 class="lng-fifth_block_h6"></h6>
-                <p class="lng-fifth_block_p"></p></div>
+                <h6 class="lng-fifth_block_h6">{{ t('fifth_block_h6') }}</h6>
+                <p class="lng-fifth_block_p">{{ t('fifth_block_p') }}</p></div>
               <div class="col1 col-3 wow animate__animated animate__zoomIn">
                 <img class="icon_info" src="./img/Icon6.svg" alt="">
-                <h6 class="lng-sixth_block_h6"></h6>
-                <p class="lng-sixth_block_p"></p></div>
+                <h6 class="lng-sixth_block_h6">{{ t('sixth_block_h6') }}</h6>
+                <p class="lng-sixth_block_p">{{ t('sixth_block_p') }}</p></div>
               <div class="col1 col-3 wow animate__animated animate__zoomIn">
                 <img class="icon_info" src="./img/Icon7.svg" alt="">
-                <h6 class="lng-seventh_block_h6"></h6>
-                <p class="lng-seventh_block_p"></p></div>
+                <h6 class="lng-seventh_block_h6">{{ t('seventh_block_h6') }}</h6>
+                <p class="lng-seventh_block_p">{{ t('seventh_block_p') }}</p></div>
               <div class="col1 col-3 wow animate__animated animate__zoomIn">
                 <img class="icon_info" src="./img/Icon8.svg" alt="">
-                <h6 class="lng-eighth_block_h6"></h6>
-                <p class="lng-eighth_block_p"></p></div>
+                <h6 class="lng-eighth_block_h6">{{ t('eighth_block_h6') }}</h6>
+                <p class="lng-eighth_block_p">{{ t('eighth_block_p') }}</p></div>
                 </div>
           </div>
         </div>
@@ -153,23 +153,23 @@
                   <div class="row">
                     <div class="col-6 wow animate__animated animate__zoomIn" id="min_block1">
                       <img class="icon_info" src="./img/umra_icon.png" alt="">
-                      <h6 class="lng-umra_text"></h6>
-                      <p class="lng-umra_options"></p>
-                      <button class=" lng-details1" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+                      <h6 class="lng-umra_text">{{ t('umra_text') }}</h6>
+                      <p class="lng-umra_options">{{ t('umra_options') }}</p>
+                      <button class=" lng-details1" data-bs-toggle="modal" data-bs-target="#exampleModal">{{ t('details1') }}</button>
                     </div>
                     <div class="col-6 wow animate__animated animate__zoomIn" id="min_block2">
                       <img class="icon_info" src="./img/Kaaba.png" alt="">
-                      <h6 class="lng-hadj_text"></h6>
-                      <p class="lng-hadj_options"></p>
-                      <button class="lng-details2" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+                      <h6 class="lng-hadj_text">{{ t('hadj_text') }}</h6>
+                      <p class="lng-hadj_options">{{ t('hadj_options') }}</p>
+                      <button class="lng-details2" data-bs-toggle="modal" data-bs-target="#exampleModal">{{ t('details2') }}</button>
                     </div>
                   </div>
                   <div class="row">
                     <div class="col-12 wow animate__animated animate__zoomIn" id="min_blocks_12">
                       <img class="icon_info" src="./img/Fire.png" alt="">
-                      <h6 class="lng-hot_tours"></h6>
-                      <p class="lng-hot_tours_options"></p>
-                      <button class="lng-details3" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+                      <h6 class="lng-hot_tours">{{ t('hot_tours') }}</h6>
+                      <p class="lng-hot_tours_options">{{ t('hot_tours_options') }}</p>
+                      <button class="lng-details3" data-bs-toggle="modal" data-bs-target="#exampleModal">{{ t('details3') }}</button>
                     </div>
                   </div>
               </div>
@@ -204,27 +204,27 @@
     <!--Paket tours-->
     <div class="paket_tours" id="tours">
       <div class="container">
-        <h3 class="paket_tours_text animate__animated animate__fadeInLeft lng-paket_tours_text"></h3>
+        <h3 class="paket_tours_text animate__animated animate__fadeInLeft lng-paket_tours_text">{{ t('paket_tours_text') }}</h3>
           <div class="paket_tours_none">
             <div class="row pakets">
               <div class="col-4 paketter with-border-gradient wow animate__animated animate__slideInUp" id="pakets1">
                     <h3>Стандард</h3>
                     <hr>
                     <img class="text_left icon_tours" src="./img/calendar.svg" alt="">
-                    <h5 class="text_left lng-duration1"></h5>
-                    <p class="text_right lng-duration1_option"></p>
+                    <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
+                    <p class="text_right lng-duration1_option">{{ t('duration1_option') }}</p>
                     <div style="clear: left;"></div>
-                    <img class="text_left icon_tours" src="./img/plane.svg" alt=""><h5 class="text_left lng-way1"></h5>
+                    <img class="text_left icon_tours" src="./img/plane.svg" alt=""><h5 class="text_left lng-way1">{{ t('way1') }}</h5>
                     <p class="text_right">Алматы - Медина</p>
                     <div style="clear: left;"></div>
-                    <img class="text_left icon_tours" src="./img/location.svg" alt=""><h5 class="text_left lng-al_haram1"></h5>
+                    <img class="text_left icon_tours" src="./img/location.svg" alt=""><h5 class="text_left lng-al_haram1">{{ t('al_haram1') }}</h5>
                     <p class="text_right">4 км</p>
                     <div style="clear: left;"></div>
-                    <img class="text_left icon_tours" src="./img/food.svg" alt=""><h5 class="text_left lng-food1"></h5>
+                    <img class="text_left icon_tours" src="./img/food.svg" alt=""><h5 class="text_left lng-food1">{{ t('food1') }}</h5>
                     <p class="text_right">Буфет</p>
                     <div style="clear: left;"></div>
                     
-                    <img class="text_left icon_tours" src="./img/hotel.svg" alt=""><h5 class="text_left lng-hotel1"></h5>
+                    <img class="text_left icon_tours" src="./img/hotel.svg" alt=""><h5 class="text_left lng-hotel1">{{ t('hotel1') }}</h5>
                     <div class="hotel_stars">
                     <img src="./img/Star.svg" alt="">
                     <img src="./img/Star.svg" alt="">
@@ -241,19 +241,20 @@
               <h3>Komfort</h3>
               <hr>
               <img class="text_left icon_tours" src="./img/calendar.svg" alt="">
-              <h5 class="text_left lng-duration2"></h5>
-                    <p class="text_right lng-duration2_option"></p>
+                    <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
+                    <p class="text_right lng-duration1_option">{{ t('duration1_option') }}</p>
                     <div style="clear: left;"></div>
-                    <img class="text_left icon_tours"  src="./img/plane.svg " alt=""><h5 class="text_left lng-way2"></h5>
+                    <img class="text_left icon_tours" src="./img/plane.svg" alt=""><h5 class="text_left lng-way1">{{ t('way1') }}</h5>
                     <p class="text_right">Алматы - Медина</p>
                     <div style="clear: left;"></div>
-                    <img class="text_left icon_tours" src="./img/location.svg" alt=""><h5 class="text_left lng-al_haram2"></h5>
+                    <img class="text_left icon_tours" src="./img/location.svg" alt=""><h5 class="text_left lng-al_haram1">{{ t('al_haram1') }}</h5>
                     <p class="text_right">4 км</p>
                     <div style="clear: left;"></div>
-                    <img class="text_left icon_tours" src="./img/food.svg" alt=""><h5 class="text_left lng-food2"></h5>
+                    <img class="text_left icon_tours" src="./img/food.svg" alt=""><h5 class="text_left lng-food1">{{ t('food1') }}</h5>
                     <p class="text_right">Буфет</p>
                     <div style="clear: left;"></div>
-                    <img class="text_left icon_tours" src="./img/hotel.svg" alt=""><h5 class="text_left lng-hotel2"></h5>
+                    
+                    <img class="text_left icon_tours" src="./img/hotel.svg" alt=""><h5 class="text_left lng-hotel1">{{ t('hotel1') }}</h5>
                     <div class="hotel_stars">
                     <img src="./img/Star.svg" alt="">
                     <img src="./img/Star.svg" alt="">
@@ -270,19 +271,20 @@
               <h3>Komfort+</h3>
               <hr>
               <img class="text_left icon_tours" src="./img/calendar.svg" alt="">
-              <h5 class="text_left lng-duration3"></h5>
-                        <p class="text_right lng-duration3_option"></p>
-                        <div style="clear: left;"></div>
-                        <img class="text_left icon_tours"  src="./img/plane.svg " alt=""><h5 class="text_left lng-way3"></h5>
-                        <p class="text_right">Алматы - Медина</p>
-                        <div style="clear: left;"></div>
-                        <img class="text_left icon_tours" src="./img/location.svg" alt=""><h5 class="text_left lng-al_haram3"></h5>
-                        <p class="text_right">4 км</p>
-                        <div style="clear: left;"></div>
-                        <img class="text_left icon_tours" src="./img/food.svg" alt=""><h5 class="text_left lng-food3"></h5>
-                        <p class="text_right">Буфет</p>
-                        <div style="clear: left;"></div>
-                        <img class="text_left icon_tours" src="./img/hotel.svg" alt=""><h5 class="text_left lng-hotel3"></h5>
+                    <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
+                    <p class="text_right lng-duration1_option">{{ t('duration1_option') }}</p>
+                    <div style="clear: left;"></div>
+                    <img class="text_left icon_tours" src="./img/plane.svg" alt=""><h5 class="text_left lng-way1">{{ t('way1') }}</h5>
+                    <p class="text_right">Алматы - Медина</p>
+                    <div style="clear: left;"></div>
+                    <img class="text_left icon_tours" src="./img/location.svg" alt=""><h5 class="text_left lng-al_haram1">{{ t('al_haram1') }}</h5>
+                    <p class="text_right">4 км</p>
+                    <div style="clear: left;"></div>
+                    <img class="text_left icon_tours" src="./img/food.svg" alt=""><h5 class="text_left lng-food1">{{ t('food1') }}</h5>
+                    <p class="text_right">Буфет</p>
+                    <div style="clear: left;"></div>
+                    
+                    <img class="text_left icon_tours" src="./img/hotel.svg" alt=""><h5 class="text_left lng-hotel1">{{ t('hotel1') }}</h5>
                         <div class="hotel_stars">
                         <img src="./img/Star.svg" alt="">
                         <img src="./img/Star.svg" alt="">
@@ -311,19 +313,20 @@
                 <h3>Стандард</h3>
                 <hr>
                 <img class="text_left icon_tours" src="./img/calendar.svg" alt="">
-                <h5 class="text_left lng-duration1_carousel1"></h5>
-                <p class="text_right lng-duration1_option_carousel1"></p>
-                <div style="clear: left;"></div>
-                <img class="text_left icon_tours" src="./img/plane.svg" alt=""><h5 class="text_left lng-way1_carousel1"></h5>
-                <p class="text_right">Алматы - Медина</p>
-                <div style="clear: left;"></div>
-                <img class="text_left icon_tours" src="./img/location.svg" alt=""><h5 class="text_left lng-al_haram1_carousel1"></h5>
-                <p class="text_right">4 км</p>
-                <div style="clear: left;"></div>
-                <img class="text_left icon_tours" src="./img/food.svg" alt=""><h5 class="text_left lng-food1_carousel1"></h5>
-                <p class="text_right">Буфет</p>
-                <div style="clear: left;"></div>
-                <img class="text_left icon_tours" src="./img/hotel.svg" alt=""><h5 class="text_left lng-hotel1_carousel1"></h5>
+                    <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
+                    <p class="text_right lng-duration1_option">{{ t('duration1_option') }}</p>
+                    <div style="clear: left;"></div>
+                    <img class="text_left icon_tours" src="./img/plane.svg" alt=""><h5 class="text_left lng-way1">{{ t('way1') }}</h5>
+                    <p class="text_right">Алматы - Медина</p>
+                    <div style="clear: left;"></div>
+                    <img class="text_left icon_tours" src="./img/location.svg" alt=""><h5 class="text_left lng-al_haram1">{{ t('al_haram1') }}</h5>
+                    <p class="text_right">4 км</p>
+                    <div style="clear: left;"></div>
+                    <img class="text_left icon_tours" src="./img/food.svg" alt=""><h5 class="text_left lng-food1">{{ t('food1') }}</h5>
+                    <p class="text_right">Буфет</p>
+                    <div style="clear: left;"></div>
+                    
+                    <img class="text_left icon_tours" src="./img/hotel.svg" alt=""><h5 class="text_left lng-hotel1">{{ t('hotel1') }}</h5>
                 <div class="hotel_stars">
                 <img src="./img/Star.svg" alt="">
                 <img src="./img/Star.svg" alt="">
@@ -344,19 +347,20 @@
                 <h3>Comfort</h3>
                 <hr>
                 <img class="text_left icon_tours" src="./img/calendar.svg" alt="">
-                <h5 class="text_left lng-duration2_carousel2"></h5>
-                <p class="text_right lng-duration2_option_carousel2"></p>
-                <div style="clear: left;"></div>
-                <img class="text_left icon_tours" src="./img/plane.svg" alt=""><h5 class="text_left lng-way2_carousel2"></h5>
-                <p class="text_right">Алматы - Медина</p>
-                <div style="clear: left;"></div>
-                <img class="text_left icon_tours" src="./img/location.svg" alt=""><h5 class="text_left lng-al_haram2_carousel2"></h5>
-                <p class="text_right">4 км</p>
-                <div style="clear: left;"></div>
-                <img class="text_left icon_tours" src="./img/food.svg" alt=""><h5 class="text_left lng-food2_carousel2"></h5>
-                <p class="text_right">Буфет</p>
-                <div style="clear: left;"></div>
-                <img class="text_left icon_tours" src="./img/hotel.svg" alt=""><h5 class="text_left lng-hotel2_carousel2"></h5>
+                    <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
+                    <p class="text_right lng-duration1_option">{{ t('duration1_option') }}</p>
+                    <div style="clear: left;"></div>
+                    <img class="text_left icon_tours" src="./img/plane.svg" alt=""><h5 class="text_left lng-way1">{{ t('way1') }}</h5>
+                    <p class="text_right">Алматы - Медина</p>
+                    <div style="clear: left;"></div>
+                    <img class="text_left icon_tours" src="./img/location.svg" alt=""><h5 class="text_left lng-al_haram1">{{ t('al_haram1') }}</h5>
+                    <p class="text_right">4 км</p>
+                    <div style="clear: left;"></div>
+                    <img class="text_left icon_tours" src="./img/food.svg" alt=""><h5 class="text_left lng-food1">{{ t('food1') }}</h5>
+                    <p class="text_right">Буфет</p>
+                    <div style="clear: left;"></div>
+                    
+                    <img class="text_left icon_tours" src="./img/hotel.svg" alt=""><h5 class="text_left lng-hotel1">{{ t('hotel1') }}</h5>
                 <div class="hotel_stars">
                 <img src="./img/Star.svg" alt="">
                 <img src="./img/Star.svg" alt="">
@@ -377,19 +381,20 @@
                 <h3>Comfort+</h3>
                 <hr>
                 <img class="text_left icon_tours" src="./img/calendar.svg" alt="">
-                <h5 class="text_left lng-duration3_carousel3"></h5>
-                <p class="text_right lng-duration3_option_carousel3"></p>
-                <div style="clear: left;"></div>
-                <img class="text_left icon_tours" src="./img/plane.svg" alt=""><h5 class="text_left lng-way3_carousel3"></h5>
-                <p class="text_right">Алматы - Медина</p>
-                <div style="clear: left;"></div>
-                <img class="text_left icon_tours" src="./img/location.svg" alt=""><h5 class="text_left lng-al_haram3_carousel3"></h5>
-                <p class="text_right">4 км</p>
-                <div style="clear: left;"></div>
-                <img class="text_left icon_tours" src="./img/food.svg" alt=""><h5 class="text_left lng-food3_carousel3"></h5>
-                <p class="text_right">Буфет</p>
-                <div style="clear: left;"></div>
-                <img class="text_left icon_tours" src="./img/hotel.svg" alt=""><h5 class="text_left lng-hotel3_carousel3"></h5>
+                    <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
+                    <p class="text_right lng-duration1_option">{{ t('duration1_option') }}</p>
+                    <div style="clear: left;"></div>
+                    <img class="text_left icon_tours" src="./img/plane.svg" alt=""><h5 class="text_left lng-way1">{{ t('way1') }}</h5>
+                    <p class="text_right">Алматы - Медина</p>
+                    <div style="clear: left;"></div>
+                    <img class="text_left icon_tours" src="./img/location.svg" alt=""><h5 class="text_left lng-al_haram1">{{ t('al_haram1') }}</h5>
+                    <p class="text_right">4 км</p>
+                    <div style="clear: left;"></div>
+                    <img class="text_left icon_tours" src="./img/food.svg" alt=""><h5 class="text_left lng-food1">{{ t('food1') }}</h5>
+                    <p class="text_right">Буфет</p>
+                    <div style="clear: left;"></div>
+                    
+                    <img class="text_left icon_tours" src="./img/hotel.svg" alt=""><h5 class="text_left lng-hotel1">{{ t('hotel1') }}</h5>
                 <div class="hotel_stars">
                 <img src="./img/Star.svg" alt="">
                 <img src="./img/Star.svg" alt="">
@@ -414,17 +419,17 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5 lng-form_text_boot" id="exampleModalLabel"></h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h1 class="modal-title fs-5 lng-form_text_boot" id="exampleModalLabel">{{ t('form_text_boot') }}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">{{ t('close') }}</button>
       </div>
       <div class="modal-body">
         <form method="post" action="https://script.google.com/macros/s/AKfycbxPOuwcJU8Qg4mGfbmDXIRA6iqvyQSTqK0VcSL0wR5qEdWnJYrDvKntI6l7rAs7OHXs8A/exec" name="contact-form">
           <div class="mb-3">
-            <label for="recipient-name" class="col-form-label lng-form_name"></label>
+            <label for="recipient-name" class="col-form-label lng-form_name">{{ t('form_name') }}</label>
             <input type="text" class="form-control" id="your-name" name="your-name">
           </div>
           <div class="mb-3">
-            <label for="recipient-name" class="col-form-label lng-form_number"></label>
+            <label for="recipient-name" class="col-form-label lng-form_number">{{ t('form_number') }}</label>
             <input type="text" id="your-number" name="your-number" class="form-control">
           </div>
           <input type="submit" id="submit"  class="submit_boot" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo">
@@ -441,8 +446,8 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5 lng-form_text_boot" id="exampleModalLabel"></h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h1 class="modal-title fs-5 lng-form_text_boot" id="exampleModalLabel">{{ t('form_text_boot') }}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">{{ t('close') }}</button>
       </div>
       <div class="modal-body">
         <div class="mb-3">
@@ -458,17 +463,17 @@
     <!--Gids-->
     <div class="gids">
       <div class="container">
-        <h3 class="wow animate__animated animate__fadeInLeft lng-our_gids"></h3>
-        <p class="wow info_gids animate__animated animate__fadeInLeft lng-our_gids_options"></p>
+        <h3 class="wow animate__animated animate__fadeInLeft lng-our_gids">{{ t('our_gids') }}</h3>
+        <p class="wow info_gids animate__animated animate__fadeInLeft lng-our_gids_options">{{ t('our_gids_options') }}</p>
         <div class="wrapper">
           <div class="item">
             <div class="card" style="width: 18rem;">
               <img src="./img/gid.png" class="card-img-top img_gid" alt="...">
               <div class="card-body">
-                <h5 class="card-title lng-name1"></h5>
-                <p class="card-text lng-work1"></p>
-                <p class="card-text lng-eduction1"></p>
-                <p class="card-text lng-languages1"></p>
+                <h5 class="card-title lng-name1">{{ t('name1') }}</h5>
+                <p class="card-text lng-work1">{{ t('work1') }}</p>
+                <p class="card-text lng-education1">{{ t('education1') }}</p>
+                <p class="card-text lng-languages1">{{ t('languages1') }}</p>
               </div>
             </div>
           </div>
@@ -476,10 +481,10 @@
             <div class="card" style="width: 18rem;">
               <img src="./img/gid.png" class="card-img-top img_gid" alt="...">
               <div class="card-body">
-                <h5 class="card-title lng-name2"></h5>
-                <p class="card-text lng-work2"></p>
-                <p class="card-text lng-eduction2"></p>
-                <p class="card-text lng-languages2"></p>
+                <h5 class="card-title lng-name1">{{ t('name1') }}</h5>
+                <p class="card-text lng-work1">{{ t('work1') }}</p>
+                <p class="card-text lng-education1">{{ t('education1') }}</p>
+                <p class="card-text lng-languages1">{{ t('languages1') }}</p>
               </div>
             </div>
           </div>
@@ -487,10 +492,10 @@
             <div class="card" style="width: 18rem;">
               <img src="./img/gid.png" class="card-img-top img_gid" alt="...">
               <div class="card-body">
-                <h5 class="card-title lng-name3"></h5>
-                <p class="card-text lng-work3"></p>
-                <p class="card-text lng-eduction3"></p>
-                <p class="card-text lng-languages3"></p>
+                <h5 class="card-title lng-name1">{{ t('name1') }}</h5>
+                <p class="card-text lng-work1">{{ t('work1') }}</p>
+                <p class="card-text lng-education1">{{ t('education1') }}</p>
+                <p class="card-text lng-languages1">{{ t('languages1') }}</p>
               </div>
             </div>
           </div>
@@ -498,10 +503,10 @@
             <div class="card" style="width: 18rem;">
               <img src="./img/gid.png" class="card-img-top img_gid" alt="...">
               <div class="card-body">
-                <h5 class="card-title lng-name4"></h5>
-                <p class="card-text lng-work4"></p>
-                <p class="card-text lng-eduction4"></p>
-                <p class="card-text lng-languages4"></p>
+                <h5 class="card-title lng-name1">{{ t('name1') }}</h5>
+                <p class="card-text lng-work1">{{ t('work1') }}</p>
+                <p class="card-text lng-education1">{{ t('education1') }}</p>
+                <p class="card-text lng-languages1">{{ t('languages1') }}</p>
               </div>
             </div>
           </div>
@@ -509,10 +514,10 @@
             <div class="card" style="width: 18rem;">
               <img src="./img/gid.png" class="card-img-top img_gid" alt="...">
               <div class="card-body">
-                <h5 class="card-title lng-name5"></h5>
-                <p class="card-text lng-work5"></p>
-                <p class="card-text lng-eduction5"></p>
-                <p class="card-text lng-languages5"></p>
+                <h5 class="card-title lng-name1">{{ t('name1') }}</h5>
+                <p class="card-text lng-work1">{{ t('work1') }}</p>
+                <p class="card-text lng-education1">{{ t('education1') }}</p>
+                <p class="card-text lng-languages1">{{ t('languages1') }}</p>
               </div>
             </div>
           </div>
@@ -526,8 +531,8 @@
         <div class="row">
           <div class="col texts">
             <div>
-              <h1 class="wow animate__animated animate__fadeInLeft lng-soon_in_phone"></h1>
-              <p class="wow animate__animated animate__fadeInLeft lng-soon_in_phone_option"></p>
+              <h1 class="wow animate__animated animate__fadeInLeft lng-soon_in_phone">{{ t('soon_in_phone') }}</h1>
+              <p class="wow animate__animated animate__fadeInLeft lng-soon_in_phone_option">{{ t('soon_in_phone_option') }}</p>
               <button class="wow animate__animated animate__fadeInLeft instagram_button" onclick="window.location.href = 'https://instagram.com/bakka_travel';">INSTAGRAM</button>
             </div>
           </div>
@@ -660,55 +665,61 @@
     <!--question and answer-->
     <div class="qua_ans">
       <div class="container">
-        <h2 class="wow animate__animated animate__fadeInLeft lng-qua_text2 qua_text2"></h2>
+        <h2 class="wow animate__animated animate__fadeInLeft lng-qua_text2 qua_text2">{{ t('qua_text2') }}</h2>
         <div class="row">
           <div class="col-4 text_in_qua">
-            <h2 class="wow animate__animated animate__fadeInLeft lng-qua_text"></h2>
+            <h2 class="wow animate__animated animate__fadeInLeft lng-qua_text">{{ t('qua_text') }}</h2>
           </div>
           <div class="col-8 qua">
             <div class="accordion wow animate__animated animate__fadeInRight" id="accordionExample">
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed  lng-first_qua" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  {{ t('first_qua') }}
                   </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body lng-first_ans">
+                  <div class="accordion-body lng-first_ans">{{ t('first_ans') }}
                   </div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed lng-second_qua" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  {{ t('second_qua') }}
                   </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body lng-second_ans"></div>
+                  <div class="accordion-body lng-second_ans">{{ t('second_ans') }}</div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed lng-third_qua" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  {{ t('third_qua') }}
                   </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body lng-third_ans"></div>
+                  <div class="accordion-body lng-third_ans">{{ t('third_ans') }}</div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
                   <button class="accordion-button collapsed lng-fourth_qua" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">                  
+                  {{ t('fourth_qua') }}
                   </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body lng-fourth_ans"></div>
+                  <div class="accordion-body lng-fourth_ans">{{ t('fourth_ans') }}</div>
                 </div>
               </div>
               <div class="accordion-item">
                 <h2 class="accordion-header">
-                  <button class="accordion-button collapsed lng-fifth_qua" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFife" aria-expanded="false" aria-controls="collapseFive"></button>                </h2>
+                  <button class="accordion-button collapsed lng-fifth_qua" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFife" aria-expanded="false" aria-controls="collapseFive">
+                    {{ t('fifth_qua') }}
+                  </button>                </h2>
                 <div id="collapseFife" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                  <div class="accordion-body lng-fifth_ans"></div>
+                  <div class="accordion-body lng-fifth_ans">{{ t('fifth_ans') }}</div>
                 </div>
               </div>
             </div>
@@ -722,12 +733,12 @@
       <div class="container">
         <div class="row">
           <div class="col form1 wow animate__animated animate__fadeInLeft">
-            <h2 class="lng-form_text"></h2>
-            <p class="lng-form_option"></p>
+            <h2 class="lng-form_text">{{t('form_text')}}</h2>
+            <p class="lng-form_option">{{ t('form_option') }}</p>
             <form method="post" action="https://script.google.com/macros/s/AKfycbxPOuwcJU8Qg4mGfbmDXIRA6iqvyQSTqK0VcSL0wR5qEdWnJYrDvKntI6l7rAs7OHXs8A/exec" name="contact-form">
-            <label for="your-name" class="lng-form_name_foot"></label><br>
+            <label for="your-name" class="lng-form_name_foot">{{t('form_name_foot')}}</label><br>
             <input type="text" id="your-name" name="your-name" ><br>
-            <label for="your-number" class="lng-form_number_foot"></label><br>
+            <label for="your-number" class="lng-form_number_foot">{{ t('form_number_foot') }}</label><br>
             <input type="text" id="your-number" name="your-number"><br><br>
             <input type="submit" id="submit">
             </form>
@@ -790,13 +801,13 @@
               <div class="row">
                 <div class="col-6 texts_infoot">
                   <h4>Компания</h4>
-                  <a class="lng-onas2" href="#info_block"></a><br>
-                  <a class="lng-paket_tours_text2" href="#tours"></a><br>
+                  <a class="lng-onas2" href="#info_block">{{ t('onas2') }}</a><br>
+                  <a class="lng-paket_tours_text2" href="#tours">{{ t('paket_tours_text2') }}</a><br>
                 </div>
                 <div class="col-6 texts_infoot">
-                  <h4 class="lng-tourst2"></h4>
-                  <a class="lng-umra2" href="#tours"></a><br>
-                  <a class="lng-hadj2" href="#tours"></a><br>
+                  <h4 class="lng-tourst2">{{ t('tourst2') }}</h4>
+                  <a class="lng-umra2" href="#tours">{{ t('umra2') }}</a><br>
+                  <a class="lng-hadj2" href="#tours">{{ t('hadj2') }}</a><br>
                 </div>
               </div>
             </div>
@@ -805,14 +816,14 @@
               <div class="col-5 without_map">
                 <div class="row">
                   <div class="col">
-                    <h4 class="lng-sviazivat"></h4>
+                    <h4 class="lng-sviazivat">{{ t('sviazivat') }}</h4>
                     <p><img src="./img/phone_icon.svg" alt="">+7 (707) 362-11-56</p>
                     <a href="https://www.instagram.com/bakka_travel/"><img class="soc_icons" src="./img/insta_icon.png" alt=""></a>
                     <a href="https://api.whatsapp.com/send/?phone=%2B77051851321&text&type=phone_number&app_absent=0"><img class="soc_icons" src="./img/wp_icon.png" alt=""></a>
                     <div class="text_office">
                       <h4>Офис</h4>
                       <div class="p_foot">
-                        <img class="text_left icon_tours" src="./img/location_icon.svg" alt=""><p class="lng-street text_left"></p><br>
+                        <img class="text_left icon_tours" src="./img/location_icon.svg" alt=""><p class="lng-street text_left">{{ t('street') }}</p><br>
                       </div>
                       <div style="clear: left;"></div>
                       <button onclick="window.location.href = 'https://2gis.kz/almaty/firm/70000001025586524?m=76.845925%2C43.342585%2F16'">Открыть <img src="./img/2GIS_logo.svg" alt=""></button>
@@ -862,10 +873,542 @@ export default {
           kz: "Умра",
           ru: "Умра",
         },
+        number_text : {
+        kz : "Байланыс номері",
+        ru : "Свяжитесь с нами",
+    },
         choose_tour: {
           kz: "Турды таңдау",
           ru: "Выбрать тур",
         },
+        options : {
+        kz : "BAKKA Travel-әлемдегі мұсылмандар үшін жетекші туроператорлардың бірі.2006 жылдан бастап біз Ислам туризмін, мұсылмандар үшін қасиетті Мекке мен сәулелі Мединаға қажылықты ұйымдастырумен айналысып келеміз.",
+        ru : "BAKKA Travel – один из ведущих туроператоров для мусульман по всему миру.С 2006 года мы успешно занимаемся организацией исламского туризма, паломничества для мусульман в Священную Мекку и Лучезарную Медину.",
+    },
+    our_advantages: {
+        kz : "Біздің артықшылықтарымыз",
+        ru : "Наши преимущества",
+    },
+    first_block_h6: {
+        kz : "Исламдық білімі бар кәсіби гидтер",
+        ru : "Профессиональные гиды с Исламским образованием",
+    },
+    first_block_p : {
+        kz : "Біздің гидтер-көп жылдық тәжірибесі бар устаздар мен имамдар",
+        ru : "Наши гиды - это устазы и имамы с многолетним опытом",
+    },
+    second_block_h6 : {
+        kz : "Қасиетті жерлерге экскурсиялар",
+        ru : "Экскурсии по священным местам",
+    },
+    second_block_p : {
+        kz : "Күтім қаласы, Сафа Марва, Хира үңгірі, Пайғамбар мешіті, құрма бағы және т.б",
+        ru : "Город Ухуд, Сафа-Марва, Пещера Хира, Мечеть Пророка, Финиковый сад и многое другое.",
+    },
+    third_block_h6 : {
+        kz : "Қасиетті рәсімдерді орындауға көмектесу",
+        ru : "Помощь в совершении священных обрядов",
+    },
+    third_block_p : {
+        kz : "Біз сізге умраның барлық кезеңдерін аяқтауға көмектесеміз",
+        ru : "Мы поможем вам в совершении всех этапов Умры",
+    },
+    fourth_block_h6 : {
+        kz : "Қонақ үйлер мен тамақтану",
+        ru : "Отели и питание",
+    },
+    fourth_block_p : {
+        kz : "Мекке мен Мединадағы ең жақсы қонақ үйлер, Аль-Харам мешітіне жақын, күніне 2 рет тамақтану.",
+        ru : "Лучшие отели в Мекке и Медине, ближайшие к мечети Аль-Харам, питание 2 раза в день.",
+    },
+    fifth_block_h6 : {
+        kz : "Умра туралы егжей-тегжейлі оқыту",
+        ru : "Детальное обучение к Умре",
+    },
+    fifth_block_p : {
+        kz : "Біздің гидтер-көп жылдық тәжірибесі бар устаздар мен имамдар.",
+        ru : "Наши гиды - это устазы и имамы с многолетним опытом",
+    },
+    sixth_block_h6 : {
+        kz : "Екі жаққа да билеттер",
+        ru : "Билеты в обе стороны",
+    },
+    sixth_block_p : {
+        kz : "Медина мен Джиддаға ең ыңғайлы ұшақтарда тікелей рейстер",
+        ru : "Прямые рейсы в Медину и Джидду в самых удобных самолетах",
+    },
+    seventh_block_h6 : {
+        kz : "Әуежайда кездесу және шығарып салу",
+        ru : "Встреча и проводы в аэропорту",
+    },
+    seventh_block_p : {
+        kz : "Біздің гид сіздерді қарсы алады және бағыттайды",
+        ru : "Наш гид встретит и проводит вас",
+    },
+    eighth_block_h6 : {
+        kz : "Қонақ үйлер мен тамақтану",
+        ru : "Отели и питание",
+    },
+    eighth_block_p : {
+        kz : "1 жыл мерзімге визаны ресімде",
+        ru : "Оформление тур визы сроком на 1 год",
+    },
+    our_tours_text : {
+        kz : "Біздің турлар",
+        ru : "Наши туры",
+    },
+    umra_text : {
+        kz : "Умра",
+        ru : "Умра",
+    },
+    umra_options : {
+        kz : "Кіші қажылық",
+        ru : "Малое паломничество",
+    },
+    details1 : {
+        kz : "Толығырақ",
+        ru : "Подробнее",
+    },
+    hadj_text : {
+        kz : "Қажылық",
+        ru : "Хадж",
+    },
+    hadj_options : {
+        kz : "Үлкен қажылық",
+        ru : "Большое паломничество",
+    },
+    details2 : {
+        kz : "Толығырақ",
+        ru : "Подробнее",
+    },
+    hot_tours : {
+        kz : "Ең тиімді турлар",
+        ru : "Горящие туры",
+    },
+    hot_tours_options : {
+        kz : "2023 жылға арналған Мекке мен Мединаға саяхаттауға арналған ең жақсы мәмілелер",
+        ru : "Самые выгодные предложения для путешествия  в Мекку и Медину на 2023 год",
+    },
+    details3 : {
+        kz : "Барлық ұсыныстарды қараңыз",
+        ru : "Смотреть все предложения",
+    },
+    paket_tours_text : {
+        kz : "Турлар пакеті",
+        ru : "Пакет туров",
+    },
+    duration1 : {
+        kz : "Ұзақтығы",
+        ru : "Длительность",
+    },
+    duration2 : {
+        kz : "Ұзақтығы",
+        ru : "Длительность",
+    },
+    duration3 : {
+        kz : "Ұзақтығы",
+        ru : "Длительность",
+    },
+    duration1_option : {
+        kz : "20 күн",
+        ru : "20 дней",
+    },
+    duration2_option : {
+        kz : "20 күн",
+        ru : "20 дней",
+    },
+    duration3_option : {
+        kz : "20 күн",
+        ru : "20 дней",
+    },
+    way1 : {
+        kz : "Бағыт",
+        ru : "Направление",
+    },
+    way2 : {
+        kz : "Бағыт",
+        ru : "Направление",
+    },
+    way3 : {
+        kz : "Бағыт",
+        ru : "Направление",
+    },
+    al_haram1 : {
+        kz : "Әл-Харам мешітіне дейін",
+        ru : "До мечети Аль-Харам",
+    },
+    al_haram2 : {
+        kz : "Әл-Харам мешітіне дейін",
+        ru : "До мечети Аль-Харам",
+    },
+    al_haram3 : {
+        kz : "Әл-Харам мешітіне дейін",
+        ru : "До мечети Аль-Харам",
+    },
+    food1 : {
+        kz : "Тамақтану",
+        ru : "Питания",
+    },
+    food2 : {
+        kz : "Тамақтану",
+        ru : "Питания",
+    },
+    food3 : {
+        kz : "Тамақтану",
+        ru : "Питания",
+    },
+    hotel1 : {
+        kz : "Қонақ үй",
+        ru : "Отель",
+    },
+    hotel2 : {
+        kz : "Қонақ үй",
+        ru : "Отель",
+    },
+    hotel3 : {
+        kz : "Қонақ үй",
+        ru : "Отель",
+    },
+    price_text1 : {
+        kz : "Бағасы:",
+        ru : "Цена:",
+    },
+    price_text2 : {
+        kz : "Бағасы:",
+        ru : "Цена:",
+    },
+    price_text3 : {
+        kz : "Бағасы:",
+        ru : "Цена:",
+    },
+    book1 : {
+        kz : "Бронь жасау",
+        ru : "Забронировать",
+    },
+    book2 : {
+        kz : "Бронь жасау",
+        ru : "Забронировать",
+    },
+    book3 : {
+        kz : "Бронь жасау",
+        ru : "Забронировать",
+    },
+    duration1_carousel1 : {
+        kz : "Ұзақтығы",
+        ru : "Длительность",
+    },
+    duration2_carousel2 : {
+        kz : "Ұзақтығы",
+        ru : "Длительность",
+    },
+    duration3_carousel3 : {
+        kz : "Ұзақтығы",
+        ru : "Длительность",
+    },
+    duration1_option_carousel1 : {
+        kz : "20 күн",
+        ru : "20 дней",
+    },
+    duration2_option_carousel2 : {
+        kz : "20 күн",
+        ru : "20 дней",
+    },
+    duration3_option_carousel3 : {
+        kz : "20 күн",
+        ru : "20 дней",
+    },
+    way1_carousel1 : {
+        kz : "Бағыт",
+        ru : "Направление",
+    },
+    way2_carousel2 : {
+        kz : "Бағыт",
+        ru : "Направление",
+    },
+    way3_carousel3 : {
+        kz : "Бағыт",
+        ru : "Направление",
+    },
+    al_haram1_carousel1 : {
+        kz : "Әл-Харам мешітіне дейін",
+        ru : "До мечети Аль-Харам",
+    },
+    al_haram2_carousel2 : {
+        kz : "Әл-Харам мешітіне дейін",
+        ru : "До мечети Аль-Харам",
+    },
+    al_haram3_carousel3 : {
+        kz : "Әл-Харам мешітіне дейін",
+        ru : "До мечети Аль-Харам",
+    },
+    food1_carousel1 : {
+        kz : "Тамақтану",
+        ru : "Питания",
+    },
+    food2_carousel2 : {
+        kz : "Тамақтану",
+        ru : "Питания",
+    },
+    food3_carousel3 : {
+        kz : "Тамақтану",
+        ru : "Питания",
+    },
+    hotel1_carousel1 : {
+        kz : "Қонақ үй",
+        ru : "Отель",
+    },
+    hotel2_carousel2 : {
+        kz : "Қонақ үй",
+        ru : "Отель",
+    },
+    hotel3_carousel3 : {
+        kz : "Қонақ үй",
+        ru : "Отель",
+    },
+    price_text1_carousel1 : {
+        kz : "Бағасы:",
+        ru : "Цена:",
+    },
+    price_text2_carousel2 : {
+        kz : "Бағасы:",
+        ru : "Цена:",
+    },
+    price_text3_carousel3 : {
+        kz : "Бағасы:",
+        ru : "Цена:",
+    },
+    book1_carousel1 : {
+        kz : "Бронь жасау",
+        ru : "Забронировать",
+    },
+    book2_carousel2 : {
+        kz : "Бронь жасау",
+        ru : "Забронировать",
+    },
+    book3_carousel3 : {
+        kz : "Бронь жасау",
+        ru : "Забронировать",
+    },
+    our_gids : {
+        kz : "Біздің гидтер",
+        ru : "Наши гиды",
+    },
+    our_gids_options : {
+        kz : "Сіздің сапарыңыздың сәтті өтуі үшін бәрін жасайтын біздің ең жақсы мамандарды! Олар әрқашан сізбен байланыста және сізге кез келген сұраққа көмектеседі!",
+        ru : "Представляем наших лучших специалистов, которые сделают все,чтобы ваша поездка прошла удачно! Они всегда с вами на связии помогут вам с любым вопросом!",
+    },
+    name1 : {
+        kz : "Пардан Нұрислам, 20 жас",
+        ru : "Пардан Нұрислам, 20 лет",
+    },
+    name2 : {
+        kz : "Пардан Нұрислам, 20 жас",
+        ru : "Пардан Нұрислам, 20 лет",
+    },
+    name3 : {
+        kz : "Пардан Нұрислам, 20 жас",
+        ru : "Пардан Нұрислам, 20 лет",
+    },
+    name4 : {
+        kz : "Пардан Нұрислам, 20 жас",
+        ru : "Пардан Нұрислам, 20 лет",
+    },
+    name5 : {
+        kz : "Пардан Нұрислам, 20 жас",
+        ru : "Пардан Нұрислам, 20 лет",
+    },
+    work1 : {
+        kz : "Клиенттермен жұмыс жөніндегі маман",
+        ru : "Специалист по работе с клиентами",
+    },
+    work2 : {
+        kz : "Клиенттермен жұмыс жөніндегі маман",
+        ru : "Специалист по работе с клиентами",
+    },
+    work3 : {
+        kz : "Клиенттермен жұмыс жөніндегі маман",
+        ru : "Специалист по работе с клиентами",
+    },
+    work4 : {
+        kz : "Клиенттермен жұмыс жөніндегі маман",
+        ru : "Специалист по работе с клиентами",
+    },
+    work5 : {
+        kz : "Клиенттермен жұмыс жөніндегі маман",
+        ru : "Специалист по работе с клиентами",
+    },
+    education1 : {
+        kz : "Білімі: жоғары",
+        ru : "Образование: высшее",
+    },
+    education2 : {
+        kz : "Білімі: жоғары",
+        ru : "Образование: высшее",
+    },
+    education3 : {
+        kz : "Білімі: жоғары",
+        ru : "Образование: высшее",
+    },
+    education4 : {
+        kz : "Білімі: жоғары",
+        ru : "Образование: высшее",
+    },
+    education5 : {
+        kz : "Білімі: жоғары",
+        ru : "Образование: высшее",
+    },
+    languages1 : {
+        kz : "Тілдері: қазақ, орыс, араб",
+        ru : "Языки: казахский, русский, арабский",
+    },
+    languages2 : {
+        kz : "Тілдері: қазақ, орыс, араб",
+        ru : "Языки: казахский, русский, арабский",
+    },
+    languages3 : {
+        kz : "Тілдері: қазақ, орыс, араб",
+        ru : "Языки: казахский, русский, арабский",
+    },
+    languages4 : {
+        kz : "Тілдері: қазақ, орыс, араб",
+        ru : "Языки: казахский, русский, арабский",
+    },
+    languages5 : {
+        kz : "Тілдері: қазақ, орыс, араб",
+        ru : "Языки: казахский, русский, арабский",
+    },
+    soon_in_phone : {
+        kz : "Жақында сіздің телефоныңызда!",
+        ru : "Скоро в твоем телефоне!",
+    },
+    soon_in_phone_option : {
+        kz : "Біздің қосымшаның көмегімен турды таңдап, сапарға шығу одан да ыңғайлы және жылдам болады!Біздің сайтта және Instagram-да жаңалықтарды қадағалаңыз.",
+        ru : "С нашим приложением подобрать тур и отправитьсяв путешествие станет еще удобнее и быстрее!Следи за новостями на нашем сайте и в инстаграм.",
+    },
+    follow : {
+        kz : "Тіркелу",
+        ru : "Подписаться",
+    },
+    qua_text : {
+        kz : "Танымал сұрақтар мен оларға жауаптар",
+        ru : "Популярные вопросы и ответы на них",
+    },
+    qua_text2 : {
+        kz : "Танымал сұрақтар мен оларға жауаптар",
+        ru : "Популярные вопросы и ответы на них",
+    },
+    first_qua : {
+        kz : "Сауд Арабиясына бару үшін жас шектеулері бар ма?",
+        ru : "Есть ли возрастные ограничения для поездки в Саудовскую Аравию?",
+    },
+    first_ans : {
+        kz : "Сауд Арабиясы 2023 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
+        ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2023 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
+    },
+    second_ans : {
+        kz : "Сауд Арабиясы 2023 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
+        ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2023 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
+    },
+    third_ans : {
+        kz : "Сауд Арабиясы 2023 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
+        ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2023 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
+    },
+    fourth_ans : {
+        kz : "Сауд Арабиясы 2023 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
+        ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2023 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
+    },
+    fifth_ans : {
+        kz : "Сауд Арабиясы 2023 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
+        ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2023 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
+    },
+    second_qua : {
+        kz : "Екі бағытты бір турға қосуға бола ма?",
+        ru : "Могу ли я соединить два направления в один тур?",
+    },
+    third_qua : {
+        kz : "Егер мен досымды әкелсем, жеңілдіктер бересіз бе?",
+        ru : "Даете ли вы скидки, если я приведу своего друга?",
+    },
+    fourth_qua : {
+        kz : "Турды рәсімдеу үшін қандай құжаттар қажет?",
+        ru : "Какие документы нужны для оформления тура?",
+    },
+    fifth_qua : {
+        kz : "Сіздерде сақтандыру бар ма?",
+        ru : "Есть ли у вас страховка?",
+    },
+    form_text : {
+        kz : "Сұрақтар қалды ма?",
+        ru : "Остались вопросы?",
+    },
+    form_option : {
+        kz : "Өтінімді қалдырыңыз, біз сізге жақын арада хабарласамыз!",
+        ru : "Оставьте заявку и мы скоро свяжемся с Вами!",
+    },
+    form_option2 : {
+        kz : "Жіберу батырмасын басу арқылы мен дербес деректерді өңдеуге келісім беремін",
+        ru : "Нажимая на кнопку отправить, я даю согласие на обработку персональных данных",
+    },
+    onas2 : {
+        kz : "Біз туралы",
+        ru : "О нас",
+    },
+    paket_tours_text2 : {
+        kz : "Турлар пакеті",
+        ru : "Пакет туров",
+    },
+    tourst2 : {
+        kz : "Турлар",
+        ru : "Туры",
+    },
+    umra2 : {
+        kz : "Умра",
+        ru : "Умра",
+    },
+    hadj2 : {
+        kz : "Қажылық",
+        ru : "Хадж",
+    },
+    sviazivat : {
+        kz : "Байланыс",
+        ru : "Контакты",
+    },
+    street : {
+        kz : "Азат 20А көшесі",
+        ru : "Улицв Азат 20А",
+    },
+    form_text_boot : {
+        kz : "Заявка қалдыру",
+        ru : "Оставить заявку",
+    },
+    form_name : {
+        kz : "Есіміңіз:",
+        ru : "Имя:",
+    },
+    form_number : {
+        kz : "Телефон номеріңіз:",
+        ru : "Номер телефона:",
+    },
+    form_name_foot : {
+        kz : "Есіміңіз:",
+        ru : "Имя:",
+    },
+    form_number_foot : {
+        kz : "Телефон номеріңіз:",
+        ru : "Номер телефона:",
+    },
+    function_next : {
+        kz : "Бұл мүмкіндік келесі нұсқада қолжетімді болады!",
+        ru : "Это функция будет доступно в следующем версии!",
+    },
+    close : {
+        kz : "Жабу",
+        ru : "Закрыть",
+    },
+    attention : {
+        kz : "Ескерту",
+        ru : "Примечание",
+    },
       },
     };
   },

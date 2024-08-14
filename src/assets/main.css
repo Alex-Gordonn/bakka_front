@@ -297,7 +297,7 @@
     border: none;
   }
   #big_logo {
-    background-image: url(/public/img/form_background.png);
+    background-image: url(/img/form_background.png);
     background-position: center;
     background-size: cover;
     border-radius: 30px;
