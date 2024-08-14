@@ -1,0 +1,1083 @@
+@font-face {
+    font-family: opensans;
+    src: url(/open_sans/OpenSans-Regular.ttf);
+  }
+  @font-face {
+    font-family: opensans_bold;
+    src: url(/open_sans/OpenSans-Bold.ttf);
+  }
+  @font-face {
+    font-family: opnsans_light;
+    src: url(/open_sans/OpenSans-Light.ttf);
+  }
+  body {
+    margin: 0;
+    font-family: opensans;
+  }
+  .main {
+    background-image: url(/back_logo.svg);
+    background-repeat: repeat;
+    background-position: center top;
+    background-size: auto;
+    padding: 0px;
+  }
+  /*1 nav*/
+  .sviaz {
+    display: block;
+  }
+  .lng-number_text {
+    margin: 0px;
+  }
+  .local {
+    background-color: #22303A;
+    border-radius: 10px;
+    color: white;
+  }
+  .local:hover {
+    color: white;
+  }
+  .change-lng {
+    background-color: #22303A;
+    color: white;
+    height: 40px;
+    padding: 5px;
+    margin-right: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 80px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .nav_links a {
+    font-size: larger;
+    color: black;
+    font-family: opensans_bold;
+    margin-top: 8px;
+    margin-right: 20px;
+  }
+  .nav_links a:hover {
+    color: #D8AE5F;
+  }
+  .phone_number_bai {
+    font-family: opensans_bold;
+  }
+  .navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1000;
+  }
+  /*1 nav*/
+  /*1 block*/
+  .main_block .container {
+    background-image: url(/main_image.png);
+    padding: 61px;
+    text-align: center;
+    border-radius: 30px;
+  }
+  .main_block h1{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family: opensans_bold;
+  }
+  .main_block h5 {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family: opensans;
+    font-style: normal;
+  }
+  .logo2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .main_block button {
+    background-color: white;
+    color: black;
+    margin-top: 20px;
+    border: none;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: large;
+  }
+  .main_block button:hover {
+    background-color: #D8AE5F;
+    color: white;
+  }
+  
+  .second_main_block img {
+    margin-top: 30px;
+    width: 100%;
+    height: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .second_main_block .col {
+    padding: 0;
+    text-align: center;
+  }
+  /*1 block end*/
+  /*2 block наши преимущество*/
+  .first_part p {
+    font-family: opensans;
+  }
+  .second_part p{
+    font-family:  opensans;
+  }
+  .second_part h3 {
+    text-align: left;
+    font-family: opensans_bold;
+  }
+  .first_part {
+    text-align: center;
+    margin-top: 100px;
+  }
+  .first_part p {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+  .first_part h1 {
+    margin-top: 30px;
+  }
+  .second_part {
+    text-align: center;
+    margin-top: 60px;
+  }
+  .second_part .row {
+    margin: 0px;
+  }
+  .second_part .col1 {
+    background-color: white;
+    width: 24%;
+    height: auto;
+    margin-right: 10px;
+    margin-top: 20px;
+    border-radius: 30px;
+    color: black;
+    padding-top: 25px;
+    padding-left: 35px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    border: 4px solid #D8AE5F;
+    background-color: #27698D;
+  }
+  .icon_info {
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+  }
+  .second_part h6 {
+    text-align: left;
+    margin-top: 20px;
+    font-family: opensans_bold;
+    color: #D8AE5F;
+  }
+  .second_part p {
+    text-align: left;
+    margin-top: 10px;
+    font-family: opensans;
+    font-size: 14px;
+    color: white;
+  }
+  /*2 block наши преимущество end*/
+  /*info block*/
+  
+  .info_block .container{
+    text-align: center;
+  }
+  .info_block_comp img {
+    width: 20%;
+    height: 20%;
+    margin-top: 50px;
+  }
+  .info_block_comp h1 {
+    margin-top: 20px;
+    font-family: opensans_bold;
+  }
+  .info_block_comp p {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+  
+  /*info block end*/
+  /*info block 2*/
+  .info_block2 .col {
+    background-color: white;
+    width: 48%;
+    margin-left: 18px;
+    border-radius: 30px;
+    text-align: center;
+    border: 1px solid;
+  }
+  .col_option h2{
+    margin-top: 100px;
+  }
+  .info_block2 {
+    margin-top: 30px;
+  }
+  .info_block2 .col_img{
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  /*info block2 end*/
+  /*3 block наши туры*/
+  .our_tours h3 {
+    margin-top: 40px;
+    font-family: opensans_bold;
+  }
+  .our_tours h6 {
+    font-family: opensans_bold;
+    color:black;
+    margin-top: 5px;
+  }
+  .our_tours p {
+    font-family: opensans;
+    font-size: 14px;
+    color: black;
+  }
+  #min_block1 {
+    margin-top: 5px;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    margin-right: 25px;
+    width: 48%;
+    height: auto;
+    border: 4px solid #D8AE5F;
+    background-color: white;
+  }
+  #min_block2 {
+    margin-top: 5px;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 20px;
+    width: 48%;
+    height: auto;
+    border: 4px solid #D8AE5F;
+    background-color: white;
+  }
+  #min_blocks_12 {
+    border-radius: 30px;
+    margin-top: 20px;
+    height: auto;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 70px;
+    border: 4px solid #D8AE5F;
+    background-color: white;
+  }
+  .blocks {
+    margin-top: 30px;
+  }
+  .big_logo {
+    border-radius: 30px;
+    width: 100%;
+    height: auto;
+  
+  }
+  .our_tours button {
+    background-color: #22303A;
+    color: white;
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+  }
+  .our_tours button:hover {
+    background-color: #D8AE5F;
+    border: none;
+  }
+  #big_logo {
+    background-image: url(/public/img/form_background.png);
+    background-position: center;
+    background-size: cover;
+    border-radius: 30px;
+    width: 45%;
+    margin-left: 30px;
+    border: 4px solid #D8AE5F;
+  }
+  #big_logo h1{
+    color: white;
+    text-align: center;
+    margin-top: 240px;
+  }
+  /*3 block наши туры end*/
+  /*4 block пакет туров*/
+  .paket_tours button {
+    color: white;
+  }
+  .paket_tours h3 {
+    font-family: opensans_bold;
+    margin-bottom: 30px;
+    z-index: 500;
+  }
+  .paket_tours h5 {
+    font-family: opensans_bold;
+    width: 50%;
+  }
+  .paket_tours p {
+    width: 40%;
+  }
+  .paket_tours_carousel h5 {
+    font-family: opensans_bold;
+    font-size: 14px;
+    width: 40%;
+    height: 30px;
+  }
+  .paket_tours_carousel p {
+    font-size: 14px;
+    width: 50%;
+  }
+  .texts_tours li {
+    display: inline;
+    margin: 0;
+  }
+  .texts_tours {
+    margin: 0px;
+    padding: 0px;
+  }
+  .paket_tours .col {
+    margin-top: 20px;
+  }
+  #pakets1 {
+    width: 31%;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    border: 5px solid transparent;
+    /*border-image: 
+      linear-gradient(to left top, #adf2f7 10%, transparent 30%, transparent 70%, #adf2f7 90%);
+    border-image-slice: 1;*/
+    box-shadow: 10px 7px 5px #adf2f7;
+    border-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius:20px;
+    padding: 10px;
+  }#pakets2 {
+    width: 31%;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    border: 5px solid transparent;
+    /*border-image: 
+      linear-gradient(to left top, #2DA771 10%, transparent 30%, transparent 70%, #2DA771 90%);
+    border-image-slice: 1;*/
+    box-shadow: 10px 7px 5px #2da771;
+    border-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius:20px;
+    padding: 10px;
+  }#pakets3 {
+    width: 31%;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    border: 5px solid transparent;
+    /*border-image: 
+      linear-gradient(to left top, #9747FF 10%, transparent 30%, transparent 70%, #9747FF 90%);
+    border-image-slice: 1;*/
+    box-shadow: 10px 7px 5px #9747ff;
+    border-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius:20px;
+    padding: 10px;
+  }
+  #pakets1 h3, #pakets2 h3, #pakets3 h3 {
+    margin-top: 40px;
+    color: #D8AE5F;
+  }
+  .text_left, .text_right {
+    float: left;
+    width: 50%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .icon_tours {
+    width: auto;
+  }
+  .text_right {
+    float: right;
+    width: 30%;
+    text-align: right;
+  }
+  .paket_tours_text {
+    margin-top: 50px;
+  }
+  .paket_tours button {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #D8AE5F;
+    border:none;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: opensans_bold;
+    font-size: 20px;
+  }
+  .paket_tours button:hover {
+    background-color:#22303A;
+  }
+  #pakets p {
+    text-align: right;
+  }
+  .hotel_stars {
+    float: right;
+  }
+  .price {
+    text-align: right;
+    font-size: 20px;
+    width: 60%;
+    font-family: opensans_bold;
+  }
+  .price_text {
+    font-family: opensans_bold;
+    width: 40%;
+  }
+  /*4 block пакет туров*/
+  
+  /*block пакет туров карусель*/
+  
+  .paket_tours_carousel h3 {
+    font-family: opensans_bold;
+  }
+  
+  .paket_tours_carousel button {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #D8AE5F;
+    border:none;
+    padding: 8px;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    font-family: opensans_bold;
+  }
+  .paket_tours_carousel button:hover {
+    background-color:#22303A;
+  }
+  .text_left {
+    text-align: left;
+  }
+  .paket_tours_carousel {
+    display: none;
+  }
+  .wrapper2 {
+    max-height: 570px;
+    display: flex;
+    overflow: auto;
+  }
+  .wrapper2::-webkit-scrollbar {
+    width: 0;
+  }
+  .wrapper2 .item2 {
+    min-width: 200px;
+    height: 500px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 150px;
+  }
+  .item2 .card {
+    background: none;
+    border: none;
+  }
+  /*block пакет туров карусель end*/
+  
+  
+  /*5 block гиды*/
+  .gids h3 {
+    margin-top: 50px;
+    font-family: opensans_bold;
+  }
+  .gids h5 {
+    font-family: opensans_bold;
+    font-size: 18px;
+  }
+  .info_gids {
+    padding-right: 500px;
+  }
+  .gids .card {
+    border-radius: 20px;
+    background-color: #27698D;
+    color: white;
+  }
+  .stars {
+    margin-bottom: 10px;
+  }
+  .wrapper {
+    max-height: 770px;
+    display: flex;
+    overflow: auto;
+  }
+  .wrapper::-webkit-scrollbar {
+    width: 0;
+  }
+  .wrapper .item {
+    min-width: 150px;
+    height: 700px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 150px;
+  }
+  .img_gid {
+    border-radius: 20px;
+  }
+  /*5 block гиды*/
+  /*application soon*/
+  .app .container{
+    background-color: #27698D;
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    color: white;
+  }
+  .texts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .texts h1 {
+    width: 100%;
+    height: auto;
+    font-family: opensans_bold;
+  }
+  .texts p {
+    width: 100%;
+    height: auto;
+  }
+  .iphones img {
+    margin-top: 55px;
+    width: 70%;
+    height: 450px;
+  }
+  .app button {
+    color: white;
+    font-size: large;
+    border-radius: 10px;
+    padding: 10px;
+    width: 30%;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    border: none;
+    transition: 1s;
+  }
+  .app button:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+  .iphones {
+    text-align: center;
+  }
+  .iphones2 {
+    display: none;
+  }
+  /*application soon*/
+  /*6 block отзывы*/
+  .feedbacks .feedbacksmin{
+    background-color: white;
+    margin-left: 15px;
+    margin-top: 15px;
+    border-radius: 20px;
+  }
+  .button_next {
+    background-color: aqua;
+  }/*6 block end отзывы*/
+  /*7 block новости*/
+  .news {
+    margin-top: 50px;
+  }
+  .button_news {
+    text-align: right;
+  }
+  .news_row .col {
+    margin-top: 25px;
+  }
+  .news_row h5 {
+    width: 100%;
+    font-size:medium;
+  }
+  .news_row p {
+    font-family: opensans;
+  }
+  /*7 block end новости*/
+  /*8 block вопросы и ответы*/
+  .qua_ans {
+    margin-top: 50px;
+  }
+  .accordion {
+    width: 100%;
+  }
+  .text_in_qua h2 {
+    width: 100%;
+    font-family: opensans_bold;
+  }
+  .qua_text2 {
+    display: none;
+    font-family: opensans_bold;
+  }
+  .qua h2 {
+    font-family: opensans_bold;
+  }
+  /*8 block end вопросы и ответы*/
+  /*9 block footer*/
+  .logo_for_footer {
+    width: 150px;
+    height: 60px;
+    margin-top: 30px;
+  }
+  .footer {
+    background-color: white;
+  }
+  .texts_infoot {
+    margin-top: 30px;
+  }
+  .texts_infoot img {
+    width: 150px;
+    height: 50px;
+  }
+  .map {
+    margin-top: 50px;
+  }
+  .soc_icons {
+    width: 40px;
+    height: 40px;
+  }
+  .map button {
+    background-color: #22303A;
+    border-radius: 10px;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .text_office {
+    margin-top: 30px;
+  }
+  .footer a {
+    text-decoration: none;
+    color: black;
+  }
+  #map {
+    width: 100%;
+    height: auto;
+  }
+  .texts_infoot h4 {
+    font-family: opensans_bold;
+  }
+  .map h4 {
+    font-family: opensans_bold;
+  }
+  /*9 block end footer*/
+  /*пакет туров страница*/
+  .paket_tours_page .col {
+    background-color: white;
+  }
+  .paket_tours_page h3 {
+    margin-top: 50px;
+  }
+  header {
+    background-color: white;
+  }
+  /*пакет туров страница end*/
+  /*form*/
+  .form2 {
+    background-image: url(/public/img/form_background.png);
+    border-radius: 30px;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    width: 45%;
+  }
+  .form button{
+    background: none;
+    border: none;
+    color: black;
+    text-decoration: underline;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  .form button:hover {
+    background: none;
+    color: black;
+  }
+  .form2 h1{
+    color: white;
+    margin-top: 200px;
+  }
+  .form1 {
+    background-color: white;
+    border-radius: 20px;
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    border: 2px solid;
+    width: 45%;
+    margin-right: 10px;
+    text-align: center;
+  }
+  .form {
+    margin-top: 30px;
+  }
+  .form input, .submit_boot {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid black
+  }
+  #submit {
+    background-color: #22303A;
+    color: white;
+  }
+  .bottom_text {
+    padding-top: 50px;
+  }
+  .bottom_text a {
+    margin: 0px;
+    text-decoration: underline;
+    color: #3278E1;
+  }
+  .form1 h2, .form1 label {
+    font-family: opensans_bold;
+  }
+  /*form end*/
+  
+  /*Adaptive*/
+  @media (max-width: 1400px) {
+    #min_block1 {
+      margin-right: 15px;
+    }
+    #pakets {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+   
+    .form1 {
+      width: 100%;
+      text-align: center;
+    }
+    .paket_tours P {
+      width: 50%;
+    }
+    .paket_tours h5 {
+      font-size: 18px;
+      width: 40%;
+    }
+  }
+  @media (max-width: 1200px) {
+    #min_block2 {
+      margin:0px;
+    }
+    .gids h3 {
+      text-align: center;
+    }
+    .info_gids {
+      text-align: center;
+      padding: 0px
+    }
+    #pakets h5 {
+      font-size: 15px;
+    }
+    .price {
+      font-size: 18px;
+      margin-top: 5px;
+      width: 60%;
+    }
+    .second_part .col1 {
+      width: 48%;
+    }
+    .info_block p {
+      padding-left: 200px;
+      padding-right: 200px;
+    }
+  }
+  @media (max-width: 990px) {
+    #big_logo {
+      display: none;
+      width: 0px;
+    }
+    .left_part {
+      width: 100%;
+    }
+    #min_block1 {
+      margin-right: 0px;
+    }
+    #min_block2 {
+      margin-left: 15px;
+    }
+    .second_part .col {
+      padding-left: 15px;
+    }
+    .paket_tours p{
+      font-size: 12px;
+      width: 30%;
+    }
+    .paket_tours h5 {
+      font-size: 14px;
+      width: 45%;
+    }
+    .paket_tours_text {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    #pakets1, #pakets2, #pakets3 {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .info_block2 .col {
+      width: 47%;
+    }
+    .info_block2 .col_option h2 {
+      margin-top: 70px;
+    }
+    .iphones img {
+      width: 90%;
+      height: 350px;
+    }
+    .form2 {
+      display: none;
+      width: 0px;
+    }
+    .info_block p {
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+    .hotel_stars img{
+      width: 20%;
+      height: 20%;
+    }
+    .hotel_stars {
+      text-align: right;
+      width: 35%;
+    }
+    .price {
+      font-size: 14px;
+    }
+    .price_text {
+      font-size: 18px;
+    }
+  
+  }
+  @media (max-width: 770px) {
+    .first_part p {
+      padding: 0px;
+    }
+    .second_part .col {
+      padding-left: 10px;
+    }
+    .second_main_block {
+      display: none;
+    }
+    #pakets {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .second_part .col1 {
+      width: 47%;
+    }
+    #pakets1, #pakets2, #pakets3 {
+      width: 90%;
+      margin-left: 15px;
+      margin-bottom: 15px;
+    }
+    .app button {
+      width: 70%;
+    }
+    .bottom_text p {
+      font-size: 10px;
+    }
+    .info_block2 .col{
+      width: 46%;
+    }
+    .info_block2 .col_option h2 {
+      margin-top: 30px;
+    }
+    .paket_tours_carousel {
+      display: block;
+    }
+    .paket_tours_none {
+      display: none;
+    }
+    .iphones img {
+      height: 250px;
+    }
+    .info_block p {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    .qua_text2 {
+      display: block;
+      text-align: center;
+    }
+    .text_in_qua h2 {
+      display: none;
+    }
+    .qua {
+      width: 100%;
+    }
+    .price {
+      font-size: 17px;
+    }
+  
+  }
+  
+  @media (max-width: 501px) {
+    .iphones {
+      display: none;
+    }
+    .iphones2 {
+      display: block;
+      padding: 0px;
+      height: 60%;
+    }
+    .iphones2 img {
+      width: 70%;
+      height: 70%;
+      border-radius: 30px;
+      margin-top: 50px;
+    }
+    .app .container {
+      padding-top: 50px;
+    }
+    .app .container {
+      padding-bottom: 0px;
+    }
+    .app .container {
+      text-align: center;
+    }
+    .second_part .col1 {
+      width: 45%;
+      padding: 5px;
+    }
+    .second_part .col1 p {
+      display: none;
+    }
+    .second_part .col1 h6 {
+      text-align: center;
+    }
+    .info_block2 .col {
+      width: 100%;
+      margin-left: 0px;
+      margin-top: 20px;
+    }
+    .info_block2 .col_option h2 {
+      margin-top: 20px;
+    }
+    .info_block p {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .texts_infoot h4 {
+      font-size: 18px;
+    }
+    .google_map {
+      display: none;
+    } 
+    .without_map {
+      width: 100%;
+      text-align: center;
+    }
+    .p_foot {
+      margin-left: 140px;
+    }
+  }
+  @media (max-width: 550px) {
+    #submit {
+      margin-top: 10px;
+    }
+  }
+  @media (max-width: 374px) {
+    #min_block1 {
+      width: 100%;
+    }
+    #min_block2 {
+      width: 100%;
+      margin-left: 0px;
+      margin-top: 20px;
+    }
+    .logo_for_footer {
+      width: 100px;
+      height: 40px;
+    }
+  }
+  /*Adaptive end*/
+  
+  /*Animation*/
+  #main_image {
+    transition: 1s;
+  }
+  #main_image:hover {
+    transform: scale(1.1);
+    transition: 1s; 
+  }
+  .with-border-gradient {
+    transition: 1s;
+  }
+  .with-border-gradient:hover {
+    transform: scale(1.1);
+    transition: 1s;
+  }
+  .wrapper .card {
+    transition: 1s;
+  }
+  .wrapper .card:hover {
+    transform: scale(1.1);
+    transition: 1s; 
+  }
+  /*Animation end*/
+  
+  .btn-up {
+    /* фиксированное позиционирование */
+    position: fixed;
+    /* цвет фона */
+    background-color: #27698D;
+    /* расстояние от правого края окна браузера */
+    right: 20px;
+    /* расстояние от нижнего края окна браузера */
+    bottom: 0;
+    /* скругление верхнего левого угла */
+    border-top-left-radius: 8px;
+    /* скругление верхнего правого угла */
+    border-top-right-radius: 8px;
+    /* вид курсора */
+    cursor: pointer;
+    /* отображение элемента как flex */
+    display: flex;
+    /* выравниваем элементы внутри элемента по центру вдоль поперечной оси */
+    align-items: center;
+    /* выравниваем элементы внутри элемента по центру вдоль главной оси */
+    justify-content: center;
+    /* ширина элемента */
+    width: 60px;
+    /* высота элемента */
+    height: 50px;
+  }
+  
+  .btn-up::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+  }
+  
+  .btn-up_hide {
+    display: none;
+  }
+  
+  @media (hover: hover) and (pointer: fine) {
+    .btn-up:hover {
+      background-color: #D8AE5F; /* цвет заднего фона при наведении */
+    }
+  }
