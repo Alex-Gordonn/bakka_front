@@ -208,7 +208,8 @@
             <div class="row pakets">
               <div class="col-4 paketter with-border-gradient wow animate__animated animate__slideInUp" id="pakets1">
                     <h3>Стандард</h3>
-                    <hr>
+                    <h4>{{ t('date_tour') }}</h4>
+                    <div class="places"><h6>Всего мест: 300</h6><h6>Осталось мест: 300</h6></div>
                     <img class="text_left icon_tours" src="./img/calendar.svg" alt="">
                     <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
                     <p class="text_right lng-duration1_option">{{ t('duration1_option') }}</p>
@@ -231,14 +232,18 @@
                     </div>
                     <div style="clear: left;"></div>
                     <hr>
-                    <h4 class="text_left price_text lng-price_text1"></h4>
+                    <h4 class="text_left price_text lng-price_text1">{{ t('price_text1') }}</h4>
                     <h4 class="text_right price">400 $ | 230.000 ₸</h4>
                     <div style="clear: left;"></div>
-                    <button  class="lng-book1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book1') }}</button>
-            </div>
+                    <div class="book_consult">
+                    <button class="lng-book2 book" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
+                    <button class="lng-book2 consultation" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('consultation') }}</button>            
+                  </div>
+                  </div>
             <div class="col-4 with-border-gradient wow animate__animated animate__slideInUp" id="pakets2">
               <h3>Komfort</h3>
-              <hr>
+              <h4>{{ t('date_tour') }}</h4>
+              <div class="places"><h6>Всего мест: 300</h6><h6>Осталось мест: 300</h6></div>
               <img class="text_left icon_tours" src="./img/calendar.svg" alt="">
                     <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
                     <p class="text_right lng-duration1_option">{{ t('duration1_option') }}</p>
@@ -261,14 +266,18 @@
                     </div>
                     <div style="clear: left;"></div>
                     <hr>
-                    <h4 class="text_left price_text lng-price_text2"></h4>
+                    <h4 class="text_left price_text lng-price_text2">{{ t('price_text2') }}</h4>
                     <h4 class="text_right price ">400 $ | 230.000 ₸</h4>
                     <div style="clear: left;"></div>
-                    <button class="lng-book2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
+                    <div class="book_consult">
+                    <button class="lng-book2 book" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
+                    <button class="lng-book2 consultation" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('consultation') }}</button>
+                    </div>
               </div>
               <div class="col-4 with-border-gradient wow animate__animated animate__slideInUp" id="pakets3">
               <h3>Komfort+</h3>
-              <hr>
+              <h4>{{ t('date_tour') }}</h4>
+              <div class="places"><h6>Всего мест: 300</h6><h6>Осталось мест: 300</h6></div>
               <img class="text_left icon_tours" src="./img/calendar.svg" alt="">
                     <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
                     <p class="text_right lng-duration1_option">{{ t('duration1_option') }}</p>
@@ -291,11 +300,13 @@
                         </div>
                         <div style="clear: left;"></div>
                         <hr>
-                        <h4 class="text_left price_text lng-price_text3"></h4>
+                        <h4 class="text_left price_text lng-price_text3">{{ t('price_text3') }}</h4>
                         <h4 class="text_right price">400 $ | 230.000 ₸</h4>
                         <div style="clear: left;"></div>
-                        <button class="lng-book3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book3') }}</button>
-            </div>
+                        <div class="book_consult">
+                        <button class="lng-book2 book" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
+                        <button class="lng-book2 consultation" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('consultation') }}</button>            </div>
+          </div>
           </div>
         </div>
       </div>
@@ -469,6 +480,13 @@
             <div class="card" style="width: 18rem;">
               <img src="./img/gid1.jpeg" class="card-img-top img_gid" alt="...">
               <div class="card-body">
+                <div class="stars_gid">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">                    
+                </div>
                 <h5 class="card-title lng-name1">{{ t('name1') }}</h5>
                 <h5 class="card-title lng-name1">{{ t('age1') }}</h5>
                 <p class="card-text lng-work1">{{ t('work1') }}</p>
@@ -481,6 +499,13 @@
             <div class="card" style="width: 18rem;">
               <img src="./img/gid2.jpeg" class="card-img-top img_gid" alt="...">
               <div class="card-body">
+                <div class="stars_gid">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">                    
+                </div>
                 <h5 class="card-title lng-name1">{{ t('name2') }}</h5>
                 <h5 class="card-title lng-name1">{{ t('age2') }}</h5>
                 <p class="card-text lng-work1">{{ t('work2') }}</p>
@@ -493,6 +518,13 @@
             <div class="card" style="width: 18rem;">
               <img src="./img/gid3.jpeg" class="card-img-top img_gid" alt="...">
               <div class="card-body">
+                <div class="stars_gid">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">                    
+                </div>
                 <h5 class="card-title lng-name1">{{ t('name3') }}</h5>
                 <h5 class="card-title lng-name1">{{ t('age3') }}</h5>
                 <p class="card-text lng-work1">{{ t('work3') }}</p>
@@ -505,6 +537,13 @@
             <div class="card" style="width: 18rem;">
               <img src="./img/gid4.jpeg" class="card-img-top img_gid" alt="...">
               <div class="card-body">
+                <div class="stars_gid">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">                    
+                </div>
                 <h5 class="card-title lng-name1">{{ t('name4') }}</h5>
                 <h5 class="card-title lng-name1">{{ t('age4') }}</h5>
                 <p class="card-text lng-work1">{{ t('work4') }}</p>
@@ -517,6 +556,13 @@
             <div class="card" style="width: 18rem;">
               <img src="./img/gid5.jpeg" class="card-img-top img_gid" alt="...">
               <div class="card-body">
+                <div class="stars_gid">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">
+                    <img src="./img/Star.svg" alt="">                    
+                </div>
                 <h5 class="card-title lng-name1">{{ t('name5') }}</h5>
                 <h5 class="card-title lng-name1">{{ t('age5') }}</h5>
                 <p class="card-text lng-work1">{{ t('work5') }}</p>
@@ -740,10 +786,8 @@
             <h2 class="lng-form_text">{{t('form_text')}}</h2>
             <p class="lng-form_option">{{ t('form_option') }}</p>
             <form method="post" action="https://script.google.com/macros/s/AKfycbxPOuwcJU8Qg4mGfbmDXIRA6iqvyQSTqK0VcSL0wR5qEdWnJYrDvKntI6l7rAs7OHXs8A/exec" name="contact-form">
-            <label for="your-name" class="lng-form_name_foot">{{t('form_name_foot')}}</label><br>
-            <input type="text" id="your-name" name="your-name" ><br>
-            <label for="your-number" class="lng-form_number_foot">{{ t('form_number_foot') }}</label><br>
-            <input type="text" id="your-number" name="your-number"><br><br>
+            <input type="text" id="your-name" name="your-name" placeholder="Ваше имя" >
+            <input type="text" id="your-number" name="your-number" placeholder="Номер телефона">
             <input type="submit" id="submit">
             </form>
             <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -799,7 +843,7 @@
            <div class="row">
             <div class="col-5">
               <img class="logo_for_footer" src="../Bakka_new_logo/bakka_logo_gold.svg" alt="">
-              <p>© Copyright 2023 BAKKA TRAVEL</p>
+              <p>© Copyright 2024 BAKKA TRAVEL</p>
             </div>
             <div class="col-7">
               <div class="row">
@@ -990,8 +1034,8 @@ export default {
         ru : "Горящие туры",
     },
     hot_tours_options : {
-        kz : "2023 жылға арналған Мекке мен Мединаға саяхаттауға арналған ең жақсы мәмілелер",
-        ru : "Самые выгодные предложения для путешествия  в Мекку и Медину на 2023 год",
+        kz : "2024 жылға арналған Мекке мен Мединаға саяхаттауға арналған ең жақсы мәмілелер",
+        ru : "Самые выгодные предложения для путешествия  в Мекку и Медину на 2024 год",
     },
     details3 : {
         kz : "Барлық ұсыныстарды қараңыз",
@@ -1326,24 +1370,24 @@ export default {
         ru : "Есть ли возрастные ограничения для поездки в Саудовскую Аравию?",
     },
     first_ans : {
-        kz : "Сауд Арабиясы 2023 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
-        ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2023 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
+        kz : "Сауд Арабиясы 2024 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
+        ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2024 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
     },
     second_ans : {
-        kz : "Сауд Арабиясы 2023 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
-        ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2023 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
+        kz : "Сауд Арабиясы 2024 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
+        ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2024 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
     },
     third_ans : {
-        kz : "Сауд Арабиясы 2023 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
-        ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2023 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
+        kz : "Сауд Арабиясы 2024 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
+        ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2024 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
     },
     fourth_ans : {
-        kz : "Сауд Арабиясы 2023 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
-        ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2023 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
+        kz : "Сауд Арабиясы 2024 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
+        ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2024 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
     },
     fifth_ans : {
-        kz : "Сауд Арабиясы 2023 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
-        ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2023 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
+        kz : "Сауд Арабиясы 2024 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
+        ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2024 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
     },
     second_qua : {
         kz : "Екі бағытты бір турға қосуға бола ма?",
@@ -1433,6 +1477,14 @@ export default {
         kz : "Ескерту",
         ru : "Примечание",
     },
+    date_tour: {
+      kz: "1 маусым - 15 шілде 2024",
+      ru: "1 июня - 15 июля 2024 "
+    },
+    consultation: {
+      kz: "Кеңес беру",
+      ru: "Консультация"
+    }
       },
     };
   },

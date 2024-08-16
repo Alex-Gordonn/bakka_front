@@ -7,7 +7,7 @@
     src: url(/open_sans/OpenSans-Bold.ttf);
   }
   @font-face {
-    font-family: opnsans_light;
+    font-family: opensans_light;
     src: url(/open_sans/OpenSans-Light.ttf);
   }
   body {
@@ -52,9 +52,10 @@
   .nav_links a {
     font-size: larger;
     color: black;
-    font-family: opensans_bold;
+    font-family: opensans_light;
     margin-top: 8px;
-    margin-right: 20px;
+    margin-right: 50px;
+    font-weight: bold;
   }
   .nav_links a:hover {
     color: #D8AE5F;
@@ -307,11 +308,9 @@
   }
   .paket_tours h3 {
     font-family: opensans_bold;
-    margin-bottom: 30px;
     z-index: 500;
   }
   .paket_tours h5 {
-    font-family: opensans_bold;
     width: 50%;
   }
   .paket_tours p {
@@ -347,7 +346,7 @@
     /*border-image: 
       linear-gradient(to left top, #adf2f7 10%, transparent 30%, transparent 70%, #adf2f7 90%);
     border-image-slice: 1;*/
-    box-shadow: 10px 7px 5px #adf2f7;
+    box-shadow: 5px 5px 3px #adf2f7;
     border-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-left-radius:20px;
@@ -361,7 +360,7 @@
     /*border-image: 
       linear-gradient(to left top, #2DA771 10%, transparent 30%, transparent 70%, #2DA771 90%);
     border-image-slice: 1;*/
-    box-shadow: 10px 7px 5px #2da771;
+    box-shadow: 5px 5px 3px #2da771;
     border-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-left-radius:20px;
@@ -375,7 +374,7 @@
     /*border-image: 
       linear-gradient(to left top, #9747FF 10%, transparent 30%, transparent 70%, #9747FF 90%);
     border-image-slice: 1;*/
-    box-shadow: 10px 7px 5px #9747ff;
+    box-shadow: 5px 5px 3px #9747ff;
     border-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-left-radius:20px;
@@ -383,7 +382,6 @@
   }
   #pakets1 h3, #pakets2 h3, #pakets3 h3 {
     margin-top: 40px;
-    color: #D8AE5F;
   }
   .text_left, .text_right {
     float: left;
@@ -402,19 +400,44 @@
   .paket_tours_text {
     margin-top: 50px;
   }
-  .paket_tours button {
-    width: 100%;
+  .book_consult {
+    display: flex;
+    justify-content: space-between;
+  }
+  .paket_tours .book {
+    width: 150px;
     margin-top: 10px;
     margin-bottom: 20px;
-    background-color: #D8AE5F;
+    background-color: #22303A;
     border:none;
-    padding: 10px;
     border-radius: 10px;
-    font-family: opensans_bold;
-    font-size: 20px;
+    font-family: opensans_light;
+    margin-right: 20px;
+    padding-right: 50px;
+    padding-left: 20px;
   }
-  .paket_tours button:hover {
-    background-color:#22303A;
+  .paket_tours .consultation {
+    width: 150px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid #3A688A;
+    border-radius: 10px;
+    font-family: opensans_light;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+
+  }
+  .paket_tours .book:hover {
+    background-color:#D8AE5F;
+  }
+  .consultation:hover {
+    background-color: #D8AE5F;
+    color: white;
+    border: none;
   }
   #pakets p {
     text-align: right;
@@ -432,6 +455,18 @@
     font-family: opensans_bold;
     width: 40%;
   }
+  .places h6 {
+    background-color: #F1F1F1;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 8px;
+  }
+  .places {
+    display: flex;
+    justify-content: space-between;
+  }
   /*4 block пакет туров*/
   
   /*block пакет туров карусель*/
@@ -444,7 +479,7 @@
     width: 100%;
     margin-top: 10px;
     margin-bottom: 20px;
-    background-color: #D8AE5F;
+    background-color: #22303A;
     border:none;
     padding: 8px;
     color: white;
@@ -453,7 +488,7 @@
     font-family: opensans_bold;
   }
   .paket_tours_carousel button:hover {
-    background-color:#22303A;
+    background-color:#D8AE5F;
   }
   .text_left {
     text-align: left;
@@ -484,21 +519,31 @@
   
   
   /*5 block гиды*/
+  .gids {
+    margin-top: 100px;
+  }
   .gids h3 {
-    margin-top: 50px;
     font-family: opensans_bold;
   }
   .gids h5 {
     font-family: opensans_bold;
     font-size: 18px;
   }
+  .name1 {
+    margin-bottom: 12px;
+  }
+  .stars_gid {
+    margin-bottom: 8px;
+  }
+  .gids p {
+    margin-bottom: 5px;
+  }
   .info_gids {
     padding-right: 500px;
   }
   .gids .card {
     border-radius: 20px;
-    background-color: #27698D;
-    color: white;
+    color: black;
   }
   .stars {
     margin-bottom: 10px;
@@ -515,11 +560,13 @@
     min-width: 150px;
     height: 700px;
     line-height: 30px;
-    text-align: center;
     margin-right: 150px;
   }
   .img_gid {
-    border-radius: 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius:20px;
+    height: 300px;
+    object-fit: cover;
   }
   /*5 block гиды*/
   /*application soon*/
@@ -640,6 +687,7 @@
   .soc_icons {
     width: 40px;
     height: 40px;
+    margin-left: 5px;
   }
   .map button {
     background-color: #22303A;
@@ -700,8 +748,15 @@
   }
   .form2 h1{
     color: white;
-    margin-top: 200px;
+    margin-top: 120px;
   }
+  .form h2 {
+    margin-bottom: 20px;
+  }
+  .form p {
+    margin-bottom: 20px;
+  }
+
   .form1 {
     background-color: white;
     border-radius: 20px;
@@ -711,19 +766,21 @@
     border: 2px solid;
     width: 45%;
     margin-right: 10px;
-    text-align: center;
   }
   .form {
     margin-top: 30px;
   }
   .form input, .submit_boot {
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 10px;
-    border: 1px solid black
+    border: 1px solid #D6D6D7;
+    margin-right: 10px;
+    margin-bottom: 35px;
   }
   #submit {
     background-color: #22303A;
     color: white;
+    width: 150px;
   }
   .bottom_text {
     padding-top: 50px;
@@ -759,6 +816,9 @@
       font-size: 18px;
       width: 40%;
     }
+    .places h6 {
+      padding: 5px 10px;
+    }
   }
   @media (max-width: 1200px) {
     #min_block2 {
@@ -788,6 +848,9 @@
     }
     .texts button {
       width: 50%;
+    }
+    .places h6 {
+      padding: 3px 8px;
     }
   }
   @media (max-width: 990px) {
