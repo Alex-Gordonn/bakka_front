@@ -693,7 +693,7 @@
   /*пакет туров страница end*/
   /*form*/
   .form2 {
-    background-image: url(/public/img/form_background.png);
+    background-image: url(/img/form_background.png);
     border-radius: 30px;
     background-position: center;
     background-size: cover;
