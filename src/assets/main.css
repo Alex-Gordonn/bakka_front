@@ -15,7 +15,7 @@
     font-family: opensans;
   }
   .main {
-    background-image: url(/back_logo.svg);
+    background-color: #F1F1F1;
     background-repeat: repeat;
     background-position: center top;
     background-size: auto;
