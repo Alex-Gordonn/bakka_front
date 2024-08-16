@@ -4,7 +4,7 @@
     <nav class="navbar navbar-expand-lg navbar-light ">
       <div class="container">
         <!--logo-->
-        <a class="navbar-brand "  href="#"><img src="./img/logo.svg" alt="" width="146.65px" height="46.37px"></a>
+        <a class="navbar-brand "  href="#"><img src="../Bakka_new_logo/bakka_logo_gradient.svg" alt="" width="146.65px" height="46.37px"></a>
         <!--logo-->
         <!--Toogle botton-->
         <button class="navbar-toggler shodow-none border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" >
@@ -51,7 +51,7 @@
     <div class="main">
     <div data-wow-duration:30s class="main_block wow animate__animated animate__fadeIn">
       <div class="container"> 
-        <img src="./img/logo2.png" alt="" class="logo2">
+        <img src="../Bakka_new_logo/bakka_logo_white.svg" alt="" class="logo2">
         <h1>{{ t('mekkaandmedina') }}</h1>
         <h5>{{ t('bakkatravel') }}</h5>
         <button onclick="window.location.href = '#tours'">{{ t('choose_tour') }}</button>
@@ -72,8 +72,7 @@
     <div class="container" id="info_block">        
       <!--indo block 1-->
     <div class="info_block_comp">
-      <img src="./img/single_logo2.png" alt="">
-      <h1>BAKKA TRAVEL</h1>
+      <img src="../Bakka_new_logo/bakka_logo_gold.svg" alt="">
       <p class="lng-options">{{t('options')  }}</p>
     </div>
     </div>
@@ -235,7 +234,7 @@
                     <h4 class="text_left price_text lng-price_text1"></h4>
                     <h4 class="text_right price">400 $ | 230.000 ₸</h4>
                     <div style="clear: left;"></div>
-                    <button  class="lng-book1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
+                    <button  class="lng-book1" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book1') }}</button>
             </div>
             <div class="col-4 with-border-gradient wow animate__animated animate__slideInUp" id="pakets2">
               <h3>Komfort</h3>
@@ -265,7 +264,7 @@
                     <h4 class="text_left price_text lng-price_text2"></h4>
                     <h4 class="text_right price ">400 $ | 230.000 ₸</h4>
                     <div style="clear: left;"></div>
-                    <button class="lng-book2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
+                    <button class="lng-book2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
               </div>
               <div class="col-4 with-border-gradient wow animate__animated animate__slideInUp" id="pakets3">
               <h3>Komfort+</h3>
@@ -295,7 +294,7 @@
                         <h4 class="text_left price_text lng-price_text3"></h4>
                         <h4 class="text_right price">400 $ | 230.000 ₸</h4>
                         <div style="clear: left;"></div>
-                        <button class="lng-book3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
+                        <button class="lng-book3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book3') }}</button>
             </div>
           </div>
         </div>
@@ -337,7 +336,7 @@
                 <h4 class="text_left price_text lng-price_text1_carousel1"></h4>
                 <h4 class="text_right price">400 $ | 230.000 ₸</h4>
                 <div style="clear: left;"></div>
-                <button class="lng-book1_carousel1"type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
+                <button class="lng-book1_carousel1"type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book1') }}</button>
             </div>
             </div>
           </div>
@@ -371,7 +370,7 @@
                 <h4 class="text_left price_text lng-price_text2_carousel2"></h4>
                 <h4 class="text_right price">400 $ | 230.000 ₸</h4>
                 <div style="clear: left;"></div>
-                <button class="lng-book2_carousel2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
+                <button class="lng-book2_carousel2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
             </div>
             </div>
           </div>
@@ -405,7 +404,7 @@
                 <h4 class="text_left price_text lng-price_text3_carousel3"></h4>
                 <h4 class="text_right price">400 $ | 230.000 ₸</h4>
                 <div style="clear: left;"></div>
-                <button class="lng-book3_carousel3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"></button>
+                <button class="lng-book3_carousel3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{t('book1')}}</button>
             </div>
             </div>
           </div>
@@ -794,7 +793,7 @@
         <div class="container">
            <div class="row">
             <div class="col-5">
-              <img class="logo_for_footer" src="./img/logo.png" alt="">
+              <img class="logo_for_footer" src="../Bakka_new_logo/bakka_logo_gold.svg" alt="">
               <p>© Copyright 2023 BAKKA TRAVEL</p>
             </div>
             <div class="col-7">
