@@ -15,7 +15,7 @@
     font-family: opensans;
   }
   .main {
-    background-image: url(/back_logo.svg);
+    background-image: url(../img/bakka_pattern.svg);
     background-repeat: repeat;
     background-position: center top;
     background-size: auto;
