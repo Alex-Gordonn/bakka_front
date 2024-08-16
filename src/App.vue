@@ -145,7 +145,7 @@
     <!--Our tours-->
     <div class="our_tours">
       <div class="container">
-        <h3 class="wow animate__animated animate__fadeInLeft lng-our_tours_text"></h3>
+        <h3 class="wow animate__animated animate__fadeInLeft lng-our_tours_text">{{ t('our_tours_text') }}</h3>
           <div class="blocks">
             <div class="row">
               <div class="col-6 left_part">
@@ -467,9 +467,10 @@
         <div class="wrapper">
           <div class="item">
             <div class="card" style="width: 18rem;">
-              <img src="./img/gid.png" class="card-img-top img_gid" alt="...">
+              <img src="./img/gid1.jpeg" class="card-img-top img_gid" alt="...">
               <div class="card-body">
                 <h5 class="card-title lng-name1">{{ t('name1') }}</h5>
+                <h5 class="card-title lng-name1">{{ t('age1') }}</h5>
                 <p class="card-text lng-work1">{{ t('work1') }}</p>
                 <p class="card-text lng-education1">{{ t('education1') }}</p>
                 <p class="card-text lng-languages1">{{ t('languages1') }}</p>
@@ -478,45 +479,49 @@
           </div>
           <div class="item">
             <div class="card" style="width: 18rem;">
-              <img src="./img/gid.png" class="card-img-top img_gid" alt="...">
+              <img src="./img/gid2.jpeg" class="card-img-top img_gid" alt="...">
               <div class="card-body">
-                <h5 class="card-title lng-name1">{{ t('name1') }}</h5>
-                <p class="card-text lng-work1">{{ t('work1') }}</p>
-                <p class="card-text lng-education1">{{ t('education1') }}</p>
-                <p class="card-text lng-languages1">{{ t('languages1') }}</p>
+                <h5 class="card-title lng-name1">{{ t('name2') }}</h5>
+                <h5 class="card-title lng-name1">{{ t('age2') }}</h5>
+                <p class="card-text lng-work1">{{ t('work2') }}</p>
+                <p class="card-text lng-education1">{{ t('education2') }}</p>
+                <p class="card-text lng-languages1">{{ t('languages2') }}</p>
               </div>
             </div>
           </div>
           <div class="item">
             <div class="card" style="width: 18rem;">
-              <img src="./img/gid.png" class="card-img-top img_gid" alt="...">
+              <img src="./img/gid3.jpeg" class="card-img-top img_gid" alt="...">
               <div class="card-body">
-                <h5 class="card-title lng-name1">{{ t('name1') }}</h5>
-                <p class="card-text lng-work1">{{ t('work1') }}</p>
-                <p class="card-text lng-education1">{{ t('education1') }}</p>
-                <p class="card-text lng-languages1">{{ t('languages1') }}</p>
+                <h5 class="card-title lng-name1">{{ t('name3') }}</h5>
+                <h5 class="card-title lng-name1">{{ t('age3') }}</h5>
+                <p class="card-text lng-work1">{{ t('work3') }}</p>
+                <p class="card-text lng-education1">{{ t('education3') }}</p>
+                <p class="card-text lng-languages1">{{ t('languages3') }}</p>
               </div>
             </div>
           </div>
           <div class="item">
             <div class="card" style="width: 18rem;">
-              <img src="./img/gid.png" class="card-img-top img_gid" alt="...">
+              <img src="./img/gid4.jpeg" class="card-img-top img_gid" alt="...">
               <div class="card-body">
-                <h5 class="card-title lng-name1">{{ t('name1') }}</h5>
-                <p class="card-text lng-work1">{{ t('work1') }}</p>
-                <p class="card-text lng-education1">{{ t('education1') }}</p>
-                <p class="card-text lng-languages1">{{ t('languages1') }}</p>
+                <h5 class="card-title lng-name1">{{ t('name4') }}</h5>
+                <h5 class="card-title lng-name1">{{ t('age4') }}</h5>
+                <p class="card-text lng-work1">{{ t('work4') }}</p>
+                <p class="card-text lng-education1">{{ t('education4') }}</p>
+                <p class="card-text lng-languages1">{{ t('languages4') }}</p>
               </div>
             </div>
           </div>
           <div class="item">
             <div class="card" style="width: 18rem;">
-              <img src="./img/gid.png" class="card-img-top img_gid" alt="...">
+              <img src="./img/gid5.jpeg" class="card-img-top img_gid" alt="...">
               <div class="card-body">
-                <h5 class="card-title lng-name1">{{ t('name1') }}</h5>
-                <p class="card-text lng-work1">{{ t('work1') }}</p>
-                <p class="card-text lng-education1">{{ t('education1') }}</p>
-                <p class="card-text lng-languages1">{{ t('languages1') }}</p>
+                <h5 class="card-title lng-name1">{{ t('name5') }}</h5>
+                <h5 class="card-title lng-name1">{{ t('age5') }}</h5>
+                <p class="card-text lng-work1">{{ t('work5') }}</p>
+                <p class="card-text lng-education1">{{ t('education5') }}</p>
+                <p class="card-text lng-languages1">{{ t('languages5') }}</p>
               </div>
             </div>
           </div>
@@ -532,7 +537,7 @@
             <div>
               <h1 class="wow animate__animated animate__fadeInLeft lng-soon_in_phone">{{ t('soon_in_phone') }}</h1>
               <p class="wow animate__animated animate__fadeInLeft lng-soon_in_phone_option">{{ t('soon_in_phone_option') }}</p>
-              <button class="wow animate__animated animate__fadeInLeft instagram_button" onclick="window.location.href = 'https://instagram.com/bakka_travel';">INSTAGRAM</button>
+              <button class="wow animate__animated animate__fadeInLeft instagram_button" onclick="window.location.href = 'https://instagram.com/bakka_travel';">Подписаться <img src="./img/subcribe_insta.svg" alt=""></button>
             </div>
           </div>
           <div class="col iphones">
@@ -1197,24 +1202,44 @@ export default {
         ru : "Представляем наших лучших специалистов, которые сделают все,чтобы ваша поездка прошла удачно! Они всегда с вами на связии помогут вам с любым вопросом!",
     },
     name1 : {
-        kz : "Пардан Нұрислам, 20 жас",
-        ru : "Пардан Нұрислам, 20 лет",
+        kz : "Алия Умурзакова",
+        ru : "Алия Умурзакова"
     },
     name2 : {
-        kz : "Пардан Нұрислам, 20 жас",
-        ru : "Пардан Нұрислам, 20 лет",
+        kz : "Арман Бекишев",
+        ru : "Арман Бекишев",
     },
     name3 : {
-        kz : "Пардан Нұрислам, 20 жас",
-        ru : "Пардан Нұрислам, 20 лет",
+        kz : "Данияр Амангалиев",
+        ru : "Данияр Амангалиев",
     },
     name4 : {
-        kz : "Пардан Нұрислам, 20 жас",
-        ru : "Пардан Нұрислам, 20 лет",
+        kz : "Мадина Баймуканова",
+        ru : "Мадина Баймуканова",
     },
     name5 : {
-        kz : "Пардан Нұрислам, 20 жас",
-        ru : "Пардан Нұрислам, 20 лет",
+        kz : "Арман Мырзакемиров",
+        ru : "Арман Мырзакемиров",
+    },
+    age1 : {
+        kz : "27 жас",
+        ru : "27 лет",
+    },
+    age2 : {
+        kz : "24 жас",
+        ru : "24 лет",
+    },
+    age3 : {
+        kz : "29 жас",
+        ru : "29 лет",
+    },
+    age4 : {
+        kz : "32 жас",
+        ru : "32 лет",
+    },
+    age5 : {
+        kz : "32 жас",
+        ru : "32 лет",
     },
     work1 : {
         kz : "Клиенттермен жұмыс жөніндегі маман",
