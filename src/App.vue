@@ -209,7 +209,7 @@
               <div class="col-4 paketter with-border-gradient wow animate__animated animate__slideInUp" id="pakets1">
                     <h3>Стандард</h3>
                     <h4>{{ t('date_tour') }}</h4>
-                    <div class="places"><h6>Всего мест: 300</h6><h6>Осталось мест: 300</h6></div>
+                    <div class="places"><h6>{{ t('all_places') }}</h6><h6>{{ t('places') }}</h6></div>
                     <img class="text_left icon_tours" src="./img/calendar.svg" alt="">
                     <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
                     <p class="text_right lng-duration1_option">{{ t('duration1_option') }}</p>
@@ -243,7 +243,7 @@
             <div class="col-4 with-border-gradient wow animate__animated animate__slideInUp" id="pakets2">
               <h3>Komfort</h3>
               <h4>{{ t('date_tour') }}</h4>
-              <div class="places"><h6>Всего мест: 300</h6><h6>Осталось мест: 300</h6></div>
+              <div class="places"><h6>{{ t('all_places') }}</h6><h6>{{ t('places') }}</h6></div>
               <img class="text_left icon_tours" src="./img/calendar.svg" alt="">
                     <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
                     <p class="text_right lng-duration1_option">{{ t('duration1_option') }}</p>
@@ -277,7 +277,7 @@
               <div class="col-4 with-border-gradient wow animate__animated animate__slideInUp" id="pakets3">
               <h3>Komfort+</h3>
               <h4>{{ t('date_tour') }}</h4>
-              <div class="places"><h6>Всего мест: 300</h6><h6>Осталось мест: 300</h6></div>
+              <div class="places"><h6>{{ t('all_places') }}</h6><h6>{{ t('places') }}</h6></div>
               <img class="text_left icon_tours" src="./img/calendar.svg" alt="">
                     <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
                     <p class="text_right lng-duration1_option">{{ t('duration1_option') }}</p>
@@ -1484,6 +1484,14 @@ export default {
     consultation: {
       kz: "Кеңес беру",
       ru: "Консультация"
+    },
+    all_places: {
+      kz: "Жалпы орын: 300",
+      ru: "Всего мест: 300"
+    },
+    places: {
+      kz: "Қалған орындар: 300",
+      ru: "Осталось мест: 300"
     }
       },
     };

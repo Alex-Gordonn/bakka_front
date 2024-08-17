@@ -176,6 +176,7 @@
     margin-top: 20px;
     font-family: opensans_bold;
     color: black;
+    text-align: center;
   }
   .second_part p {
     text-align: left;
@@ -183,6 +184,7 @@
     font-family: opensans;
     font-size: 14px;
     color: black;
+    text-align: center;
   }
   /*2 block наши преимущество end*/
   /*info block*/
@@ -405,19 +407,19 @@
     justify-content: space-between;
   }
   .paket_tours .book {
-    width: 150px;
+    width: 100%;
     margin-top: 10px;
     margin-bottom: 20px;
     background-color: #22303A;
     border:none;
     border-radius: 10px;
     font-family: opensans_light;
-    margin-right: 20px;
-    padding-right: 50px;
+    margin-right: 10px;
+    padding-right: 40px;
     padding-left: 20px;
   }
   .paket_tours .consultation {
-    width: 150px;
+    width: 100%;
     margin-top: 10px;
     margin-bottom: 20px;
     background-color: white;
@@ -425,7 +427,7 @@
     border: 1px solid #3A688A;
     border-radius: 10px;
     font-family: opensans_light;
-    padding-right: 50px;
+    padding-right: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 20px;
@@ -457,11 +459,9 @@
   }
   .places h6 {
     background-color: #F1F1F1;
-    padding-right: 25px;
-    padding-left: 25px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding: 20px 15px;
     border-radius: 8px;
+    width: 48%;
   }
   .places {
     display: flex;
@@ -817,7 +817,7 @@
       width: 40%;
     }
     .places h6 {
-      padding: 5px 10px;
+      padding: 8px 4px;
     }
   }
   @media (max-width: 1200px) {
@@ -850,7 +850,11 @@
       width: 50%;
     }
     .places h6 {
-      padding: 3px 8px;
+      padding: 4px 1px;
+    }
+    .consultation, .book {
+      padding-left: 5px;
+      padding-right: 5px;
     }
   }
   @media (max-width: 990px) {
