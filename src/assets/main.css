@@ -1050,6 +1050,9 @@
     .info_block_comp img {
       width: 300px;
     }
+    .main_block button {
+      width: 70%;
+    }
   }
   @media (max-width: 550px) {
     #submit {
