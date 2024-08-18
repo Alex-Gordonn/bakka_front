@@ -305,7 +305,8 @@
                         <div style="clear: left;"></div>
                         <div class="book_consult">
                         <button class="lng-book2 book" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
-                        <button class="lng-book2 consultation" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('consultation') }}</button>            </div>
+                        <button class="lng-book2 consultation" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('consultation') }}</button>            
+                      </div>
           </div>
           </div>
         </div>
@@ -321,6 +322,8 @@
             <div class="card" style="width: 350px;">
               <div class="col-4 paketter with-border-gradient wow animate__animated animate__slideInUp" id="pakets1">
                 <h3>Стандард</h3>
+                <h4>{{ t('date_tour') }}</h4>
+                <div class="places"><h6>{{ t('all_places') }}</h6><h6>{{ t('places') }}</h6></div>
                 <hr>
                 <img class="text_left icon_tours" src="./img/calendar.svg" alt="">
                     <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
@@ -344,17 +347,22 @@
                 </div>
                 <div style="clear: left;"></div>
                 <hr>
-                <h4 class="text_left price_text lng-price_text1_carousel1"></h4>
+                <h4 class="text_left price_text lng-price_text1_carousel1">{{ t('price_text1_carousel1') }}</h4>
                 <h4 class="text_right price">400 $ | 230.000 ₸</h4>
                 <div style="clear: left;"></div>
-                <button class="lng-book1_carousel1"type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book1') }}</button>
-            </div>
+                <div class="book_consult">
+                        <button class="lng-book2 book" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
+                        <button class="lng-book2 consultation" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('consultation') }}</button>            
+                </div>             
+              </div>
             </div>
           </div>
           <div class="item2">
             <div class="card" style="width: 350px;">
               <div class="col-4 paketter with-border-gradient wow animate__animated animate__slideInUp" id="pakets2">
                 <h3>Comfort</h3>
+                <h4>{{ t('date_tour') }}</h4>
+                <div class="places"><h6>{{ t('all_places') }}</h6><h6>{{ t('places') }}</h6></div>
                 <hr>
                 <img class="text_left icon_tours" src="./img/calendar.svg" alt="">
                     <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
@@ -378,17 +386,22 @@
                 </div>
                 <div style="clear: left;"></div>
                 <hr>
-                <h4 class="text_left price_text lng-price_text2_carousel2"></h4>
+                <h4 class="text_left price_text lng-price_text2_carousel2">{{ t('price_text1_carousel1') }}</h4>
                 <h4 class="text_right price">400 $ | 230.000 ₸</h4>
                 <div style="clear: left;"></div>
-                <button class="lng-book2_carousel2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
-            </div>
+                <div class="book_consult">
+                        <button class="lng-book2 book" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
+                        <button class="lng-book2 consultation" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('consultation') }}</button>            
+                </div>             
+              </div>
             </div>
           </div>
           <div class="item2">
             <div class="card" style="width: 350px;">
               <div class="col-4 paketter with-border-gradient wow animate__animated animate__slideInUp" id="pakets3">
                 <h3>Comfort+</h3>
+                <h4>{{ t('date_tour') }}</h4>
+                <div class="places"><h6>{{ t('all_places') }}</h6><h6>{{ t('places') }}</h6></div>
                 <hr>
                 <img class="text_left icon_tours" src="./img/calendar.svg" alt="">
                     <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
@@ -412,11 +425,14 @@
                 </div>
                 <div style="clear: left;"></div>
                 <hr>
-                <h4 class="text_left price_text lng-price_text3_carousel3"></h4>
+                <h4 class="text_left price_text lng-price_text3_carousel3">{{ t('price_text1_carousel1') }}</h4>
                 <h4 class="text_right price">400 $ | 230.000 ₸</h4>
                 <div style="clear: left;"></div>
-                <button class="lng-book3_carousel3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{t('book1')}}</button>
-            </div>
+                <div class="book_consult">
+                        <button class="lng-book2 book" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
+                        <button class="lng-book2 consultation" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('consultation') }}</button>            
+                </div>            
+                </div>
             </div>
           </div>
       </div>
@@ -430,7 +446,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5 lng-form_text_boot" id="exampleModalLabel">{{ t('form_text_boot') }}</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">{{ t('close') }}</button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method="post" action="https://script.google.com/macros/s/AKfycbxPOuwcJU8Qg4mGfbmDXIRA6iqvyQSTqK0VcSL0wR5qEdWnJYrDvKntI6l7rAs7OHXs8A/exec" name="contact-form">
@@ -457,7 +473,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5 lng-form_text_boot" id="exampleModalLabel">{{ t('form_text_boot') }}</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">{{ t('close') }}</button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <div class="mb-3">
@@ -790,8 +806,7 @@
             <input type="text" id="your-number" name="your-number" placeholder="Номер телефона">
             <input type="submit" id="submit">
             </form>
-            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              Нажимая на кнопку отправить, я даю согласие на обработку персональных данных            </button>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">{{ t('confedencial') }}</button>
           </div>
           <div class="col form2 wow animate__animated animate__fadeInRight">
             <h1>BAKKA TRAVEL</h1>
@@ -1469,10 +1484,6 @@ export default {
         kz : "Бұл мүмкіндік келесі нұсқада қолжетімді болады!",
         ru : "Это функция будет доступно в следующем версии!",
     },
-    close : {
-        kz : "Жабу",
-        ru : "Закрыть",
-    },
     attention : {
         kz : "Ескерту",
         ru : "Примечание",
@@ -1492,6 +1503,10 @@ export default {
     places: {
       kz: "Қалған орындар: 300",
       ru: "Осталось мест: 300"
+    },
+    confedencial: {
+      kz: "Жіберу түймесін басу арқылы мен жеке деректерді өңдеуге келісім беремін",
+      ru: "Нажимая на кнопку отправить, я даю согласие на обработку персональных данных"
     }
       },
     };
