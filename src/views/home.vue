@@ -889,7 +889,7 @@
                             <img class="text_left icon_tours" src="../img/location_icon.svg" alt=""><p class="lng-street text_left">{{ t('street') }}</p><br>
                           </div>
                           <div style="clear: left;"></div>
-                          <button onclick="window.location.href = 'https://2gis.kz/almaty/firm/70000001025586524?m=76.845925%2C43.342585%2F16'">Открыть <img src="./img/2GIS_logo.svg" alt=""></button>
+                          <button onclick="window.location.href = 'https://2gis.kz/almaty/firm/70000001025586524?m=76.845925%2C43.342585%2F16'">Открыть <img src="../img/2GIS_logo.svg" alt=""></button>
                         </div>
                       </div>
                     </div>
