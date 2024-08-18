@@ -495,7 +495,7 @@
     display: none;
   }
   .wrapper2 {
-    max-height: 570px;
+    max-height: 600px;
     display: flex;
     overflow: auto;
   }
@@ -504,7 +504,7 @@
   }
   .wrapper2 .item2 {
     min-width: 200px;
-    height: 600px;
+    height: 570px;
     line-height: 30px;
     text-align: center;
     margin-right: 150px;
