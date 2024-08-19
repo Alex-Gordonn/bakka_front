@@ -730,69 +730,39 @@
         <!--Новости end-->
         <!--question and answer-->
         <div class="qua_ans">
-          <div class="container">
-            <h2 class="wow animate__animated animate__fadeInLeft lng-qua_text2 qua_text2">{{ t('qua_text2') }}</h2>
-            <div class="row">
-              <div class="col-4 text_in_qua">
-                <h2 class="wow animate__animated animate__fadeInLeft lng-qua_text">{{ t('qua_text') }}</h2>
-              </div>
-              <div class="col-8 qua">
-                <div class="accordion wow animate__animated animate__fadeInRight" id="accordionExample">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed  lng-first_qua" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                      {{ t('first_qua') }}
-                      </button>
-                    </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                      <div class="accordion-body lng-first_ans">{{ t('first_ans') }}
-                      </div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed lng-second_qua" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                      {{ t('second_qua') }}
-                      </button>
-                    </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                      <div class="accordion-body lng-second_ans">{{ t('second_ans') }}</div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed lng-third_qua" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      {{ t('third_qua') }}
-                      </button>
-                    </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                      <div class="accordion-body lng-third_ans">{{ t('third_ans') }}</div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed lng-fourth_qua" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">                  
-                      {{ t('fourth_qua') }}
-                      </button>
-                    </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                      <div class="accordion-body lng-fourth_ans">{{ t('fourth_ans') }}</div>
-                    </div>
-                  </div>
-                  <div class="accordion-item">
-                    <h2 class="accordion-header">
-                      <button class="accordion-button collapsed lng-fifth_qua" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFife" aria-expanded="false" aria-controls="collapseFive">
-                        {{ t('fifth_qua') }}
-                      </button>                </h2>
-                    <div id="collapseFife" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                      <div class="accordion-body lng-fifth_ans">{{ t('fifth_ans') }}</div>
-                    </div>
-                  </div>
-                </div>
+    <div class="container">
+      <h2 class="wow animate__animated animate__fadeInLeft qua_text2">{{ t('qua_text') }}</h2>
+      <div class="row">
+        <div class="col-4 text_in_qua">
+          <h2 class="wow animate__animated animate__fadeInLeft">{{ t('qua_text') }}</h2>
+        </div>
+        <div class="col-8 qua">
+          <div class="accordion wow animate__animated animate__fadeInRight" id="accordionExample">
+            <div v-for="(item, index) in faqList" :key="item.id" class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  :data-bs-target="'#collapse' + index"
+                  :aria-controls="'collapse' + index"
+                >
+                  {{ item.question }}
+                </button>
+              </h2>
+              <div
+                :id="'collapse' + index"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body">{{ item.answer }}</div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
         <!--question and answer end-->
         <!--Form-->
         <div class="form" id="form">
@@ -906,10 +876,15 @@
     </template>
     
     <script>
+    import axios from 'axios';
+
     
     export default {
       data() {
         return {
+          faqList: [],
+          headingText: 'Часто задаваемые вопросы',
+          sectionTitle: 'Вопросы и ответы',
           currentLang: 'kz',
           langArr: {
             bakkatravel: {
@@ -1380,46 +1355,6 @@
             kz : "Танымал сұрақтар мен оларға жауаптар",
             ru : "Популярные вопросы и ответы на них",
         },
-        first_qua : {
-            kz : "Сауд Арабиясына бару үшін жас шектеулері бар ма?",
-            ru : "Есть ли возрастные ограничения для поездки в Саудовскую Аравию?",
-        },
-        first_ans : {
-            kz : "Сауд Арабиясы 2024 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
-            ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2024 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
-        },
-        second_ans : {
-            kz : "Сауд Арабиясы 2024 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
-            ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2024 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
-        },
-        third_ans : {
-            kz : "Сауд Арабиясы 2024 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
-            ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2024 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
-        },
-        fourth_ans : {
-            kz : "Сауд Арабиясы 2024 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
-            ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2024 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
-        },
-        fifth_ans : {
-            kz : "Сауд Арабиясы 2024 жылы қажылыққа барғысы келетіндер үшін барлық жас шектеулерін ресми түрде алып тастады. Енді қажылықты барлық жастағы адамдар, соның ішінде 65 жастан асқан қажылар жасай алады.",
-            ru : "Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2024 году. Теперь Хадж могут совершить люди любого возраста, в том числе паломники старше 65 лет.",
-        },
-        second_qua : {
-            kz : "Екі бағытты бір турға қосуға бола ма?",
-            ru : "Могу ли я соединить два направления в один тур?",
-        },
-        third_qua : {
-            kz : "Егер мен досымды әкелсем, жеңілдіктер бересіз бе?",
-            ru : "Даете ли вы скидки, если я приведу своего друга?",
-        },
-        fourth_qua : {
-            kz : "Турды рәсімдеу үшін қандай құжаттар қажет?",
-            ru : "Какие документы нужны для оформления тура?",
-        },
-        fifth_qua : {
-            kz : "Сіздерде сақтандыру бар ма?",
-            ru : "Есть ли у вас страховка?",
-        },
         form_text : {
             kz : "Сұрақтар қалды ма?",
             ru : "Остались вопросы?",
@@ -1511,6 +1446,9 @@
           },
         };
       },
+      mounted() {
+    this.fetchFaq();
+  },
       methods: {
         t(key) {
           return this.langArr[key][this.currentLang];
@@ -1519,6 +1457,14 @@
           window.location.hash = this.currentLang;
           window.location.reload();
         },
+        async fetchFaq() {
+      try {
+        const response = await axios.get('https://bakka.kz/api/faq/');
+        this.faqList = response.data.results;
+      } catch (error) {
+        console.error('Ошибка при загрузке данных FAQ:', error);
+      }
+    },
       },
       created() {
         const hashLang = window.location.hash.replace('#', '');
