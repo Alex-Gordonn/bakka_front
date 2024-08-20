@@ -670,63 +670,38 @@
         </div>-->
         <!--Отзывы end-->
         <!--Новости-->
-        <!--
-          <div class="news">
-            <div class="container">
+        <div class="news">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>{{ t('news_tittle') }}</h1>
+        </div>
+        <div class="col button_news">
+          <button class="justify-content-end ">{{ t('all_news') }} <img src="../img/see_news.svg" alt=""></button>
+        </div>
+      </div>
+
+      <div class="row news_row">
+        <div v-for="newsItem in newsList" :key="newsItem.id" class="col-md-6 mb-4">
+          <div class="card">
+            <img :src="newsItem.image" class="card-img-top" alt="news image">
+            <div class="card-body">
+              <h5 class="card-title">{{ newsItem.title }}</h5>
+              <p class="card-text">{{ truncateText(newsItem.content, 100) }}</p>
               <div class="row">
-                <div class="col">
-                  <h3>Новости</h3>
+                <div class="col date_news">
+                  <p>{{ formatDate(newsItem.created_at) }}</p>
                 </div>
-                <div class="col button_news">
-                  <button class="btn justify-content-end btn-primary">Смотреть все</button>
-                </div>
+              <div class="col button_read">
+              <button class="justify-content-end">{{ t('read_news') }} <img src="../img/read_news.svg" alt=""></button>
               </div>
-    
-              <div class="row news_row">
-                <div class="col">
-                  <div class="card" style="width: 100%;">
-                    <img src="./img/news1.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Хадж 2023: Саудовская Аравия сняла возрастные ограничения</h5>
-                      <p class="card-text">Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2023 году...</p>
-                      <a href="#" class="btn btn-primary">Читать источник</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card" style="width: 100%;">
-                    <img src="./img/news2.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Хадж 2023: Саудовская Аравия сняла возрастные ограничения</h5>
-                      <p class="card-text">Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2023 году...</p>
-                      <a href="#" class="btn btn-primary">Читать источник</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card" style="width: 100%;">
-                    <img src="./img/news3.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Хадж 2023: Саудовская Аравия сняла возрастные ограничения</h5>
-                      <p class="card-text">Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2023 году...</p>
-                      <a href="#" class="btn btn-primary">Читать источник</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card" style="width: 100%;">
-                    <img src="./img/news4.png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Хадж 2023: Саудовская Аравия сняла возрастные ограничения</h5>
-                      <p class="card-text">Саудовская Аравия официально сняла все возрастные ограничения для желающих совершить Хадж в 2023 году...</p>
-                      <a href="#" class="btn btn-primary">Читать источник</a>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
-        -->
+        </div>
+      </div>
+    </div>
+  </div>
         <!--Новости end-->
         <!--question and answer-->
         <div class="qua_ans">
@@ -883,6 +858,7 @@
       data() {
         return {
           faqList: [],
+          newsList: [],
           headingText: 'Часто задаваемые вопросы',
           sectionTitle: 'Вопросы и ответы',
           currentLang: 'kz',
@@ -1442,12 +1418,27 @@
         confedencial: {
           kz: "Жіберу түймесін басу арқылы мен жеке деректерді өңдеуге келісім беремін",
           ru: "Нажимая на кнопку отправить, я даю согласие на обработку персональных данных"
-        }
+        },
+        news_tittle: {
+          kz: "Жаңалықтар",
+          ru: "Новости"
+        },
+        all_news: {
+          kz: "Барлығын көру",
+          ru: "Cмотреть все"
+        },
+        read_news: {
+          kz: "Дереккөзді оқу",
+          ru: "Читать источник"
+        },
+        
           },
         };
       },
       mounted() {
     this.fetchFaq();
+    this.fetchNews();
+
   },
       methods: {
         t(key) {
@@ -1465,6 +1456,25 @@
         console.error('Ошибка при загрузке данных FAQ:', error);
       }
     },
+    async fetchNews() {
+      try {
+        const response = await axios.get('https://bakka.kz/api/news/');
+        this.newsList = response.data.results;
+      } catch (error) {
+        console.error('Ошибка при загрузке новостей:', error);
+      }
+    },
+    truncateText(text, length) {
+      if (text.length > length) {
+        return text.substring(0, length) + '...';
+      }
+      return text;
+    },
+    formatDate(dateString) {
+      const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+      const date = new Date(dateString);
+      return date.toLocaleDateString('ru-RU', options);
+    }
       },
       created() {
         const hashLang = window.location.hash.replace('#', '');

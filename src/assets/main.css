@@ -632,9 +632,24 @@
   }
   .button_news {
     text-align: right;
+    margin-bottom: 50px;
+  }
+  .button_read {
+    text-align: right;
+  }
+  .button_news button {
+    background-color: white;
+    border: 1px solid #3A688A;
+    border-radius: 8px;
+    padding: 10px 15px;
+  }
+  .button_news button:hover {
+    background-color: #3A688A;
+    color: white;
   }
   .news_row .col {
     margin-top: 25px;
+    width: 100%;
   }
   .news_row h5 {
     width: 100%;
@@ -642,6 +657,17 @@
   }
   .news_row p {
     font-family: opensans;
+  }
+  .news_row button {
+    background-color: #22303A;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 15px;
+  }
+  .date_news p {
+    font-size: large;
+    margin-bottom: 0px;
+    margin-top: 10px;
   }
   /*7 block end новости*/
   /*8 block вопросы и ответы*/
