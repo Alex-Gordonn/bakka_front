@@ -612,63 +612,29 @@
           </div>
         </div>
         <!--Application soon end-->
-        <!--Отзывы--><!--
-        <div class="container feedbacks">
-          <h3>Отзывы</h3>
-        <div id="carouselExample" class="carousel slide">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="container">
-              <div class="row">
-                <div class="col feedbacksmin">
-                  <p>Хочу выразить благодарность компании BAKKA и отдельное спасибо турагенту Самал, которая отвечала абсолютно на все наши вопросы, наша семья в восторгеот поездки, будем советовать вас всем родственникам и друзьям!</6>
-                </div>
-                <div class="col feedbacksmin">
-                  <p>Хочу выразить благодарность компании BAKKA и отдельное спасибо турагенту Самал, которая отвечала абсолютно на все наши вопросы, наша семья в восторгеот поездки, будем советовать вас всем родственникам и друзьям!</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col feedbacksmin">
-                  <p>Хочу выразить благодарность компании BAKKA и отдельное спасибо турагенту Самал, которая отвечала абсолютно на все наши вопросы, наша семья в восторгеот поездки, будем советовать вас всем родственникам и друзьям!</p>
-                </div>
-                <div class="col feedbacksmin">
-                  <p>Хочу выразить благодарность компании BAKKA и отдельное спасибо турагенту Самал, которая отвечала абсолютно на все наши вопросы, наша семья в восторгеот поездки, будем советовать вас всем родственникам и друзьям!</p>
-                </div>
-              </div>
-              </div>
+        <!-- Отзывы -->
+  <div class="container feedbacks">
+    <h3>Отзывы</h3>
+    <div class="row">
+      <div v-for="review in reviews" :key="review.id" class="reviews col-md-6 mb-4">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col name_review">
+            <h5 class="card-title">{{ review.name }}</h5>
             </div>
-            <div class="carousel-item">
-              <div class="container">
-              <div class="row">
-                <div class="col feedbacksmin">
-                  <p>Хочу выразить благодарность компании BAKKA и отдельное спасибо турагенту Самал, которая отвечала абсолютно на все наши вопросы, наша семья в восторгеот поездки, будем советовать вас всем родственникам и друзьям!</6>
-                </div>
-                <div class="col feedbacksmin">
-                  <p>Хочу выразить благодарность компании BAKKA и отдельное спасибо турагенту Самал, которая отвечала абсолютно на все наши вопросы, наша семья в восторгеот поездки, будем советовать вас всем родственникам и друзьям!</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col feedbacksmin">
-                  <p>Хочу выразить благодарность компании BAKKA и отдельное спасибо турагенту Самал, которая отвечала абсолютно на все наши вопросы, наша семья в восторгеот поездки, будем советовать вас всем родственникам и друзьям!</p>
-                </div>
-                <div class="col feedbacksmin">
-                  <p>Хочу выразить благодарность компании BAKKA и отдельное спасибо турагенту Самал, которая отвечала абсолютно на все наши вопросы, наша семья в восторгеот поездки, будем советовать вас всем родственникам и друзьям!</p>
-                </div>
-              </div>
-              </div>
+            <div class="col date_review">
+              <p class="justify-content-end">{{ formatDate(review.created_at) }}</p>
             </div>
+            </div>
+            <p class="card-text">{{ review.content }}</p>
+            <p class="card-text">Рейтинг: {{ review.rating }}/5</p>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden button_next">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden button_next">Next</span>
-          </button>
         </div>
-        </div>-->
-        <!--Отзывы end-->
+      </div>
+    </div>
+  </div>
+  <!-- Отзывы end -->
         <!--Новости-->
         <div class="news">
     <div class="container">
@@ -859,6 +825,7 @@
         return {
           faqList: [],
           newsList: [],
+          reviews: [],
           headingText: 'Часто задаваемые вопросы',
           sectionTitle: 'Вопросы и ответы',
           currentLang: 'kz',
@@ -1438,7 +1405,7 @@
       mounted() {
     this.fetchFaq();
     this.fetchNews();
-
+    this.fetchReviews();
   },
       methods: {
         t(key) {
@@ -1474,7 +1441,15 @@
       const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
       const date = new Date(dateString);
       return date.toLocaleDateString('ru-RU', options);
-    }
+    },
+    async fetchReviews() {
+      try {
+        const response = await axios.get('https://bakka.kz/api/reviews/');
+        this.reviews = response.data.results;
+      } catch (error) {
+        console.error('Ошибка при загрузке отзывов:', error);
+      }
+    },
       },
       created() {
         const hashLang = window.location.hash.replace('#', '');

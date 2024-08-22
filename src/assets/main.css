@@ -623,9 +623,16 @@
     margin-top: 15px;
     border-radius: 20px;
   }
+  .feedbacks .card{
+    border-radius: 20px;
+  }
   .button_next {
     background-color: aqua;
-  }/*6 block end отзывы*/
+  }
+  .date_review {
+    text-align: right;
+  }
+  /*6 block end отзывы*/
   /*7 block новости*/
   .news {
     margin-top: 50px;
