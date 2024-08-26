@@ -449,16 +449,16 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form method="post" action="https://script.google.com/macros/s/AKfycbxPOuwcJU8Qg4mGfbmDXIRA6iqvyQSTqK0VcSL0wR5qEdWnJYrDvKntI6l7rAs7OHXs8A/exec" name="contact-form">
+            <form method="post" @submit.prevent="submitForm"  name="contact-form">
               <div class="mb-3">
                 <label for="recipient-name" class="col-form-label lng-form_name">{{ t('form_name') }}</label>
-                <input type="text" class="form-control" id="your-name" name="your-name">
+                <input v-model="formData.name" type="text" placeholder="Ваше имя"  class="form-control" id="your-name" name="your-name">
               </div>
               <div class="mb-3">
                 <label for="recipient-name" class="col-form-label lng-form_number">{{ t('form_number') }}</label>
-                <input type="text" id="your-number" name="your-number" class="form-control">
+                <input v-model="formData.phone_number" type="text" id="your-number" placeholder="Номер телефона" name="your-number" class="form-control">
               </div>
-              <input type="submit" id="submit"  class="submit_boot" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo">
+              <input type="submit" id="submit" value="Отправить"  class="submit_boot" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-bs-whatever="@mdo">
             </form>
           </div>
         </div>
@@ -466,26 +466,8 @@
     </div>
     
         <!--form bootstrap end-->
-    
-        <!--form bootstrap2-->
-    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5 lng-form_text_boot" id="exampleModalLabel">{{ t('form_text_boot') }}</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <div class="mb-3">
-            <h2>Данные отправлено</h2>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-        <!--form bootstrap2 end-->
-    
+  
+  
         <!-- Gids -->
   <div class="gids">
     <div class="container">
@@ -627,28 +609,28 @@
   </div>
         <!--question and answer end-->
         <!--Form-->
-        <div class="form" id="form">
-          <div class="container">
-            <div class="row">
-              <div class="col form1 wow animate__animated animate__fadeInLeft">
-                <h2 class="lng-form_text">{{t('form_text')}}</h2>
-                <p class="lng-form_option">{{ t('form_option') }}</p>
-                <form method="post" action="https://script.google.com/macros/s/AKfycbxPOuwcJU8Qg4mGfbmDXIRA6iqvyQSTqK0VcSL0wR5qEdWnJYrDvKntI6l7rAs7OHXs8A/exec" name="contact-form">
-                <input type="text" id="your-name" name="your-name" placeholder="Ваше имя" >
-                <input type="text" id="your-number" name="your-number" placeholder="Номер телефона">
-                <input type="submit" id="submit">
-                </form>
-                <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">{{ t('confedencial') }}</button>
-              </div>
-              <div class="col form2 wow animate__animated animate__fadeInRight">
-                <h1>BAKKA TRAVEL</h1>
-              </div>
-            </div>
-          </div>
-        </div>
-        <br>
-        </div>
-        <!--Form end-->
+<div class="form" id="form">
+  <div class="container">
+    <div class="row">
+      <div class="col form1 wow animate__animated animate__fadeInLeft">
+        <h2 class="lng-form_text">{{t('form_text')}}</h2>
+        <p class="lng-form_option">{{ t('form_option') }}</p>
+        <form @submit.prevent="submitForm" name="contact-form">
+          <input v-model="formData.name" type="text" id="your-name" name="your-name" placeholder="Ваше имя" required>
+          <input v-model="formData.phone_number" type="text" id="your-number" name="your-number" placeholder="Номер телефона" required>
+          <input type="submit" id="submit" value="Отправить" data-bs-target="#exampleModal2">
+        </form>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">{{ t('confedencial') }}</button>
+      </div>
+      <div class="col form2 wow animate__animated animate__fadeInRight">
+        <h1>BAKKA TRAVEL</h1>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--Form end-->
+
     <!-- Modal -->
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
@@ -748,6 +730,11 @@
           newsList: [],
           reviews: [],
           guides: [],
+          formData: {
+        name: '',
+        phone_number: '',
+        status: 1
+      },
           headingText: 'Часто задаваемые вопросы',
           sectionTitle: 'Вопросы и ответы',
           currentLang: 'kz',
@@ -1317,6 +1304,20 @@
     async read_news(newsId) {
         this.$router.push({ name: 'read_news', query: { id: newsId } });
       },
+      async submitForm() {
+      try {
+        const response = await axios.post('https://bakka.kz/api/contact-request/', this.formData);
+        if (response.status === 201) {
+          alert('Форма успешно отправлена!');
+          // Очистка формы
+          this.formData.name = '';
+          this.formData.phone_number = '';
+        }
+      } catch (error) {
+        console.error('Ошибка при отправке формы:', error);
+        alert('Ошибка при отправке формы. Попробуйте еще раз.');
+      }
+    },
       },
       created() {
         const hashLang = window.location.hash.replace('#', '');
