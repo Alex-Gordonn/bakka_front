@@ -2,6 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import home from '../src/views/home.vue'
 import admin from '../src/views/admin.vue'
 import login from '../src/views/login.vue'
+import news from '../src/views/news.vue'
+import read_news from '../src/views/read_news.vue';
 
 const routes = [
     {
@@ -19,6 +21,16 @@ const routes = [
       name: 'admin',
       component: admin,
       meta: { requiresAuth: true }
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: news,
+    },
+    {
+      path: '/read_news',
+      name: 'read_news',
+      component: read_news,
     },
 ]
 

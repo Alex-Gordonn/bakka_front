@@ -617,6 +617,9 @@
   }
   /*application soon*/
   /*6 block отзывы*/
+  .feedbacks {
+    margin-top: 50px;
+  }
   .feedbacks .feedbacksmin{
     background-color: white;
     margin-left: 15px;
@@ -632,10 +635,30 @@
   .date_review {
     text-align: right;
   }
+  .name_review img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .name_review {
+    display: flex;
+  }
+  .name_review h5 {
+    margin-left: 10px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+  }
   /*6 block end отзывы*/
   /*7 block новости*/
   .news {
     margin-top: 50px;
+  }
+  .all_news .news{
+    margin-top: 10px;
+  }
+  .news_tittle h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .button_news {
     text-align: right;

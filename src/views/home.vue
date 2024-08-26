@@ -486,111 +486,31 @@
     
         <!--form bootstrap2 end-->
     
-        <!--Gids-->
-        <div class="gids">
-          <div class="container">
-            <h3 class="wow animate__animated animate__fadeInLeft lng-our_gids">{{ t('our_gids') }}</h3>
-            <p class="wow info_gids animate__animated animate__fadeInLeft lng-our_gids_options">{{ t('our_gids_options') }}</p>
-            <div class="wrapper">
-              <div class="item">
-                <div class="card" style="width: 18rem;">
-                  <img src="../img/gid1.jpeg" class="card-img-top img_gid" alt="...">
-                  <div class="card-body">
-                    <div class="stars_gid">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">                    
-                    </div>
-                    <h5 class="card-title lng-name1">{{ t('name1') }}</h5>
-                    <h5 class="card-title lng-name1">{{ t('age1') }}</h5>
-                    <p class="card-text lng-work1">{{ t('work1') }}</p>
-                    <p class="card-text lng-education1">{{ t('education1') }}</p>
-                    <p class="card-text lng-languages1">{{ t('languages1') }}</p>
-                  </div>
-                </div>
+        <!-- Gids -->
+  <div class="gids">
+    <div class="container">
+      <h3 class="wow animate__animated animate__fadeInLeft">{{ t('our_gids') }}</h3>
+      <p class="wow info_gids animate__animated animate__fadeInLeft">{{ t('our_gids_options') }}</p>
+      <div class="wrapper">
+        <div v-for="guide in guides" :key="guide.id" class="item">
+          <div class="card" style="width: 18rem;">
+            <img :src="guide.image" class="card-img-top img_gid" alt="guide image">
+            <div class="card-body">
+              <div class="stars_gid">
+                <img v-for="n in guide.rating" :key="n" src="../img/Star.svg" alt="star">
               </div>
-              <div class="item">
-                <div class="card" style="width: 18rem;">
-                  <img src="../img/gid2.jpeg" class="card-img-top img_gid" alt="...">
-                  <div class="card-body">
-                    <div class="stars_gid">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">                    
-                    </div>
-                    <h5 class="card-title lng-name1">{{ t('name2') }}</h5>
-                    <h5 class="card-title lng-name1">{{ t('age2') }}</h5>
-                    <p class="card-text lng-work1">{{ t('work2') }}</p>
-                    <p class="card-text lng-education1">{{ t('education2') }}</p>
-                    <p class="card-text lng-languages1">{{ t('languages2') }}</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="card" style="width: 18rem;">
-                  <img src="../img/gid3.jpeg" class="card-img-top img_gid" alt="...">
-                  <div class="card-body">
-                    <div class="stars_gid">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">                    
-                    </div>
-                    <h5 class="card-title lng-name1">{{ t('name3') }}</h5>
-                    <h5 class="card-title lng-name1">{{ t('age3') }}</h5>
-                    <p class="card-text lng-work1">{{ t('work3') }}</p>
-                    <p class="card-text lng-education1">{{ t('education3') }}</p>
-                    <p class="card-text lng-languages1">{{ t('languages3') }}</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="card" style="width: 18rem;">
-                  <img src="../img/gid4.jpeg" class="card-img-top img_gid" alt="...">
-                  <div class="card-body">
-                    <div class="stars_gid">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">                    
-                    </div>
-                    <h5 class="card-title lng-name1">{{ t('name4') }}</h5>
-                    <h5 class="card-title lng-name1">{{ t('age4') }}</h5>
-                    <p class="card-text lng-work1">{{ t('work4') }}</p>
-                    <p class="card-text lng-education1">{{ t('education4') }}</p>
-                    <p class="card-text lng-languages1">{{ t('languages4') }}</p>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="card" style="width: 18rem;">
-                  <img src="../img/gid5.jpeg" class="card-img-top img_gid" alt="...">
-                  <div class="card-body">
-                    <div class="stars_gid">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">                    
-                    </div>
-                    <h5 class="card-title lng-name1">{{ t('name5') }}</h5>
-                    <h5 class="card-title lng-name1">{{ t('age5') }}</h5>
-                    <p class="card-text lng-work1">{{ t('work5') }}</p>
-                    <p class="card-text lng-education1">{{ t('education5') }}</p>
-                    <p class="card-text lng-languages1">{{ t('languages5') }}</p>
-                  </div>
-                </div>
-              </div>
+              <h5 class="card-title">{{ guide.name }}</h5>
+              <h5 class="card-title">{{ guide.age }} лет</h5>
+              <p class="card-text">{{ guide.role }}</p>
+              <p class="card-text">{{t('education')}} {{educationLevel(guide.education) }}</p>
+              <p class="card-text">{{t('languages')}} {{ languagesSpoken(guide.language) }}</p>
             </div>
           </div>
         </div>
-      <!--Gids end-->
+      </div>
+    </div>
+  </div>
+  <!-- Gids end -->
         <!--Application soon-->
         <div class="app">
           <div class="container">
@@ -614,13 +534,14 @@
         <!--Application soon end-->
         <!-- Отзывы -->
   <div class="container feedbacks">
-    <h3>Отзывы</h3>
+    <h3>{{ t('review') }}</h3>
     <div class="row">
       <div v-for="review in reviews" :key="review.id" class="reviews col-md-6 mb-4">
         <div class="card">
           <div class="card-body">
             <div class="row">
               <div class="col name_review">
+                <img :src="review.image" alt="">
             <h5 class="card-title">{{ review.name }}</h5>
             </div>
             <div class="col date_review">
@@ -628,7 +549,7 @@
             </div>
             </div>
             <p class="card-text">{{ review.content }}</p>
-            <p class="card-text">Рейтинг: {{ review.rating }}/5</p>
+            <img v-for="n in review.rating" :key="n" src="../img/Star.svg" alt="star">
           </div>
         </div>
       </div>
@@ -643,7 +564,7 @@
           <h1>{{ t('news_tittle') }}</h1>
         </div>
         <div class="col button_news">
-          <button class="justify-content-end ">{{ t('all_news') }} <img src="../img/see_news.svg" alt=""></button>
+          <button @click="goToNews" class="justify-content-end ">{{ t('all_news') }} <img src="../img/see_news.svg" alt=""></button>
         </div>
       </div>
 
@@ -659,7 +580,7 @@
                   <p>{{ formatDate(newsItem.created_at) }}</p>
                 </div>
               <div class="col button_read">
-              <button class="justify-content-end">{{ t('read_news') }} <img src="../img/read_news.svg" alt=""></button>
+              <button @click="read_news(newsItem.id)" class="justify-content-end">{{ t('read_news') }} <img src="../img/read_news.svg" alt=""></button>
               </div>
               </div>
             </div>
@@ -826,6 +747,7 @@
           faqList: [],
           newsList: [],
           reviews: [],
+          guides: [],
           headingText: 'Часто задаваемые вопросы',
           sectionTitle: 'Вопросы и ответы',
           currentLang: 'kz',
@@ -1178,105 +1100,13 @@
             kz : "Сіздің сапарыңыздың сәтті өтуі үшін бәрін жасайтын біздің ең жақсы мамандарды! Олар әрқашан сізбен байланыста және сізге кез келген сұраққа көмектеседі!",
             ru : "Представляем наших лучших специалистов, которые сделают все,чтобы ваша поездка прошла удачно! Они всегда с вами на связии помогут вам с любым вопросом!",
         },
-        name1 : {
-            kz : "Алия Умурзакова",
-            ru : "Алия Умурзакова"
+        education : {
+            kz : "Білімі:",
+            ru : "Образование:",
         },
-        name2 : {
-            kz : "Арман Бекишев",
-            ru : "Арман Бекишев",
-        },
-        name3 : {
-            kz : "Данияр Амангалиев",
-            ru : "Данияр Амангалиев",
-        },
-        name4 : {
-            kz : "Мадина Баймуканова",
-            ru : "Мадина Баймуканова",
-        },
-        name5 : {
-            kz : "Арман Мырзакемиров",
-            ru : "Арман Мырзакемиров",
-        },
-        age1 : {
-            kz : "27 жас",
-            ru : "27 лет",
-        },
-        age2 : {
-            kz : "24 жас",
-            ru : "24 лет",
-        },
-        age3 : {
-            kz : "29 жас",
-            ru : "29 лет",
-        },
-        age4 : {
-            kz : "32 жас",
-            ru : "32 лет",
-        },
-        age5 : {
-            kz : "32 жас",
-            ru : "32 лет",
-        },
-        work1 : {
-            kz : "Клиенттермен жұмыс жөніндегі маман",
-            ru : "Специалист по работе с клиентами",
-        },
-        work2 : {
-            kz : "Клиенттермен жұмыс жөніндегі маман",
-            ru : "Специалист по работе с клиентами",
-        },
-        work3 : {
-            kz : "Клиенттермен жұмыс жөніндегі маман",
-            ru : "Специалист по работе с клиентами",
-        },
-        work4 : {
-            kz : "Клиенттермен жұмыс жөніндегі маман",
-            ru : "Специалист по работе с клиентами",
-        },
-        work5 : {
-            kz : "Клиенттермен жұмыс жөніндегі маман",
-            ru : "Специалист по работе с клиентами",
-        },
-        education1 : {
-            kz : "Білімі: жоғары",
-            ru : "Образование: высшее",
-        },
-        education2 : {
-            kz : "Білімі: жоғары",
-            ru : "Образование: высшее",
-        },
-        education3 : {
-            kz : "Білімі: жоғары",
-            ru : "Образование: высшее",
-        },
-        education4 : {
-            kz : "Білімі: жоғары",
-            ru : "Образование: высшее",
-        },
-        education5 : {
-            kz : "Білімі: жоғары",
-            ru : "Образование: высшее",
-        },
-        languages1 : {
-            kz : "Тілдері: қазақ, орыс, араб",
-            ru : "Языки: казахский, русский, арабский",
-        },
-        languages2 : {
-            kz : "Тілдері: қазақ, орыс, араб",
-            ru : "Языки: казахский, русский, арабский",
-        },
-        languages3 : {
-            kz : "Тілдері: қазақ, орыс, араб",
-            ru : "Языки: казахский, русский, арабский",
-        },
-        languages4 : {
-            kz : "Тілдері: қазақ, орыс, араб",
-            ru : "Языки: казахский, русский, арабский",
-        },
-        languages5 : {
-            kz : "Тілдері: қазақ, орыс, араб",
-            ru : "Языки: казахский, русский, арабский",
+        languages : {
+            kz : "Тілдері:",
+            ru : "Языки:",
         },
         soon_in_phone : {
             kz : "Жақында сіздің телефоныңызда!",
@@ -1398,6 +1228,10 @@
           kz: "Дереккөзді оқу",
           ru: "Читать источник"
         },
+        review: {
+          kz: "Пікірлер",
+          ru: "Отзывы"
+        },
         
           },
         };
@@ -1406,6 +1240,7 @@
     this.fetchFaq();
     this.fetchNews();
     this.fetchReviews();
+    this.fetchGuides();
   },
       methods: {
         t(key) {
@@ -1423,6 +1258,9 @@
         console.error('Ошибка при загрузке данных FAQ:', error);
       }
     },
+    goToNews() {
+          this.$router.push({ name: 'news' });
+          },
     async fetchNews() {
       try {
         const response = await axios.get('https://bakka.kz/api/news/');
@@ -1450,6 +1288,35 @@
         console.error('Ошибка при загрузке отзывов:', error);
       }
     },
+    async fetchGuides() {
+      try {
+        const response = await axios.get('https://bakka.kz/api/guides/');
+        this.guides = response.data.results;
+      } catch (error) {
+        console.error('Ошибка при загрузке данных гидов:', error);
+      }
+    },
+    educationLevel(level) {
+      const educationLevels = {
+        1: 'Cредняя школа',
+        2: 'Бакалавр',
+        3: 'Магистр',
+        4: 'Докторантура',
+        5: 'Другое'
+      };
+      return educationLevels[level] || 'Не указано';
+    },
+    languagesSpoken(languages) {
+      const languageMap = {
+        1: 'Русский',
+        2: 'Казахский',
+        3: 'Английский',
+      };
+      return languages.map(lang => languageMap[lang]).join(', ');
+    },
+    async read_news(newsId) {
+        this.$router.push({ name: 'read_news', query: { id: newsId } });
+      },
       },
       created() {
         const hashLang = window.location.hash.replace('#', '');
