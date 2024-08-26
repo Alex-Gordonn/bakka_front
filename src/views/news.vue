@@ -69,8 +69,8 @@
                   <p>{{ formatDate(newsItem.created_at) }}</p>
                 </div>
               <div class="col button_read">
-              <button class="justify-content-end">{{ t('read_news') }} <img src="../img/read_news.svg" alt=""></button>
-              </div>
+                <button @click="read_news(newsItem.id)" class="justify-content-end">{{ t('read_news') }} <img src="../img/read_news.svg" alt=""></button>
+            </div>
               </div>
             </div>
           </div>
@@ -721,6 +721,9 @@ export default {
         console.error('Ошибка при загрузке отзывов:', error);
       }
     },
+    async read_news(newsId) {
+        this.$router.push({ name: 'read_news', query: { id: newsId } });
+      },
       },
 
   }

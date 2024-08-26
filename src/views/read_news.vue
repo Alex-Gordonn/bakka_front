@@ -58,12 +58,12 @@
           </div>
     
           <div class="row news_row">
-            <div v-for="newsItem in newsList" :key="newsItem.id" class="col-md-6 mb-4">
-              <div class="card">
-                <img :src="newsItem.image" class="card-img-top" alt="news image">
+            <div v-for="newsItem in newsList" :key="newsItem.id">
+              <div class="news_card">
+                <img :src="newsItem.image" alt="news image">
                 <div class="card-body">
                   <h5 class="card-title">{{ newsItem.title }}</h5>
-                  <p class="card-text">{{ truncateText(newsItem.content, 100) }}</p>
+                  <p class="card-text">{{ newsItem.content }}</p>
                   <div class="row">
                     <div class="col date_news">
                       <p>{{ formatDate(newsItem.created_at) }}</p>
@@ -151,17 +151,11 @@
                 const newsId = this.$route.query.id
                 try {
                     const response = await axios.get(`https://bakka.kz/api/news/${newsId}/`);
-                    this.newsList = response.data; // Для получения конкретной новости
+                    this.newsList = [response.data]; // Присваиваем массив с единственной новостью
                 } catch (error) {
                     console.error('Ошибка при загрузке новости:', error);
                 }
 },
-        truncateText(text, length) {
-          if (text.length > length) {
-            return text.substring(0, length) + '...';
-          }
-          return text;
-        },
         formatDate(dateString) {
           const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
           const date = new Date(dateString);
