@@ -4,14 +4,14 @@
         <img src="../Bakka_new_logo/bakka_logo_blue.svg" alt="">
       </div>
       <ul class="sidebar-menu">
-        <li @click="" class="sidebar-menu-item choosed"><a >Туры</a></li>
-        <li @click="" class="sidebar-menu-item"><a >Гиды</a></li>
-        <li @click="goToReviews" class="sidebar-menu-item"><a >Отзывы</a></li>
-        <li @click="" class="sidebar-menu-item"><a >Новости</a></li>
-        <li @click="" class="sidebar-menu-item"><a >Вопросы и ответы</a></li>
-        <li @click="" class="sidebar-menu-item"><a >Список заявок</a></li>
-        <li @click="logout" class="sidebar-menu-item"><a>Выйти</a></li>
-      </ul>
+            <li @click="" class="sidebar-menu-item"><a ><img src="../img/icon_airplane.svg" alt=""> Туры</a></li>
+            <li @click="" class="sidebar-menu-item"><a ><img src="../img/Icon_guids.svg" alt=""> Гиды</a></li>
+            <li @click="goToReviews" class="sidebar-menu-item choosed"><a ><img src="../img/icon_review.svg" alt=""> Отзывы</a></li>
+            <li @click="" class="sidebar-menu-item"><a ><img src="../img/icon_news.svg" alt=""> Новости</a></li>
+            <li @click="" class="sidebar-menu-item"><a ><img src="../img/icon_qa.svg" alt=""> Вопросы и ответы</a></li>
+            <li @click="" class="sidebar-menu-item"><a ><img src="../img/icon_request.svg" alt=""> Список заявок</a></li>
+            <li @click="logout" class="sidebar-menu-item"><a><img src="../img/Icon_logout.svg" alt=""> Выйти</a></li>
+          </ul>
     </div>
 </template>
 <script>
@@ -62,7 +62,9 @@ export default {
       margin: 0;
       color: black;
     }
-    
+    .sidebar-menu img {
+          width: 20px;
+        }
     .sidebar-menu-item {
       padding: 10px 20px;
       font-size: 18px;
