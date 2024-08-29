@@ -7,6 +7,10 @@ import read_news from '../src/views/read_news.vue';
 import reviews from '../src/views/reviews.vue'
 import change_review from '../src/views/change_review.vue';
 import add_review from '../src/views/add_review.vue'
+import requests from '../src/views/requests.vue';
+import news_admin from '../src/views/news_admin.vue';
+import qa from '../src/views/qa.vue';
+import guids from '../src/views/guids.vue';
 
 const routes = [
     {
@@ -51,6 +55,36 @@ const routes = [
       path: '/add_review',
       name: 'add_review',
       component: add_review,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/requests',
+      name: 'requests',
+      component: requests,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/news_admin',
+      name: 'news_admin',
+      component: news_admin,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/qa',
+      name: 'qa',
+      component: qa,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/guids',
+      name: 'guids',
+      component: guids,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/tours',
+      name: 'tours',
+      component: tours,
       meta: { requiresAuth: true }
     },
 ]
