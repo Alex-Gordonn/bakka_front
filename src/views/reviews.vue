@@ -42,7 +42,8 @@
               <td>{{ review.content }}</td>
               <td>{{ review.rating }}</td>
               <td>{{ formatDate(review.created_at) }}</td>
-              <td><button @click="changeReview(review.id)" class="change_button">Изменить</button> <button class="delete_button">Удалить</button></td>
+              <td><button @click="changeReview(review.id)" class="change_button">Изменить</button> 
+                  <button @click="deleteReview(review.id)" class="delete_button">Удалить</button></td>
             </tr>
           </tbody>
         </table>
@@ -87,6 +88,17 @@
                 const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
                 const date = new Date(dateString);
                 return date.toLocaleDateString('ru-RU', options);
+            },
+            async deleteReview(reviewId){
+              if(confirm("Вы уверены что хотите удалить?")) {
+                try{
+                  await axios.delete(`https://bakka.kz/api/reviews/${reviewId}/`);
+                  this.reviews = this.reviews.filter(review => review.id != reviewId);
+                  alert('Удалено!')
+                }catch(error) {
+                  alert('Ошибка')
+                }
+              }
             },
         }
     }
