@@ -7,52 +7,49 @@
       <ul class="sidebar-menu">
             <li @click="goToTours" class="sidebar-menu-item"><a ><img src="../img/icon_airplane.svg" alt=""> Туры</a></li>
             <li @click="goToGuids" class="sidebar-menu-item"><a ><img src="../img/Icon_guids.svg" alt=""> Гиды</a></li>
-            <li @click="goToReviews" class="sidebar-menu-item choosed"><a ><img src="../img/icon_review.svg" alt=""> Отзывы</a></li>
-            <li @click="goToNews_admin" class="sidebar-menu-item"><a ><img src="../img/icon_news.svg" alt=""> Новости</a></li>
+            <li @click="goToReviews" class="sidebar-menu-item"><a ><img src="../img/icon_review.svg" alt=""> Отзывы</a></li>
+            <li @click="goToNews_admin" class="sidebar-menu-item choosed"><a ><img src="../img/icon_news.svg" alt=""> Новости</a></li>
             <li @click="goToQa" class="sidebar-menu-item"><a ><img src="../img/icon_qa.svg" alt=""> Вопросы и ответы</a></li>
             <li @click="goToRequests" class="sidebar-menu-item"><a ><img src="../img/icon_request.svg" alt=""> Список заявок</a></li>
             <li @click="logout" class="sidebar-menu-item"><a><img src="../img/Icon_logout.svg" alt=""> Выйти</a></li>
           </ul>
     </div>
   
-    <div class="list_reviews">
+    <div class="list_news">
       <div class="row">
         <div class="col text_review">
-          <h1>Отзывы</h1>
+          <h1>Новости</h1>
         </div>
       </div>
       <div class="add_review">
         <div class="row">
           <div class="col">
             <label for="name">
-              Имя <br />
-              <input v-model="review.name" type="text" name="name" id="name" />
+              Название <br />
+              <input v-model="news.title" type="text" name="title" id="title" />
             </label>
             <br />
-            <label for="rating">
-              Рэйтинг <br />
-              <select v-model="review.rating" name="rating" id="rating">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
+            <label for="is_published">
+              Добавить также в ленте? <br />
+              <select v-model="news.is_published" name="is_published" id="is_published">
+                <option value="true">Да</option>
+                <option value="false">Нет</option>
               </select>
             </label>
           </div>
           <div class="col file">
-            <label for="file">Фото человека <br>
+            <label for="file">Фото новости <br>
             <input type="file" id="file" @change="handleFileUpload" />
             </label>
           </div>
         </div>
         <div class="content">
           <label for="content">
-            Комментарий <br />
-            <textarea v-model="review.content" name="content" id="content"></textarea>
+            Новость <br />
+            <textarea v-model="news.content" name="content" id="content"></textarea>
           </label>
         </div>
-        <button @click="submitReview">Отправить отзыв</button>
+        <button @click="submitNews">Отправить новость</button>
       </div>
     </div>
   </template>
@@ -63,9 +60,9 @@
   export default {
     data() {
       return {
-        review: {
-          name: '',
-          rating: 1,
+        news: {
+          title: '',
+          is_published: true,
           content: '',
           file: null,
         },
@@ -75,45 +72,38 @@
       handleFileUpload(event) {
         const file = event.target.files[0];
         if (file) {
-          this.review.file = file;
+          this.news.file = file;
         } else {
-          this.review.file = null; // Убедитесь, что файл правильно обрабатывается
+          this.news.file = null; // Убедитесь, что файл правильно обрабатывается
         }
       },
-      async submitReview() {
+      async submitNews() {
         try {
           const formData = new FormData();
-          formData.append('name', this.review.name);
-          formData.append('rating', this.review.rating);
-          formData.append('content', this.review.content);
+          formData.append('title', this.news.title);
+          formData.append('is_published', this.news.is_published);
+          formData.append('content', this.news.content);
   
-          if (this.review.file) {
-            formData.append('image', this.review.file); // Используйте 'image' или нужный ключ для файла
+          if (this.news.file) {
+            formData.append('image', this.news.file); // Используйте 'image' или нужный ключ для файла
           }
   
-          const response = await axios.post('https://bakka.kz/api/reviews/', formData, {
+          const response = await axios.post('https://bakka.kz/api/news/', formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
           });
   
           if (response.status === 201) {
-            alert('Отзыв успешно отправлен!');
-            this.$router.push({ name: 'reviews' });
+            alert('Новость успешно отправлен!');
+            this.$router.push({ name: 'news' });
           } else {
-            alert('Произошла ошибка при отправке отзыва.');
+            alert('Произошла ошибка при отправке новости.');
           }
         } catch (error) {
-          console.error('Ошибка при отправке отзыва:', error);
+          console.error('Ошибка при отправке новости:', error);
           alert('Ошибка при отправке. Попробуйте еще раз.');
         }
-      },
-      clearForm() {
-        this.review.name = '';
-        this.review.rating = 1;
-        this.review.content = '';
-        this.review.file = null;
-        document.querySelector('input[type="file"]').value = null;
       },
       logout() {
         this.$root.logout();
@@ -195,7 +185,7 @@
         .logo_admin img{
             width: 150px;
         }
-        .list_reviews {
+        .list_news {
       margin-left: 260px;
     }
   
@@ -224,7 +214,7 @@
     width: 80px;
     border-radius: 15px;
   }
-  .list_reviews button {
+  .list_news button {
     padding: 7px;
     width: 100px;
     margin-top: 5px;

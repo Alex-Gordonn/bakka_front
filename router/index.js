@@ -11,6 +11,8 @@ import requests from '../src/views/requests.vue';
 import news_admin from '../src/views/news_admin.vue';
 import qa from '../src/views/qa.vue';
 import guids from '../src/views/guids.vue';
+import add_news from '../src/views/add_news.vue';
+import change_news from '../src/views/change_news.vue';
 
 const routes = [
     {
@@ -85,6 +87,18 @@ const routes = [
       path: '/tours',
       name: 'tours',
       component: tours,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/change_news',
+      name: 'change_news',
+      component: change_news,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/add_news',
+      name: 'add_news',
+      component: add_news,
       meta: { requiresAuth: true }
     },
 ]

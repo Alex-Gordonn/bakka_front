@@ -1,123 +1,130 @@
 <template>
-    <div class="sidebar" id="sidebar">
-        <router-view/>
-          <div class="sidebar-header logo_admin">
-            <img src="../Bakka_new_logo/bakka_logo_blue.svg" alt="">
-          </div>
-          <ul class="sidebar-menu">
-            <li @click="goToTours" class="sidebar-menu-item"><a ><img src="../img/icon_airplane.svg" alt=""> Туры</a></li>
-            <li @click="goToGuids" class="sidebar-menu-item"><a ><img src="../img/Icon_guids.svg" alt=""> Гиды</a></li>
-            <li @click="goToReviews" class="sidebar-menu-item"><a ><img src="../img/icon_review.svg" alt=""> Отзывы</a></li>
-            <li @click="goToNews_admin" class="sidebar-menu-item choosed"><a ><img src="../img/icon_news.svg" alt=""> Новости</a></li>
-            <li @click="goToQa" class="sidebar-menu-item"><a ><img src="../img/icon_qa.svg" alt=""> Вопросы и ответы</a></li>
-            <li @click="goToRequests" class="sidebar-menu-item"><a ><img src="../img/icon_request.svg" alt=""> Список заявок</a></li>
-            <li @click="logout" class="sidebar-menu-item"><a><img src="../img/Icon_logout.svg" alt=""> Выйти</a></li>
-          </ul>
-        </div>
+  <div class="sidebar" id="sidebar">
+    <router-view/>
+    <div class="sidebar-header logo_admin">
+      <img src="../Bakka_new_logo/bakka_logo_blue.svg" alt="">
+    </div>
+    <ul class="sidebar-menu">
+      <li @click="goToTours" class="sidebar-menu-item"><a ><img src="../img/icon_airplane.svg" alt=""> Туры</a></li>
+      <li @click="goToGuids" class="sidebar-menu-item"><a ><img src="../img/Icon_guids.svg" alt=""> Гиды</a></li>
+      <li @click="goToReviews" class="sidebar-menu-item"><a ><img src="../img/icon_review.svg" alt=""> Отзывы</a></li>
+      <li @click="goToNews_admin" class="sidebar-menu-item choosed"><a ><img src="../img/icon_news.svg" alt=""> Новости</a></li>
+      <li @click="goToQa" class="sidebar-menu-item"><a ><img src="../img/icon_qa.svg" alt=""> Вопросы и ответы</a></li>
+      <li @click="goToRequests" class="sidebar-menu-item"><a ><img src="../img/icon_request.svg" alt=""> Список заявок</a></li>
+      <li @click="logout" class="sidebar-menu-item"><a><img src="../img/Icon_logout.svg" alt=""> Выйти</a></li>
+    </ul>
+  </div>
 
-        <div class="list_reviews">
-            <div class="row">
-            <div class="col text_review">
-                <h1>Отзывы</h1>
-            </div>
-            <div class=" col add_review_button">
-                <button @click="addReview()" class="justify-content-end">Добавить отзыв</button>
-            </div>
-            </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Фото</th>
-              <th>Имя</th>
-              <th>Комментарий</th>
-              <th>Рэйтинг</th>
-              <th>Дата публикации</th>
-              <th>Действие</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="review in reviews" :key="review.id">
-              <td><img :src="review.image" alt=""></td>
-              <td>{{ review.name }}</td>
-              <td>{{ review.content }}</td>
-              <td>{{ review.rating }}</td>
-              <td>{{ formatDate(review.created_at) }}</td>
-              <td><button @click="changeReview(review.id)" class="change_button">Изменить</button> 
-                  <button @click="deleteReview(review.id)" class="delete_button">Удалить</button></td>
-            </tr>
-          </tbody>
-        </table>
+  <div class="list_news">
+    <div class="row">
+      <div class="col text_review">
+        <h1>Новости</h1>
       </div>
-    </template>
-    <script>
-    import axios from './axios';
-    
-    export default {
-        data() {
-            return {
-                reviews:[]
-            }
-        },
-        created() {
-            this.fetchReviews()
-        },
-        methods: {
-            logout() {
-                  this.$root.logout();
-                  localStorage.removeItem('authToken');
-                  this.$router.push('/');
-                },
-                goToReviews() {
-                this.$router.push({ name: 'reviews' });
-                },
-                async changeReview(reviewId) {
-                    this.$router.push({ name: 'change_review', query: { id: reviewId } });
-                },
-                async goToReviews() {
-                this.$router.push({ name: 'reviews' });
-                },
-                async goToRequests() {
-                    this.$router.push({ name: 'requests'});
-                },
-                async goToGuids() {
-                    this.$router.push({ name: 'guids'});
-                },
-                async goToNews_admin() {
-                    this.$router.push({ name: 'news_admin'});
-                },
-                async goToQa() {
-                    this.$router.push({ name: 'qa'});
-                },
-                async goToTours() {
-                    this.$router.push({ name: 'tours'});
-                },
-                async fetchReviews() {
-            try{
-                const response = await axios.get('https://bakka.kz/api/reviews/');
-                this.reviews = response.data.results
-              }catch(error) {
-                console.error("error")
-              }
-            },
-            formatDate(dateString) {
-                const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-                const date = new Date(dateString);
-                return date.toLocaleDateString('ru-RU', options);
-            },
-            async deleteReview(reviewId){
-              if(confirm("Вы уверены что хотите удалить?")) {
-                try{
-                  await axios.delete(`https://bakka.kz/api/reviews/${reviewId}/`);
-                  this.reviews = this.reviews.filter(review => review.id != reviewId);
-                  alert('Удалено!')
-                }catch(error) {
-                  alert('Ошибка')
-                }
-              }
-            },
+      <div class="col add_review_button">
+        <button @click="addNews()" class="justify-content-end">Добавить новость</button>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Фото</th>
+          <th>Название</th>
+          <th>Новость</th>
+          <th>В ленте</th>
+          <th>Дата публикации</th>
+          <th>Действие</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="news in newses" :key="news.id">
+          <td class="news_image"><img :src="news.image" alt=""></td>
+          <td>{{ news.title }}</td>
+          <td>{{ news.content }}</td>
+          <td class="news_is_published">
+            <img v-if="news.is_published" src="../img/checked_icon.svg" alt="Published">
+            <img v-else src="../img/not_published.svg" alt="Not Published">
+          </td>
+          <td>{{ formatDate(news.created_at) }}</td>
+          <td>
+            <button @click="changeNews(news.id)" class="change_button">Изменить</button>
+            <button @click="deleteNews(news.id)" class="delete_button">Удалить</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</template>
+
+<script>
+import axios from './axios';
+
+export default {
+  data() {
+    return {
+      newses: []
+    };
+  },
+  created() {
+    this.fetchNews();
+  },
+  methods: {
+    logout() {
+      this.$root.logout();
+      localStorage.removeItem('authToken');
+      this.$router.push('/');
+    },
+    goToReviews() {
+      this.$router.push({ name: 'reviews' });
+    },
+    async changeNews(newsId) {
+      this.$router.push({ name: 'change_news', query: { id: newsId } });
+    },
+    goToRequests() {
+      this.$router.push({ name: 'requests' });
+    },
+    goToGuids() {
+      this.$router.push({ name: 'guids' });
+    },
+    goToNews_admin() {
+      this.$router.push({ name: 'news_admin' });
+    },
+    goToQa() {
+      this.$router.push({ name: 'qa' });
+    },
+    goToTours() {
+      this.$router.push({ name: 'tours' });
+    },
+    addNews() {
+      this.$router.push({ name: 'add_news' });
+    },
+    async fetchNews() {
+      try {
+        const response = await axios.get('https://bakka.kz/api/news/');
+        this.newses = response.data.results;
+      } catch (error) {
+        console.error("Ошибка при загрузке новостей:", error);
+      }
+    },
+    formatDate(dateString) {
+      const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+      const date = new Date(dateString);
+      return date.toLocaleDateString('ru-RU', options);
+    },
+    async deleteNews(newsId) {
+      if (confirm("Вы уверены, что хотите удалить?")) {
+        try {
+          await axios.delete(`https://bakka.kz/api/news/${newsId}/`);
+          this.newses = this.newses.filter(news => news.id !== newsId);
+          alert('Удалено!');
+        } catch (error) {
+          alert('Ошибка при удалении новости');
+          console.error("Ошибка при удалении:", error);
         }
+      }
     }
-    </script>
+  }
+};
+</script>
     <style>
     .sidebar {
           position: fixed;
@@ -199,11 +206,17 @@
   tr:nth-child(even) {
     background-color: #f2f2f2;
   }
-  .list_reviews img {
-    width: 80px;
-    border-radius: 15px;
+  .list_news {
+    margin-left: 260px;
   }
-  .list_reviews button {
+  .news_image img {
+    width: 150px;
+    border-radius: 5px;
+  }
+  .news_is_published img{
+    width: 50px;
+  }
+  .list_news button {
     padding: 7px;
     width: 100px;
     margin-top: 5px;
