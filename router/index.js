@@ -9,7 +9,7 @@ import change_review from '../src/views/change_review.vue';
 import add_review from '../src/views/add_review.vue'
 import requests from '../src/views/requests.vue';
 import news_admin from '../src/views/news_admin.vue';
-import qa from '../src/views/qa.vue';
+import faq from '../src/views/faq.vue';
 import guids from '../src/views/guids.vue';
 import add_news from '../src/views/add_news.vue';
 import change_news from '../src/views/change_news.vue';
@@ -72,9 +72,9 @@ const routes = [
       meta: { requiresAuth: true }
     },
     {
-      path: '/qa',
-      name: 'qa',
-      component: qa,
+      path: '/faq',
+      name: 'faq',
+      component: faq,
       meta: { requiresAuth: true }
     },
     {

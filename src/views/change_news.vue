@@ -9,7 +9,7 @@
               <li @click="goToGuids" class="sidebar-menu-item"><a ><img src="../img/Icon_guids.svg" alt=""> Гиды</a></li>
               <li @click="goToReviews" class="sidebar-menu-item"><a ><img src="../img/icon_review.svg" alt=""> Отзывы</a></li>
               <li @click="goToNews_admin" class="sidebar-menu-item choosed"><a ><img src="../img/icon_news.svg" alt=""> Новости</a></li>
-              <li @click="goToQa" class="sidebar-menu-item"><a ><img src="../img/icon_qa.svg" alt=""> Вопросы и ответы</a></li>
+              <li @click="goTofaq" class="sidebar-menu-item"><a ><img src="../img/icon_faq.svg" alt=""> Вопросы и ответы</a></li>
               <li @click="goToRequests" class="sidebar-menu-item"><a ><img src="../img/icon_request.svg" alt=""> Список заявок</a></li>
               <li @click="logout" class="sidebar-menu-item"><a><img src="../img/Icon_logout.svg" alt=""> Выйти</a></li>
             </ul>
@@ -149,8 +149,8 @@
                   async goToNews_admin() {
                       this.$router.push({ name: 'news_admin'});
                   },
-                  async goToQa() {
-                      this.$router.push({ name: 'qa'});
+                  async goTofaq() {
+                      this.$router.push({ name: 'faq'});
                   },
                   async goToTours() {
                       this.$router.push({ name: 'tours'});
