@@ -18,32 +18,28 @@
         <div class="list_reviews">
             <div class="row">
             <div class="col text_review">
-                <h1>Отзывы</h1>
+                <h1>Вопросы и ответы</h1>
             </div>
             <div class=" col add_review_button">
-                <button @click="addFaq()" class="justify-content-end">Добавить отзыв</button>
+                <button @click="addFaq()" class="justify-content-end">Добавить</button>
             </div>
             </div>
         <table>
           <thead>
             <tr>
-              <th>Фото</th>
-              <th>Имя</th>
-              <th>Комментарий</th>
-              <th>Рэйтинг</th>
+              <th>Вопрос</th>
+              <th>Ответ</th>
               <th>Дата публикации</th>
               <th>Действие</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="review in reviews" :key="review.id">
-              <td><img :src="review.image" alt=""></td>
-              <td>{{ review.name }}</td>
-              <td>{{ review.content }}</td>
-              <td>{{ review.rating }}</td>
-              <td>{{ formatDate(review.created_at) }}</td>
-              <td><button @click="changeReview(review.id)" class="change_button">Изменить</button> 
-                  <button @click="deleteReview(review.id)" class="delete_button">Удалить</button></td>
+            <tr v-for="faq in faqs" :key="faq.id">
+              <td>{{ faq.question }}</td>
+              <td>{{ faq.answer }}</td>
+              <td>{{ formatDate(faq.created_at) }}</td>
+              <td><button @click="changeFaq(faq.id)" class="change_button">Изменить</button> 
+                  <button @click="deleteFaq(faq.id)" class="delete_button">Удалить</button></td>
             </tr>
           </tbody>
         </table>
@@ -55,11 +51,11 @@
     export default {
         data() {
             return {
-                reviews:[]
+                faqs:[]
             }
         },
         created() {
-            this.fetchReviews()
+            this.fetchFaq()
         },
         methods: {
             logout() {
@@ -70,8 +66,8 @@
                 goToReviews() {
                 this.$router.push({ name: 'reviews' });
                 },
-                async changeReview(reviewId) {
-                    this.$router.push({ name: 'change_review', query: { id: reviewId } });
+                async changeFaq(faqId) {
+                    this.$router.push({ name: 'change_faq', query: { id: faqId } });
                 },
                 async goToReviews() {
                 this.$router.push({ name: 'reviews' });
@@ -91,10 +87,13 @@
                 async goToTours() {
                     this.$router.push({ name: 'tours'});
                 },
-                async fetchReviews() {
+                async addFaq() {
+                  this.$router.push({ name: 'add_faq'});
+                },
+                async fetchFaq() {
             try{
-                const response = await axios.get('https://bakka.kz/api/reviews/');
-                this.reviews = response.data.results
+                const response = await axios.get('https://bakka.kz/api/faq/');
+                this.faqs = response.data.results
               }catch(error) {
                 console.error("error")
               }
@@ -104,11 +103,11 @@
                 const date = new Date(dateString);
                 return date.toLocaleDateString('ru-RU', options);
             },
-            async deleteReview(reviewId){
+            async deleteFaq(faqId){
               if(confirm("Вы уверены что хотите удалить?")) {
                 try{
-                  await axios.delete(`https://bakka.kz/api/reviews/${reviewId}/`);
-                  this.reviews = this.reviews.filter(review => review.id != reviewId);
+                  await axios.delete(`https://bakka.kz/api/faq/${faqId}/`);
+                  this.faqs = this.faqs.filter(faq => faq.id != faqId);
                   alert('Удалено!')
                 }catch(error) {
                   alert('Ошибка')
