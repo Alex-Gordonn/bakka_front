@@ -13,6 +13,9 @@
             <li @click="logout" class="sidebar-menu-item"><a><img src="../img/Icon_logout.svg" alt=""> Выйти</a></li>
           </ul>
     </div>
+    <div class="list_reviews">
+      <h1>В разработке...</h1>
+    </div>
 </template>
 <script>
 import axios from './axios';

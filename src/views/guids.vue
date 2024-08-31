@@ -16,37 +16,7 @@
         </div>
 
         <div class="list_reviews">
-            <div class="row">
-            <div class="col text_review">
-                <h1>Отзывы</h1>
-            </div>
-            <div class=" col add_review_button">
-                <button @click="addReview()" class="justify-content-end">Добавить отзыв</button>
-            </div>
-            </div>
-        <table>
-          <thead>
-            <tr>
-              <th>Фото</th>
-              <th>Имя</th>
-              <th>Комментарий</th>
-              <th>Рэйтинг</th>
-              <th>Дата публикации</th>
-              <th>Действие</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="review in reviews" :key="review.id">
-              <td><img :src="review.image" alt=""></td>
-              <td>{{ review.name }}</td>
-              <td>{{ review.content }}</td>
-              <td>{{ review.rating }}</td>
-              <td>{{ formatDate(review.created_at) }}</td>
-              <td><button @click="changeReview(review.id)" class="change_button">Изменить</button> 
-                  <button @click="deleteReview(review.id)" class="delete_button">Удалить</button></td>
-            </tr>
-          </tbody>
-        </table>
+            <h1>В разработке...</h1>
       </div>
     </template>
     <script>
