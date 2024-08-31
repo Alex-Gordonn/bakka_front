@@ -8,8 +8,8 @@
               <li @click="goToTours" class="sidebar-menu-item"><a ><img src="../img/icon_airplane.svg" alt=""> Туры</a></li>
               <li @click="goToGuids" class="sidebar-menu-item"><a ><img src="../img/Icon_guids.svg" alt=""> Гиды</a></li>
               <li @click="goToReviews" class="sidebar-menu-item"><a ><img src="../img/icon_review.svg" alt=""> Отзывы</a></li>
-              <li @click="goToNews_admin" class="sidebar-menu-item choosed"><a ><img src="../img/icon_news.svg" alt=""> Новости</a></li>
-              <li @click="goTofaq" class="sidebar-menu-item"><a ><img src="../img/icon_faq.svg" alt=""> Вопросы и ответы</a></li>
+              <li @click="goToNews_admin" class="sidebar-menu-item"><a ><img src="../img/icon_news.svg" alt=""> Новости</a></li>
+              <li @click="goTofaq" class="sidebar-menu-item choosed"><a ><img src="../img/icon_faq.svg" alt=""> Вопросы и ответы</a></li>
               <li @click="goToRequests" class="sidebar-menu-item"><a ><img src="../img/icon_request.svg" alt=""> Список заявок</a></li>
               <li @click="logout" class="sidebar-menu-item"><a><img src="../img/Icon_logout.svg" alt=""> Выйти</a></li>
             </ul>
@@ -18,38 +18,27 @@
     <div class="list_reviews">
       <div class="row">
         <div class="col text_review">
-          <h1>Новости</h1>
+          <h1>Вопросы и ответы</h1>
         </div>
       </div>
       <div class="add_news">
         <div class="row">
           <div class="col">
             <label for="name">
-              Название <br />
-              <input v-model="news.title" type="text" name="title" id="title" />
-            </label>
-            <br />
-            <label for="rating">
-              Добавить также в ленте? <br />
-              <select v-model="news.is_published" name="is_published" id="is_published">
-                <option value="true">Да</option>
-                <option value="false">Нет</option>
-              </select>
+              Вопрос <br />
+              <input v-model="faq.question" type="text" name="question" id="question" />
             </label>
           </div>
           <div class="col file">
-            <label for="file">Фото новости<br>
-            <input type="file" id="file" @change="handleFileUpload" />
-            </label>
+            <div class="content">
+                <label for="content">
+                    Ответ <br />
+                    <textarea v-model="faq.answer" name="answer" id="content"></textarea>
+                </label>
+        </div>
           </div>
         </div>
-        <div class="content">
-          <label for="content">
-            Новость <br />
-            <textarea v-model="news.content" name="content" id="content"></textarea>
-          </label>
-        </div>
-        <button @click="submitNews">Обновить новость</button>
+        <button @click="submitFaq">Обновить</button>
       </div>
     </div>
   </template>
@@ -60,75 +49,57 @@
   export default {
     data() {
       return {
-        news: {
+        faq: {
           id: null,
-          title: '',
-          is_published: true,
-          content: '',
-          file: null,
+          questionn: '',
+          answer: '',
         },
       };
     },
     created() {
       // Получаем ID отзыва из параметров маршрута
-      const newsId = this.$route.query.id;
-      if (newsId) {
-        this.loadReview(newsId);
+      const faqid = this.$route.query.id;
+      if (faqid) {
+        this.loadReview(faqid);
       }
     },
     methods: {
-      async loadReview(newsId) {
+      async loadReview(faqId) {
         try {
           // GET запрос для получения данных отзыва по ID
-          const response = await axios.get(`https://bakka.kz/api/news/${newsId}/`);
+          const response = await axios.get(`https://bakka.kz/api/faq/${faqId}/`);
           if (response.status === 200) {
             const data = response.data;
-            // Заполняем данные формы
-            this.news.id = data.id;
-            this.news.title = data.title;
-            this.news.is_published = data.is_published;
-            this.news.content = data.content;
-            // Примечание: Файл изображения не загружается напрямую в input type="file", но его можно показать, если нужно.
+            this.faq.id = data.id;
+            this.faq.question = data.question;
+            this.faq.answer = data.answer;
           }
         } catch (error) {
-          console.error('Ошибка при загрузке новости:', error);
-          alert('Не удалось загрузить данные новости.');
+          console.error('Ошибка при загрузке:', error);
+          alert('Не удалось загрузить данные.');
         }
       },
-      handleFileUpload(event) {
-        const file = event.target.files[0];
-        if (file) {
-          this.news.file = file;
-        } else {
-          this.news.file = null;
-        }
-      },
-      async submitNews() {
+      async submitFaq() {
         try {
           const formData = new FormData();
-          formData.append('title', this.news.title);
-          formData.append('is_published', this.news.is_published);
-          formData.append('content', this.news.content);
-  
-          if (this.news.file) {
-            formData.append('image', this.news.file); // Используйте 'image' или нужный ключ для файла
-          }
+          formData.append('question', this.faq.question);
+          formData.append('answer', this.faq.answer);
   
           // Выполняем PUT запрос для обновления отзыва
-          const response = await axios.put(`https://bakka.kz/api/news/${this.news.id}/`, formData, {
+          const response = await axios.put(`https://bakka.kz/api/faq/${this.faq.id}/`, formData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },
           });
   
           if (response.status === 200) {
-            alert('Новость успешно обновлен!');
-            this.$router.push({ name: 'news_admin' });
+            alert('Успешно обновлен!');
+            this.$router.push({ name: 'faq' });
           } else {
-            alert('Произошла ошибка при обновлении новости.');
+            alert('Произошла ошибка при обновлении.');
           }
         } catch (error) {
-          console.error('Ошибка при обновлении новости:', error);
+          console.error('Ошибка при обновлении:', error);
           alert('Ошибка при отправке. Попробуйте еще раз.');
         }
       },
