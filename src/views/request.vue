@@ -29,8 +29,8 @@
             <label for="rating" class="status">
               <h3>Статус</h3>
               <select v-model="requests.status" name="status" id="status">
-                <option value="2">Звонил</option>
-                <option value="3">Не доступен</option>
+                <option value="3">Звонил</option>
+                <option value="2">Не доступен</option>
               </select>
             </label>
           </div>

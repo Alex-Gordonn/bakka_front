@@ -36,7 +36,11 @@
               <td>{{ request.name }}</td>
               <td>{{ request.phone_number }}</td>
               <td>{{ formatDate(request.created_at) }}</td>
-              <td>{{ request.status }}</td>
+              <td>
+                <span :class="getStatusClass(request.status)">
+                  {{ getStatusText(request.status) }}
+                </span>
+              </td>             
               <td><button @click="openRequest(request.id)" class="change_button">Открыть</button> <br>
                   <button @click="deleteRequest(request.id)" class="delete_button">Удалить</button></td>
             </tr>
@@ -111,6 +115,30 @@
                 }catch(error) {
                   alert('Ошибка')
                 }
+              }
+            },
+            getStatusText(status) {
+              switch (status) {
+                case 1:
+                  return 'Новая заявка';
+                case 2:
+                  return 'Не доступен';
+                case 3:
+                  return 'Завершено';
+                default:
+                  return 'Неизвестный статус';
+              }
+            },
+            getStatusClass(status) {
+              switch (status) {
+                case 1:
+                  return 'status-new';
+                case 2:
+                  return 'status-unavailable';
+                case 3:
+                  return 'status-completed';
+                default:
+                  return '';
               }
             },
         }
@@ -224,4 +252,25 @@
     padding: 12px;
     background-color: #116ACC;
   }
+  .status-new {
+  background-color: green;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.status-unavailable {
+  background-color: #D84949;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.status-completed {
+  background-color: #116ACC;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
     </style>
