@@ -37,7 +37,7 @@
               <td>{{ request.phone_number }}</td>
               <td>{{ formatDate(request.created_at) }}</td>
               <td>{{ request.status }}</td>
-              <td><button class="change_button">Изменить</button> <br>
+              <td><button @click="openRequest(request.id)" class="change_button">Открыть</button> <br>
                   <button @click="deleteRequest(request.id)" class="delete_button">Удалить</button></td>
             </tr>
           </tbody>
@@ -65,8 +65,8 @@
                 goToReviews() {
                 this.$router.push({ name: 'reviews' });
                 },
-                async changeReview(reviewId) {
-                    this.$router.push({ name: 'change_review', query: { id: reviewId } });
+                async openRequest(requestId) {
+                    this.$router.push({ name: 'request', query: { id: requestId } });
                 },
                 async addReview() {
                     this.$router.push({ name: 'add_review'});

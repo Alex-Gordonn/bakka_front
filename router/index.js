@@ -15,6 +15,8 @@ import add_news from '../src/views/add_news.vue';
 import change_news from '../src/views/change_news.vue';
 import add_faq from '../src/views/add_faq.vue';
 import change_faq from '../src/views/change_faq.vue';
+import request from '../src/views/request.vue';
+
 
 const routes = [
     {
@@ -113,6 +115,12 @@ const routes = [
       path: '/add_faq',
       name: 'add_faq',
       component: add_faq,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/request',
+      name: 'request',
+      component: request,
       meta: { requiresAuth: true }
     },
 ]
