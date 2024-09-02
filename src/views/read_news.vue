@@ -57,11 +57,9 @@
             </div>
           </div>
     
-          <div class="row news_row">
+          <div class="one_news">
             <div v-for="newsItem in newsList" :key="newsItem.id">
-              <div class="news_card">
                 <img :src="newsItem.image" alt="news image">
-                <div class="card-body">
                   <h5 class="card-title">{{ newsItem.title }}</h5>
                   <p class="card-text">{{ newsItem.content }}</p>
                   <div class="row">
@@ -69,8 +67,6 @@
                       <p>{{ formatDate(newsItem.created_at) }}</p>
                     </div>
                   </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -165,3 +161,21 @@
     
       }
     </script>
+    <style>
+  .one_news {
+    text-align: center;
+    height: 75vh;
+  }
+  .one_news img {
+    width: 500px;
+    border-radius: 8px;
+  }
+  .one_news h5 {
+    margin-top: 20px;
+  }
+  @media (max-width: 500px) {
+    .one_news img {
+      width: 300px;
+    }
+  }
+  </style>

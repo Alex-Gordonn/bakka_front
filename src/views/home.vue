@@ -516,10 +516,10 @@
         <!--Application soon end-->
         <!-- Отзывы -->
   <div class="container feedbacks">
-    <h3>{{ t('review') }}</h3>
+    <h3 class="wow animate__animated animate__fadeInLeft">{{ t('review') }}</h3>
     <div class="row">
       <div v-for="review in reviews" :key="review.id" class="reviews col-md-6 mb-4">
-        <div class="card">
+        <div class="card wow animate__animated animate__fadeInLeft">
           <div class="card-body">
             <div class="row">
               <div class="col name_review">
@@ -542,16 +542,16 @@
         <div class="news">
     <div class="container">
       <div class="row">
-        <div class="col">
+        <div class="col wow animate__animated animate__fadeInLeft">
           <h1>{{ t('news_tittle') }}</h1>
         </div>
-        <div class="col button_news">
+        <div class="col button_news wow animate__animated animate__fadeInLeft">
           <button @click="goToNews" class="justify-content-end ">{{ t('all_news') }} <img src="../img/see_news.svg" alt=""></button>
         </div>
       </div>
 
       <div class="row news_row">
-        <div v-for="newsItem in newsList" :key="newsItem.id" class="col-md-6 mb-4">
+        <div v-for="newsItem in newsList" :key="newsItem.id" class="col-md-6 mb-4 wow animate__animated animate__fadeInLeft">
           <div class="card">
             <img :src="newsItem.image" class="card-img-top" alt="news image">
             <div class="card-body">

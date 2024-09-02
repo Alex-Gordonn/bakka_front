@@ -1125,6 +1125,12 @@
     .main_block button {
       width: 70%;
     }
+    .news button {
+      font-size: 12px;
+    }
+    .one_news img {
+      width: 200px;
+    }
   }
   @media (max-width: 550px) {
     #submit {
