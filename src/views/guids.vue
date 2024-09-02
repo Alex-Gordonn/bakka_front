@@ -15,9 +15,35 @@
           </ul>
         </div>
 
-        <div class="list_reviews">
-            <h1>В разработке...</h1>
+        <div class="list_news">
+    <div class="row">
+      <div class="col text_review">
+        <h1>Гиды</h1>
       </div>
+      <div class="col add_review_button">
+        <button @click="addGuid()" class="justify-content-end">Добавить гид</button>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Фото</th>
+          <th>Имя и Фамилия</th>
+          <th>Действие</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="guid in guids" :key="guid.id">
+          <td class="guid_image"><img :src="guid.image" alt=""></td>
+          <td>{{ guid.name }}</td>
+          <td>
+            <button @click="changeGuid(guid.id)" class="change_button">Изменить</button><br>
+            <button @click="deleteGuid(guid.id)" class="delete_button">Удалить</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
     </template>
     <script>
     import axios from './axios';
@@ -25,11 +51,11 @@
     export default {
         data() {
             return {
-                reviews:[]
+                guids:[]
             }
         },
         created() {
-            this.fetchReviews()
+            this.fetchGuids()
         },
         methods: {
             logout() {
@@ -40,8 +66,8 @@
                 goToReviews() {
                 this.$router.push({ name: 'reviews' });
                 },
-                async changeReview(reviewId) {
-                    this.$router.push({ name: 'change_review', query: { id: reviewId } });
+                async changeGuid(guidId) {
+                    this.$router.push({ name: 'change_guid', query: { id: guidId } });
                 },
                 async addReview() {
                     this.$router.push({ name: 'add_review'});
@@ -64,24 +90,22 @@
                 async goToTours() {
                     this.$router.push({ name: 'tours'});
                 },
-                async fetchReviews() {
+                async addGuid() {
+                    this.$router.push({ name: 'add_guid'});
+                },
+                async fetchGuids() {
             try{
-                const response = await axios.get('https://bakka.kz/api/reviews/');
-                this.reviews = response.data.results
+                const response = await axios.get('https://bakka.kz/api/guides/');
+                this.guids = response.data.results
               }catch(error) {
                 console.error("error")
               }
             },
-            formatDate(dateString) {
-                const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-                const date = new Date(dateString);
-                return date.toLocaleDateString('ru-RU', options);
-            },
-            async deleteReview(reviewId){
+            async deleteGuid(guidId){
               if(confirm("Вы уверены что хотите удалить?")) {
                 try{
-                  await axios.delete(`https://bakka.kz/api/reviews/${reviewId}/`);
-                  this.reviews = this.reviews.filter(review => review.id != reviewId);
+                  await axios.delete(`https://bakka.kz/api/guides/${guidId}/`);
+                  this.guids = this.guids.filter(guid => guid.id != guidId);
                   alert('Удалено!')
                 }catch(error) {
                   alert('Ошибка')
@@ -198,5 +222,8 @@
     width: 150px;
     padding: 12px;
     background-color: #116ACC;
+  }
+  .guid_image img{
+    width: 100px;
   }
     </style>
