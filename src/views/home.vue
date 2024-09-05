@@ -1179,14 +1179,14 @@
     goToNews() {
           this.$router.push({ name: 'news' });
           },
-    async fetchNews() {
-      try {
-        const response = await axios.get('https://bakka.kz/api/news/');
-        this.newsList = response.data.results;
-      } catch (error) {
-        console.error('Ошибка при загрузке новостей:', error);
-      }
-    },
+          async fetchNews() {
+  try {
+    const response = await axios.get('https://bakka.kz/api/news/');
+    // Фильтруем новости, чтобы показывались только те, у которых is_published = true
+    this.newsList = response.data.results.filter(news => news.is_published);
+  } catch (error) {
+    console.error('Ошибка при загрузке новостей:', error);
+  }},
     truncateText(text, length) {
       if (text.length > length) {
         return text.substring(0, length) + '...';

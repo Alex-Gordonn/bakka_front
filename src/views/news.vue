@@ -697,8 +697,8 @@ export default {
     async fetchNews() {
       try {
         const response = await axios.get('https://bakka.kz/api/news/');
-        this.newsList = response.data.results;
-      } catch (error) {
+        this.newsList = response.data.results.filter(news => news.is_published);
+    } catch (error) {
         console.error('Ошибка при загрузке новостей:', error);
       }
     },

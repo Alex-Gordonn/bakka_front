@@ -96,7 +96,7 @@
   
           if (response.status === 201) {
             alert('Новость успешно отправлен!');
-            this.$router.push({ name: 'news' });
+            this.$router.push({ name: 'news_admin' });
           } else {
             alert('Произошла ошибка при отправке новости.');
           }
