@@ -39,7 +39,7 @@
                   </select>
                     <ul class="navbar-nav justify-content-end sviaz">
                       <li><p class="lng-number_text phone_number_bai">{{ t('number_text') }}</p></li>
-                      <li><p><img src="../img/phone_icon.svg" alt="">+7 (707) 362-11-56</p></li>
+                      <li><p><img src="../img/phone_icon.svg" alt="">+7 (707) 059-30-30</p></li>
                     </ul>
                 </div>   
             </div>

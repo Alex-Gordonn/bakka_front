@@ -40,7 +40,7 @@
                   </select>
                     <ul class="navbar-nav justify-content-end sviaz">
                       <li><p class="lng-number_text phone_number_bai">{{ t('number_text') }}</p></li>
-                      <li><p><img src="../img/phone_icon.svg" alt="">+7 (707) 362-11-56</p></li>
+                      <li><p><img src="../img/phone_icon.svg" alt="">+7 (707) 059-30-30</p></li>
                     </ul>
                 </div>   
             </div>
@@ -625,7 +625,7 @@
                     <div class="row">
                       <div class="col">
                         <h4 class="lng-sviazivat">{{ t('sviazivat') }}</h4>
-                        <p><img src="../img/phone_icon.svg" alt="">+7 (707) 362-11-56</p>
+                        <p><img src="../img/phone_icon.svg" alt="">+7 (707) 059-30-30</p>
                         <a href="https://www.instagram.com/bakka_travel/"><img class="soc_icons" src="../img/insta_icon.png" alt=""></a>
                         <a href="https://api.whatsapp.com/send/?phone=%2B77051851321&text&type=phone_number&app_absent=0"><img class="soc_icons" src="../img/wp_icon.png" alt=""></a>
                         <div class="text_office">
