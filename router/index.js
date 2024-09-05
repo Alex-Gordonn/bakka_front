@@ -18,6 +18,7 @@ import change_faq from '../src/views/change_faq.vue';
 import request from '../src/views/request.vue';
 import add_guid from '../src/views/add_guid.vue';
 import change_guid from '../src/views/change_guid.vue';
+import tour_info from '../src/views/tour_info.vue';
 
 
 const routes = [
@@ -135,6 +136,12 @@ const routes = [
       path: '/add_guid',
       name: 'add_guid',
       component: add_guid,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/tour_info',
+      name: 'tour_info',
+      component: tour_info,
       meta: { requiresAuth: true }
     },
 ]

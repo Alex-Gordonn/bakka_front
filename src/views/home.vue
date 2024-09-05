@@ -207,105 +207,36 @@
               <div class="paket_tours_none">
                 <div class="row pakets">
                   <div class="col-4 paketter with-border-gradient wow animate__animated animate__slideInUp" id="pakets1">
-                        <h3>Стандард</h3>
-                        <h4>{{ t('date_tour') }}</h4>
-                        <div class="places"><h6>{{ t('all_places') }}</h6><h6>{{ t('places') }}</h6></div>
-                        <img class="text_left icon_tours" src="../img/calendar.svg" alt="">
-                        <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
-                        <p class="text_right lng-duration1_option">{{ t('duration1_option') }}</p>
-                        <div style="clear: left;"></div>
-                        <img class="text_left icon_tours" src="../img/plane.svg" alt=""><h5 class="text_left lng-way1">{{ t('way1') }}</h5>
-                        <p class="text_right">Алматы - Медина</p>
-                        <div style="clear: left;"></div>
-                        <img class="text_left icon_tours" src="../img/location.svg" alt=""><h5 class="text_left lng-al_haram1">{{ t('al_haram1') }}</h5>
-                        <p class="text_right">4 км</p>
-                        <div style="clear: left;"></div>
-                        <img class="text_left icon_tours" src="../img/food.svg" alt=""><h5 class="text_left lng-food1">{{ t('food1') }}</h5>
-                        <p class="text_right">Буфет</p>
-                        <div style="clear: left;"></div>
-                        
-                        <img class="text_left icon_tours" src="../img/hotel.svg" alt=""><h5 class="text_left lng-hotel1">{{ t('hotel1') }}</h5>
-                        <div class="hotel_stars">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        </div>
-                        <div style="clear: left;"></div>
+                        <h3>Lux</h3>
+                        <h4>{{ t('date_tour1') }}</h4>
                         <hr>
                         <h4 class="text_left price_text lng-price_text1">{{ t('price_text1') }}</h4>
-                        <h4 class="text_right price">400 $ | 230.000 ₸</h4>
+                        <h4 class="text_right price">1490 $ | 719.000 ₸</h4>
                         <div style="clear: left;"></div>
                         <div class="book_consult">
-                        <button class="lng-book2 book" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
-                        <button class="lng-book2 consultation" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('consultation') }}</button>            
+                        <button class="lng-book2 book" @click="goToTourInfo()" type="button">{{ t('consultation') }}</button>            
                       </div>
                       </div>
                 <div class="col-4 with-border-gradient wow animate__animated animate__slideInUp" id="pakets2">
-                  <h3>Komfort</h3>
-                  <h4>{{ t('date_tour') }}</h4>
-                  <div class="places"><h6>{{ t('all_places') }}</h6><h6>{{ t('places') }}</h6></div>
-                  <img class="text_left icon_tours" src="../img/calendar.svg" alt="">
-                        <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
-                        <p class="text_right lng-duration1_option">{{ t('duration1_option') }}</p>
-                        <div style="clear: left;"></div>
-                        <img class="text_left icon_tours" src="../img/plane.svg" alt=""><h5 class="text_left lng-way1">{{ t('way1') }}</h5>
-                        <p class="text_right">Алматы - Медина</p>
-                        <div style="clear: left;"></div>
-                        <img class="text_left icon_tours" src="../img/location.svg" alt=""><h5 class="text_left lng-al_haram1">{{ t('al_haram1') }}</h5>
-                        <p class="text_right">4 км</p>
-                        <div style="clear: left;"></div>
-                        <img class="text_left icon_tours" src="../img/food.svg" alt=""><h5 class="text_left lng-food1">{{ t('food1') }}</h5>
-                        <p class="text_right">Буфет</p>
-                        <div style="clear: left;"></div>
-                        
-                        <img class="text_left icon_tours" src="../img/hotel.svg" alt=""><h5 class="text_left lng-hotel1">{{ t('hotel1') }}</h5>
-                        <div class="hotel_stars">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        <img src="../img/Star.svg" alt="">
-                        </div>
-                        <div style="clear: left;"></div>
+                  <h3>Lux</h3>
+                  <h4>{{ t('date_tour2') }}</h4>
                         <hr>
                         <h4 class="text_left price_text lng-price_text2">{{ t('price_text2') }}</h4>
-                        <h4 class="text_right price ">400 $ | 230.000 ₸</h4>
+                        <h4 class="text_right price ">1490 $ | 719.000 ₸</h4>
                         <div style="clear: left;"></div>
                         <div class="book_consult">
-                        <button class="lng-book2 book" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
-                        <button class="lng-book2 consultation" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('consultation') }}</button>
+                        <button class="lng-book2 book" @click="goToTourInfo()" type="button">{{ t('consultation') }}</button>            
                         </div>
                   </div>
                   <div class="col-4 with-border-gradient wow animate__animated animate__slideInUp" id="pakets3">
-                  <h3>Komfort+</h3>
-                  <h4>{{ t('date_tour') }}</h4>
-                  <div class="places"><h6>{{ t('all_places') }}</h6><h6>{{ t('places') }}</h6></div>
-                  <img class="text_left icon_tours" src="../img/calendar.svg" alt="">
-                        <h5 class="text_left lng-duration1">{{ t('duration1') }}</h5>
-                        <p class="text_right lng-duration1_option">{{ t('duration1_option') }}</p>
-                        <div style="clear: left;"></div>
-                        <img class="text_left icon_tours" src="../img/plane.svg" alt=""><h5 class="text_left lng-way1">{{ t('way1') }}</h5>
-                        <p class="text_right">Алматы - Медина</p>
-                        <div style="clear: left;"></div>
-                        <img class="text_left icon_tours" src="../img/location.svg" alt=""><h5 class="text_left lng-al_haram1">{{ t('al_haram1') }}</h5>
-                        <p class="text_right">4 км</p>
-                        <div style="clear: left;"></div>
-                        <img class="text_left icon_tours" src="../img/food.svg" alt=""><h5 class="text_left lng-food1">{{ t('food1') }}</h5>
-                        <p class="text_right">Буфет</p>
-                        <div style="clear: left;"></div>
-                        
-                        <img class="text_left icon_tours" src="../img/hotel.svg" alt=""><h5 class="text_left lng-hotel1">{{ t('hotel1') }}</h5>
-                            <div class="hotel_stars">
-                            <img src="../img/Star.svg" alt="">
-                            <img src="../img/Star.svg" alt="">
-                            <img src="../img/Star.svg" alt="">
-                            </div>
-                            <div style="clear: left;"></div>
+                  <h3>Lux</h3>
+                  <h4>{{ t('date_tour3') }}</h4>
                             <hr>
                             <h4 class="text_left price_text lng-price_text3">{{ t('price_text3') }}</h4>
-                            <h4 class="text_right price">400 $ | 230.000 ₸</h4>
+                            <h4 class="text_right price">1490 $ | 719.000 ₸</h4>
                             <div style="clear: left;"></div>
                             <div class="book_consult">
-                            <button class="lng-book2 book" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
-                            <button class="lng-book2 consultation" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('consultation') }}</button>            
+                            <button class="lng-book2 book" @click="goToTourInfo()" type="button">{{ t('consultation') }}</button>            
                           </div>
               </div>
               </div>
@@ -321,8 +252,8 @@
               <div class="item2">
                 <div class="card" style="width: 350px;">
                   <div class="col-4 paketter with-border-gradient wow animate__animated animate__slideInUp" id="pakets1">
-                    <h3>Стандард</h3>
-                    <h4>{{ t('date_tour') }}</h4>
+                    <h3>Lux</h3>
+                    <h4>{{ t('date_tour1') }}</h4>
                     <div class="places"><h6>{{ t('all_places') }}</h6><h6>{{ t('places') }}</h6></div>
                     <hr>
                     <img class="text_left icon_tours" src="../img/calendar.svg" alt="">
@@ -352,16 +283,16 @@
                     <div style="clear: left;"></div>
                     <div class="book_consult">
                             <button class="lng-book2 book" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
-                            <button class="lng-book2 consultation" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('consultation') }}</button>            
-                    </div>             
+                            <button class="lng-book2 consultation" @click="goToTourInfo()" type="button">{{ t('consultation') }}</button>            
+                          </div>             
                   </div>
                 </div>
               </div>
               <div class="item2">
                 <div class="card" style="width: 350px;">
                   <div class="col-4 paketter with-border-gradient wow animate__animated animate__slideInUp" id="pakets2">
-                    <h3>Comfort</h3>
-                    <h4>{{ t('date_tour') }}</h4>
+                    <h3>Lux</h3>
+                    <h4>{{ t('date_tour2') }}</h4>
                     <div class="places"><h6>{{ t('all_places') }}</h6><h6>{{ t('places') }}</h6></div>
                     <hr>
                     <img class="text_left icon_tours" src="../img/calendar.svg" alt="">
@@ -391,16 +322,16 @@
                     <div style="clear: left;"></div>
                     <div class="book_consult">
                             <button class="lng-book2 book" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
-                            <button class="lng-book2 consultation" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('consultation') }}</button>            
-                    </div>             
+                            <button class="lng-book2 consultation" @click="goToTourInfo()" type="button">{{ t('consultation') }}</button>            
+                          </div>             
                   </div>
                 </div>
               </div>
               <div class="item2">
                 <div class="card" style="width: 350px;">
                   <div class="col-4 paketter with-border-gradient wow animate__animated animate__slideInUp" id="pakets3">
-                    <h3>Comfort+</h3>
-                    <h4>{{ t('date_tour') }}</h4>
+                    <h3>Lux</h3>
+                    <h4>{{ t('date_tour3') }}</h4>
                     <div class="places"><h6>{{ t('all_places') }}</h6><h6>{{ t('places') }}</h6></div>
                     <hr>
                     <img class="text_left icon_tours" src="../img/calendar.svg" alt="">
@@ -430,8 +361,8 @@
                     <div style="clear: left;"></div>
                     <div class="book_consult">
                             <button class="lng-book2 book" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('book2') }}</button>
-                            <button class="lng-book2 consultation" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">{{ t('consultation') }}</button>            
-                    </div>            
+                            <button class="lng-book2 consultation" @click="goToTourInfo()" type="button">{{ t('consultation') }}</button>            
+                          </div>            
                     </div>
                 </div>
               </div>
@@ -900,16 +831,8 @@
             ru : "Длительность",
         },
         duration1_option : {
-            kz : "20 күн",
-            ru : "20 дней",
-        },
-        duration2_option : {
-            kz : "20 күн",
-            ru : "20 дней",
-        },
-        duration3_option : {
-            kz : "20 күн",
-            ru : "20 дней",
+            kz : "11 күн",
+            ru : "11 дней",
         },
         way1 : {
             kz : "Бағыт",
@@ -1183,13 +1106,21 @@
             kz : "Ескерту",
             ru : "Примечание",
         },
-        date_tour: {
-          kz: "1 маусым - 15 шілде 2024",
-          ru: "1 июня - 15 июля 2024 "
+        date_tour1: {
+          kz: "16 қыркүйек - 26 қыркүйек 2024",
+          ru: "16 сентябрь - 26 сентябрь 2024 "
+        },
+        date_tour2: {
+          kz: "7 қазан - 17 қазан 2024",
+          ru: "7 октябрь - 17 октябрь 2024 "
+        },
+        date_tour3: {
+          kz: "28 қазан - 7 қараша 2024",
+          ru: "28 октябрь - 7 ноябрь 2024 "
         },
         consultation: {
-          kz: "Кеңес беру",
-          ru: "Консультация"
+          kz: "Толығырақ",
+          ru: "Подробнее"
         },
         all_places: {
           kz: "Жалпы орын: 300",
@@ -1303,6 +1234,9 @@
     },
     async read_news(newsId) {
         this.$router.push({ name: 'read_news', query: { id: newsId } });
+      },
+      async goToTourInfo() {
+        this.$router.push({ name: 'tour_info',});
       },
       async submitForm() {
       try {
