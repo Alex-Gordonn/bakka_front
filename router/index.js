@@ -142,7 +142,6 @@ const routes = [
       path: '/tour_info',
       name: 'tour_info',
       component: tour_info,
-      meta: { requiresAuth: true }
     },
 ]
 
