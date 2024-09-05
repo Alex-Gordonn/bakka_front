@@ -484,7 +484,7 @@
       <div class="row news_row">
         <div v-for="newsItem in newsList" :key="newsItem.id" class="col-md-6 mb-4 wow animate__animated animate__fadeInLeft">
           <div class="card">
-            <img :src="newsItem.image" class="card-img-top" alt="news image">
+            <img :src="newsItem.image" class="card-img-top news_image" alt="news image">
             <div class="card-body">
               <h5 class="card-title">{{ newsItem.title }}</h5>
               <p class="card-text">{{ truncateText(newsItem.content, 100) }}</p>

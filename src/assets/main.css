@@ -712,6 +712,9 @@
     border-radius: 8px;
     padding: 10px 15px;
   }
+  .news_image {
+    height: 350px;
+  }
   .date_news p {
     font-size: large;
     margin-bottom: 0px;
