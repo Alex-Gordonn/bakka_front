@@ -77,6 +77,7 @@
     </template>
     <script>
     import axios from 'axios';
+    import { langArr } from './lang.js';
     
         
     export default {
@@ -88,45 +89,7 @@
           headingText: 'Часто задаваемые вопросы',
           sectionTitle: 'Вопросы и ответы',
           currentLang: 'kz',
-          langArr: {
-            onas: {
-              kz: "Біз туралы",
-              ru: "О нас",
-            },
-            tourst: {
-              kz: "Турлар",
-              ru: "Туры",
-            },
-            hadj: {
-              kz: "Қажылық",
-              ru: "Хадж",
-            },
-            umra: {
-              kz: "Умра",
-              ru: "Умра",
-            },
-            number_text : {
-            kz : "Байланыс номері",
-            ru : "Свяжитесь с нами",
-        },
-        news_tittle: {
-          kz: "Жаңалықтар",
-          ru: "Новости"
-        },
-        all_news: {
-          kz: "Барлығын көру",
-          ru: "Cмотреть все"
-        },
-        read_news: {
-          kz: "Дереккөзді оқу",
-          ru: "Читать источник"
-        },
-        review: {
-          kz: "Пікірлер",
-          ru: "Отзывы"
-        },
-        
-          },
+          langArr,
         };
       },
       mounted() {
